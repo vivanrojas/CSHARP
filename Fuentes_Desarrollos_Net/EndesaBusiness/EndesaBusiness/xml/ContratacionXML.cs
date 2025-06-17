@@ -726,5 +726,10 @@ namespace EndesaBusiness.xml
             return id + 1;
 
         }
+
+        public void CreaMensajeA305(TipoMensajeA305 xml_a305)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
