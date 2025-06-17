@@ -1,0 +1,344 @@
+﻿using EndesaBusiness.servidores;
+using MySql.Data.MySqlClient;
+using OfficeOpenXml.Drawing.Chart.ChartEx;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static EndesaBusiness.medida.Kee_Extraccion_Formulas;
+
+namespace EndesaBusiness.medida
+{
+    public class EstadosSubestadosKronos : EndesaEntity.medida.Pendiente
+    {
+        public Dictionary<string, EndesaEntity.medida.Pendiente> dic { get; set; }
+        //public bool existe { get; set; }
+        public EstadosSubestadosKronos()
+        {
+            dic = Carga();
+        }
+
+        private Dictionary<string, EndesaEntity.medida.Pendiente> Carga()
+        {
+            string strSql;
+            MySQLDB db;
+            MySqlCommand command;
+            MySqlDataReader r;
+
+            Dictionary<string, EndesaEntity.medida.Pendiente> d = new Dictionary<string, EndesaEntity.medida.Pendiente>();
+            try
+            {
+                strSql = "SELECT codigo_estado, estado_periodo, area_responsable," 
+                    + " prioridad, subestado, estado, comentario_revision_medida"
+                    + " FROM estados_kee_param order by prioridad";
+
+                db = new MySQLDB(MySQLDB.Esquemas.MED);
+                command = new MySqlCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    EndesaEntity.medida.Pendiente c = new EndesaEntity.medida.Pendiente();
+                    c.cod_estado = r["codigo_estado"].ToString();
+                    c.estado_periodo = r["estado_periodo"].ToString();
+                    c.area_responsable = r["area_responsable"].ToString();
+                    c.prioridad = Convert.ToInt32(r["prioridad"]);
+                    c.descripcion_subestado = r["subestado"].ToString();
+                    c.descripcion_estado = r["estado"].ToString();
+
+                    if (r["comentario_revision_medida"] != System.DBNull.Value)
+                        c.comentario_revision_medida = r["comentario_revision_medida"].ToString();
+                    
+                    d.Add(c.estado_periodo.ToUpper(), c);
+                }
+                db.CloseConnection();
+
+                return d;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,
+                  "EstadosSubestadosKronos.Carga",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Error);
+
+                return null;
+            }
+        }
+
+        public void Save()
+        {
+            try
+            {
+                EndesaEntity.medida.Pendiente o;
+                if (!dic.TryGetValue(this.cod_estado, out o))
+                    this.New();
+                else
+                    this.Update();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message,
+                  "EstadosSubestadosKronos.Save",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Error);
+            }
+        }
+
+        private void New()
+        {
+            MySQLDB db;
+            MySqlCommand command;
+            string strSql;
+
+            try
+            {
+                strSql = "insert into t_ed_p_subestado_sap_pendiente_facturar (cd_subestado, de_subestado,"
+                    + " area_responsable, created_by, created_date) values ";
+
+                if (this.cod_subestado != null)
+                    strSql += "('" + this.cod_subestado + "'";
+                else
+                    strSql += "(null";
+
+                if (this.descripcion_subestado != null)
+                    strSql += ",'" + this.descripcion_subestado + "'";
+                else
+                    strSql += ",null";
+
+                if (this.area_responsable != null)
+                    strSql += ",'" + this.area_responsable + "'";
+                else
+                    strSql += ",null";
+
+                if (this.created_by != null)
+                    strSql += ",'" + this.created_by + "'";
+                else
+                    strSql += ",'" + System.Environment.UserName + "'";
+
+                strSql += ",'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')";
+
+                db = new MySQLDB(servidores.MySQLDB.Esquemas.MED);
+                db.MySQLTransaction();
+                command = new MySqlCommand(strSql, db.con);
+                command.ExecuteNonQuery();
+                db.MySQLCommit();
+                db.CloseConnection();
+
+                MessageBox.Show("Se ha añadido correctamente el registro con estado: " + this.cod_estado,
+                 "Subestados",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,
+             "EstadosSubestadosKronos.New",
+             MessageBoxButtons.OK,
+             MessageBoxIcon.Error);
+            }
+        }
+
+        private void Update()
+        {
+            string strSql;
+            MySQLDB db;
+            MySqlCommand command;
+
+            strSql = "update estados_kee_param set"
+                + " last_update_by = '" + System.Environment.UserName.ToUpper() + "'";
+
+            if (this.cod_estado != null)
+                strSql += " ,codigo_estado = '" + this.cod_estado + "'";
+
+            if (this.estado_periodo != null)
+                strSql += " ,estado_periodo = '" + this.estado_periodo + "'";
+
+            if (this.area_responsable != null)
+                strSql += " ,area_responsable = '" + this.area_responsable + "'";
+
+            if (this.prioridad != 0)
+                strSql += " ,prioridad = " + this.prioridad ;
+
+            if (this.descripcion_subestado != null)
+                strSql += " ,subestado = '" + this.descripcion_subestado + "'";
+
+            if (this.descripcion_estado != null)
+                strSql += " ,estado = '" + this.descripcion_estado + "'";
+
+            if (this.comentario_revision_medida != null)
+                strSql += " ,comentario_revision_medida = '" + this.comentario_revision_medida + "'";
+
+            strSql += " where codigo_estado = '" + this.cod_estado + "'";
+
+            db = new MySQLDB(servidores.MySQLDB.Esquemas.MED);
+            db.MySQLTransaction();
+            command = new MySqlCommand(strSql, db.con);
+            command.ExecuteNonQuery();
+            db.MySQLCommit();
+            db.CloseConnection();
+
+            MessageBox.Show("Se ha modifcado correctamente el subestado: " + this.cod_subestado,
+            "EstadosSubestadosKronos",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+        }
+
+        public void Del()
+        {
+            MySQLDB db;
+            MySqlCommand command;
+            string strSql;
+
+            try
+            {
+                DialogResult result = MessageBox.Show("Warning:" + System.Environment.NewLine
+                    + "¿Desea borrar el registro para el código " + this.cod_estado + "?"
+                    , "Borrado del registro con código " + this.cod_estado,
+                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    strSql = "delete from estados_kee_param where cd_subestado = '" + this.cod_subestado + "'";
+
+                    db = new MySQLDB(servidores.MySQLDB.Esquemas.MED);
+                    command = new MySqlCommand(strSql, db.con);
+                    command.ExecuteNonQuery();
+                    db.CloseConnection();
+
+                    MessageBox.Show("registro borrado.",
+                      "Subestados",
+                      MessageBoxButtons.OK,
+                      MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message,
+              "Pendiente_Subestados - Del",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Error);
+            }
+        }
+
+
+        private int GetPrioridad(string estado_periodo)
+        {
+            int prioridad = 99999999;
+            EndesaEntity.medida.Pendiente o;
+            if (dic.TryGetValue(estado_periodo.ToUpper(), out o))
+                return o.prioridad;
+            else
+                return prioridad;
+        }
+
+        public void GetEstadoKEE(string estado_periodo)
+        {
+            EndesaEntity.medida.Pendiente o;
+            if (dic.TryGetValue(estado_periodo.ToUpper(), out o))
+            {
+                existe = true;
+                this.cod_estado = o.cod_estado;
+                this.estado_periodo = o.estado_periodo;
+                this.area_responsable = o.area_responsable;
+                this.prioridad = o.prioridad;
+                this.descripcion_subestado = o.descripcion_subestado;
+                this.descripcion_estado = o.descripcion_estado;
+            }
+            else
+                existe = false;
+                
+           
+        }
+
+        public void GetEstadoKEE(List<string> lista_estado_periodo)
+        {
+            bool firstOnly = true;
+            int prioridad = 99999999;
+            EndesaEntity.medida.Pendiente pendiente
+                = new EndesaEntity.medida.Pendiente();
+
+            foreach (string p in lista_estado_periodo)
+            {
+                if (firstOnly)
+                {
+                    GetEstadoKEE(p);
+                    firstOnly = false;
+                    prioridad = this.prioridad;
+                }
+                else
+                {
+                    if(GetPrioridad(p) < prioridad)
+                        GetEstadoKEE(p);
+
+                }
+                
+                
+                    
+            }
+
+
+        }
+
+        public void GetEstadoKEEDetalle(List<string> lista_estado_periodo)
+        {
+            bool firstOnly = true;
+            int prioridad = 99999999;
+            EndesaEntity.medida.Pendiente pendiente
+                = new EndesaEntity.medida.Pendiente();
+
+            foreach (string p in lista_estado_periodo)
+            {
+                if (firstOnly)
+                {
+                    GetEstadoKEEDetalle(p);
+                    firstOnly = false;
+                    prioridad = this.prioridad;
+                }
+                else
+                {
+                    if (GetPrioridad(p) < prioridad)
+                        GetEstadoKEEDetalle(p);
+
+                }
+
+
+            }
+
+
+        }
+
+        public void GetEstadoKEEDetalle(string estado_periodo)
+        {
+            EndesaEntity.medida.Pendiente o;
+            if (dic.TryGetValue(estado_periodo.ToUpper(), out o))
+            {
+                existe = true;
+                this.cod_estado = o.cod_estado;
+                this.estado_periodo = o.estado_periodo;
+                this.area_responsable = o.area_responsable;
+                this.prioridad = o.prioridad;
+                this.descripcion_subestado = o.descripcion_subestado;
+                this.descripcion_estado = o.descripcion_estado;
+            }
+            else
+
+
+                //Para controlar si se fuerza la etiqueta (columna=Discrepancia)
+                if (estado_periodo.IndexOf("Discrepancia") >= 0)
+            {
+                existe = true;
+                this.descripcion_estado = estado_periodo;
+            }
+            else
+            {
+                existe = false;
+            }
+
+        }
+    }
+}

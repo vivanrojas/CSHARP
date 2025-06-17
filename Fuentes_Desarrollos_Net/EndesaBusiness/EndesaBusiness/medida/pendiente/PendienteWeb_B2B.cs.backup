@@ -1,0 +1,134 @@
+﻿using EndesaBusiness.servidores;
+using EndesaEntity.medida;
+using System;
+using System.Collections.Generic;
+using System.Data.Odbc;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EndesaBusiness.medida.pendiente
+{
+    public class PendienteWeb_B2B : PendienteMedida_B2B
+    {
+        logs.Log ficheroLog;
+        Dictionary<string, List<PendienteMedida_B2B>> dic;
+        public bool existe { get; set; }
+
+        public PendienteWeb_B2B()
+        {
+            ficheroLog = new logs.Log(Environment.CurrentDirectory, "logs", "PendienteMedida_B2B");
+            dic = Carga(MaxFechaInforme());
+        }
+
+        private Dictionary<string, List<PendienteMedida_B2B>> Carga(DateTime fecha_max)
+        {
+
+            servidores.RedShiftServer db;
+            OdbcCommand command;
+            OdbcDataReader r;
+            string strSql = "";
+
+            Dictionary<string, List<PendienteMedida_B2B>> d = new Dictionary<string, List<PendienteMedida_B2B>>();
+
+            try
+            {
+                strSql = "SELECT comercializadora, cups20, cups22, contrato_ps, fecha_desde, fecha_hasta,"
+                    + " mes, estado, distribuidora, multipunto, ritmo_facturacion, tco_segm_back, fecha_informe, fec_act,"
+                    + " cod_carga, id_pte_web"
+                    + " from ed_owner.t_ed_h_pdtweb_pm_b2b"
+                    + " where fec_act >= '" + fecha_max.ToString("yyyy-MM-dd HH:mm:ss") + "'";
+                ficheroLog.Add(strSql);
+                db = new servidores.RedShiftServer(RedShiftServer.Entornos.PROD);
+                command = new OdbcCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    PendienteMedida_B2B c = new PendienteMedida_B2B();
+                    c.comercializadora = r["comercializadora"].ToString();
+                    c.cups20 = r["cups20"].ToString();
+                    c.cups22 = r["cups22"].ToString();
+                    c.contrato_ps = r["contrato_ps"].ToString();
+                    c.fecha_desde = Convert.ToDateTime(r["fecha_desde"]);
+                    c.fecha_hasta = Convert.ToDateTime(r["fecha_hasta"]);
+                    c.mes = Convert.ToInt32(r["mes"]);
+                    c.estado = r["estado"].ToString();
+                    c.cod_carga = Convert.ToInt32(r["cod_carga"]);
+
+                    List<PendienteMedida_B2B> t;
+                    if (!d.TryGetValue(c.cups20, out t))
+                    {
+                        t = new List<PendienteMedida_B2B>();
+                        t.Add(c);
+                        d.Add(c.cups20, t);
+                    }
+                    else
+                        t.Add(c);
+
+                }
+                db.CloseConnection();
+                return d;
+
+
+            }
+            catch(Exception ex)
+            {
+                ficheroLog.addError("Carga: " + ex.Message);
+                return null;
+            }
+        }
+
+
+
+        private DateTime MaxFechaInforme()
+        {
+            // Buscamos la última fecha de publicación del informe
+
+            servidores.RedShiftServer db;
+            OdbcCommand command;
+            OdbcDataReader r;
+            string strSql = "";
+            DateTime fecha_max = new DateTime();
+
+            try
+            {
+                strSql = "select max(fecha_informe) as max_fecha from ed_owner.t_ed_h_pdtweb_pm_b2b";
+                ficheroLog.Add(strSql);
+                db = new servidores.RedShiftServer(RedShiftServer.Entornos.PROD);
+                command = new OdbcCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    fecha_max = Convert.ToDateTime(r["max_fecha"]);
+                }
+                db.CloseConnection();
+
+                return fecha_max;
+            }
+            catch(Exception ex) 
+            {
+                ficheroLog.addError("MaxFechaInforme: " + ex.Message);
+                return DateTime.Now;
+            }           
+
+        }
+
+
+        public List<string> GetCups(string cups20, DateTime fecha_desde, DateTime fecha_hasta)
+        {
+            List<string> lista = new List<string>();
+
+            List<PendienteMedida_B2B> o;
+            if (dic.TryGetValue(cups20, out o))
+            {
+                lista =
+                    o.FindAll(z => z.fecha_desde == fecha_desde
+                    && z.fecha_hasta == fecha_hasta).Select(z => z.estado).ToList();
+
+
+            }
+            return lista;
+
+        }
+    }
+}

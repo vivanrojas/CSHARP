@@ -1,0 +1,2040 @@
+﻿using EndesaBusiness.contratacion.eexxi;
+using EndesaBusiness.factoring;
+using EndesaBusiness.servidores;
+using EndesaBusiness.utilidades;
+using EndesaEntity.cnmc.V21_2019_12_17;
+using EndesaEntity.cnmc.V30_2022_21_01;
+using EndesaEntity.contratacion.gas;
+using EndesaEntity.extrasistemas;
+using Microsoft.Graph;
+using Microsoft.Office.Core;
+using Microsoft.Office.Interop.Excel;
+using MySql.Data.MySqlClient;
+using OfficeOpenXml;
+using Org.BouncyCastle.Ocsp;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Management;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+using Telegram.Bot.Types;
+
+namespace EndesaBusiness.xml 
+{
+    public class Extrasistemas
+    {
+        utilidades.Param param;
+        utilidades.Param param_cnmc;
+        List<EndesaEntity.extrasistemas.Global> lista_datos_excel_extrasistemas;
+        Dictionary<string,EndesaEntity.xml.Plantilla_Extrasistemas_total_registros> dic_total_registros;
+        public List<string> lista_log { get; set; }
+        cnmc.CNMC cnmc;
+
+        public Extrasistemas()
+        {
+            param = new utilidades.Param("extrasistemas_param", servidores.MySQLDB.Esquemas.CON);
+            param_cnmc = new utilidades.Param("cnmc_param", servidores.MySQLDB.Esquemas.CON);
+            lista_datos_excel_extrasistemas = new List<EndesaEntity.extrasistemas.Global>();
+            dic_total_registros = Inicializa_Lista_Totales();
+            lista_log = new List<string>();
+            cnmc = new cnmc.CNMC();
+        }
+
+        public void CargaExcel(string fichero)
+        {
+            ProcesaExcel(fichero);
+            //RellenaInventario(dic);
+            //Proceso(mensual);
+            //GeneraExcelResultados(fichero);
+        }
+
+
+        private void ProcesaExcel(string fichero)
+        {
+            
+            int f = 1;
+            int c = 1;
+            int total_hojas_excel = 0;
+            bool firstOnly = true;
+            string cabecera = "";
+            FileStream fs;
+            ExcelPackage excelPackage;
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.Commercial;
+            EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101 c101 =
+                new EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101();
+
+            string tipoDocAportado = "";
+            string direccionUrl = "";
+
+
+
+            bool registro_valido = false;
+
+            int ad_total = 0;
+            int acc_total = 0;
+            int acc_cambios_total = 0;
+            int mod_total = 0;
+            int baja_total = 0;
+
+            int ad_ok = 0;
+            int acc_ok = 0;
+            int acc_cambios_ok = 0;
+            int mod_ok = 0;
+            int baja_ok = 0;
+
+            string fecha = "";
+            EndesaEntity.xml.Plantilla_Extrasistemas_total_registros o;
+
+            
+
+            try
+            {
+                lista_log.Clear();
+
+                FileInfo file = new FileInfo(fichero);
+                fs = new FileStream(fichero, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                excelPackage = new ExcelPackage(fs);
+                total_hojas_excel = excelPackage.Workbook.Worksheets.Count();
+                var workSheet = excelPackage.Workbook.Worksheets.First();
+                for (int hoja = 0; hoja < total_hojas_excel; hoja++)
+                {
+                    workSheet = excelPackage.Workbook.Worksheets[hoja];
+                    firstOnly = true;
+
+                    // A301 Alta Directa
+                    if (workSheet.Name == "AD")
+                    {
+                        //NO PROCESAMOS ESTA PESTAÑA HASTA FINALIZAR IMPLEMENTACION
+                        //FORZAMOS BREAK
+                        lista_log.Add("La pestaña AD no se procesará, está deshabilitada temporalmente");
+                        continue;
+
+                        f = 2; // Porque la primera fila es la cabecera
+                        for (int i = 1; i < 1000000; i++)
+                        {
+                            registro_valido = true;
+                            f++;
+                            if(workSheet.Cells[f, 3].Value == null)                            
+                                break;
+
+                            ad_total++;
+                            
+                            EndesaEntity.extrasistemas.Global g = new EndesaEntity.extrasistemas.Global();
+                            g.fichero = file.Name;
+                            g.hoja = workSheet.Name;
+                            
+                            g.empresa_emisora = Convert.ToString(workSheet.Cells[f, 1].Value).Substring(0, 4);
+                            g.distribuidora = Convert.ToString(workSheet.Cells[f, 2].Value);
+                            g.cups22 = Convert.ToString(workSheet.Cells[f, 3].Value);
+                            g.cnae = Convert.ToString(workSheet.Cells[f, 4].Value);
+                            g.ind_activacion = Convert.ToString(workSheet.Cells[f, 5].Value).Substring(0, 1);
+
+                            if(g.ind_activacion == "F")
+                            {
+                                // Nos aseguramos que el campo contiene una fecha
+                                fecha = Convert.ToString(workSheet.Cells[f, 6].Value);
+                                if (fecha.Length != 10)
+                                {
+                                    registro_valido = false;
+                                    lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                        " El campo fecha_activación no tiene un campo fecha válido.");
+                                }                                    
+                                else
+                                    g.fecha_activacion = Convert.ToDateTime(workSheet.Cells[f, 6].Value);
+                            }
+                                
+
+                            g.tipo_contrato_atr = Convert.ToString(workSheet.Cells[f, 7].Value);
+                            g.fecha_finalizacion = Convert.ToDateTime(workSheet.Cells[f, 8].Value);
+                            g.tipo_autoconsumo = Convert.ToString(workSheet.Cells[f, 9].Value);
+                            g.tarifa = Convert.ToString(workSheet.Cells[f, 10].Value).Substring(0,3);
+
+                            for (int pot = 0; pot < 6; pot++)
+                            {
+                                if(Convert.ToString(workSheet.Cells[f, 11 + pot].Value) != "")
+                                    g.potencias[pot] = Convert.ToInt32(workSheet.Cells[f, 11 + pot].Value);
+                            }
+                                                        
+                            g.tipo_identificador = Convert.ToString(workSheet.Cells[f, 17].Value);
+                            g.n_identificador = Convert.ToString(workSheet.Cells[f, 18].Value);
+                            g.tipo_persona = Convert.ToString(workSheet.Cells[f, 19].Value).Substring(0, 1);
+
+                            if (g.tipo_persona == "J")
+                                g.razon_social = Convert.ToString(workSheet.Cells[f, 20].Value);
+                            else
+                            {
+                                g.nombre_de_pila = Convert.ToString(workSheet.Cells[f, 21].Value);
+                                g.primer_apellido = Convert.ToString(workSheet.Cells[f, 22].Value);
+                            }
+                                                        
+                            g.telefono = Convert.ToString(workSheet.Cells[f, 23].Value);
+                            g.persona_contacto = Convert.ToString(workSheet.Cells[f, 24].Value);
+                            g.indicador_tipo_direccion = Convert.ToString(workSheet.Cells[f, 25].Value).Substring(0,1);
+
+
+                            // DIRECCION 
+                            g.pais = Convert.ToString(workSheet.Cells[f, 26].Value);
+                            g.provincia = Convert.ToString(workSheet.Cells[f, 27].Value).Substring(0,2);
+                            g.municipio = Convert.ToString(workSheet.Cells[f, 28].Value);
+                            g.codigo_postal = Convert.ToString(workSheet.Cells[f, 29].Value).PadLeft(5, '0');
+                            g.tipo_via = Convert.ToString(workSheet.Cells[f, 30].Value).Substring(0,2);
+                            g.nombre_via = Convert.ToString(workSheet.Cells[f, 31].Value);
+                            g.numero = Convert.ToString(workSheet.Cells[f, 32].Value);
+                            g.entorno = Convert.ToString(workSheet.Cells[f, 33].Value).Trim();
+                            g.tipo_cliente = Convert.ToString(workSheet.Cells[f, 34].Value).Trim();
+
+
+                            c = 34;
+
+                            // TipoDocAportado DireccionUrl
+
+                            for (int j = 1;  j <= 10; j++)
+                            {
+                                c++;
+                                Documentacion doc = new Documentacion();
+                                if (Convert.ToString(workSheet.Cells[f, c].Value) != "" && Convert.ToString(workSheet.Cells[f, c + 1].Value) != "")
+                                {                                    
+                                    doc.tipo_doc_aportado = Convert.ToString(workSheet.Cells[f, c].Value);                                 
+                                    doc.tipo_doc_aportado = doc.tipo_doc_aportado.Substring(0, doc.tipo_doc_aportado.IndexOf(' ')).PadLeft(2, '0');
+                                    doc.direccion_url = Convert.ToString(workSheet.Cells[f, c + 1].Value);
+                                    g.lista_documentacion.Add(doc); 
+                                }
+                            }
+
+                            
+
+
+
+                            if (registro_valido)
+                            {
+                                lista_datos_excel_extrasistemas.Add(g);
+                                if (dic_total_registros.TryGetValue(g.hoja, out o))
+                                    o.registros = o.registros + 1;
+                            }
+                            
+
+                            
+                        }
+                    }
+                    // C101 Alta Cambio Comercializadora Sin Cambios
+                    else if (workSheet.Name == "ACC")
+                    {
+
+                        f = 1; // Porque la primera fila es la cabecera
+                        for (int i = 1; i < 1000000; i++)
+                        {
+                            registro_valido = true;
+                            f++;
+                            if (workSheet.Cells[f, 3].Value == null)
+                                break;
+
+                            acc_total++;
+
+                            EndesaEntity.extrasistemas.Global g = new EndesaEntity.extrasistemas.Global();
+                            g.hoja = workSheet.Name;
+                            //CodigoREEEmpresaEmisora - Obligatorio X(4) - STRING NUMERICO
+                            if (workSheet.Cells[f, 1].Value != null && Convert.ToString(workSheet.Cells[f, 1].Value).Length>=4)
+                            {
+                                if(int.TryParse(Convert.ToString(workSheet.Cells[f, 1].Value).Substring(0, 4), out _))
+                                    g.empresa_emisora = Convert.ToString(workSheet.Cells[f, 1].Value).Substring(0, 4);
+                                else
+                                {
+                                    lista_log.Add("Hoja: " + g.hoja + " Fila: " + i + " --> " + " Empresa_emisora: el campo código empresa emisora no tiene un formato válido.");
+                                    lista_log.Add(System.Environment.NewLine);
+                                    registro_valido = false;
+                                }
+                            }
+                            else
+                            {
+                                lista_log.Add("Hoja: " + g.hoja + " Fila: " + i + " --> " + " Empresa_emisora: el campo código empresa emisora es nulo o no tiene una longitud válida X(4).");
+                                lista_log.Add(System.Environment.NewLine);
+                                registro_valido = false;
+                            }
+                            //CodigoREEEmpresaDestino - Obligatorio X(4) - STRING NUMERICO
+                            //g.distribuidora = Convert.ToString(workSheet.Cells[f, 2].Value);
+                            if (workSheet.Cells[f, 2].Value != null && Convert.ToString(workSheet.Cells[f, 2].Value).Length >= 4)
+                            {
+                                if (int.TryParse(Convert.ToString(workSheet.Cells[f, 2].Value).Substring(0, 4), out _))
+                                    g.distribuidora = Convert.ToString(workSheet.Cells[f, 2].Value).Substring(0, 4);
+                                else
+                                {
+                                    lista_log.Add("Hoja: " + g.hoja + " Fila: " + i + " --> " + " Distribuidora: el campo código empresa destino (distribuidora) no tiene un formato válido.");
+                                    lista_log.Add(System.Environment.NewLine);
+                                    registro_valido = false;
+                                }
+                            }
+                            else
+                            {
+                                lista_log.Add("Hoja: " + g.hoja + " Fila: " + i + " --> " + " Distribuidora: el campo código empresa destino (distribuidora) es nulo o no tiene una longitud válida X(4).");
+                                lista_log.Add(System.Environment.NewLine);
+                                registro_valido = false;
+                            }
+
+                            //CUPS - Obligatorio X(22)
+                            //g.cups22 = Convert.ToString(workSheet.Cells[f, 3].Value);
+                            if (workSheet.Cells[f, 3].Value != null && Convert.ToString(workSheet.Cells[f, 3].Value).Length >= 22)
+                            {
+                                g.cups22 = Convert.ToString(workSheet.Cells[f, 3].Value).Substring(0, 22);
+                            }
+                            else
+                            {
+                                lista_log.Add("Hoja: " + g.hoja + " Fila: " + i + " --> " + " CUPS: el campo CUPS es nulo o no tiene una longitud válida X(22).");
+                                lista_log.Add(System.Environment.NewLine);
+                                registro_valido = false;
+                            }
+
+                            //IndActivacion - Obligatorio X(1) [A,L,F]
+                            // g.ind_activacion = Convert.ToString(workSheet.Cells[f, 4].Value).Substring(0, 1);
+                            if (workSheet.Cells[f, 4].Value != null && Convert.ToString(workSheet.Cells[f, 4].Value).Length >= 1)
+                            {
+                                if (cnmc.dic_indicativo_activacion.ContainsValue(Convert.ToString(workSheet.Cells[f, 4].Value).Substring(0, 1).ToUpper()))
+                                {
+                                    g.ind_activacion = Convert.ToString(workSheet.Cells[f, 4].Value).Substring(0, 1);
+                                }
+                                else
+                                {
+                                    lista_log.Add("Hoja: " + g.hoja + " Fila: " + i + " --> " + " IndActivacion: el campo IndActivacion no contiene un valor válido.");
+                                    lista_log.Add(System.Environment.NewLine);
+                                    registro_valido = false;
+                                }
+                            }
+                            else
+                            {
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " Fila: " + i + " IndActivacion: el campo IndActivacion es nulo o no tiene una longitud válida X(1).");
+                                lista_log.Add(System.Environment.NewLine);
+                                registro_valido = false;
+                            }
+
+
+                            //FechaPrevistaAccion - Condicionada a valor IndActivacion == F - Fecha(AAAA-MM-DD)
+                            if (g.ind_activacion == "F")
+                            {
+                                
+                                // Nos aseguramos que el campo contiene una fecha válida
+                                fecha = Convert.ToString(workSheet.Cells[f, 5].Value);
+                                
+                                if (DateTime.TryParse(fecha, out _))
+                                {
+                                    g.fecha_activacion = Convert.ToDateTime(fecha);
+                                    
+                                }
+                                else
+                                {
+                                    lista_log.Add("Hoja: " + g.hoja + " --> " + " Fila: " + i + " FechaPrevistaAccion: el campo fecha_activación no tiene un campo fecha válido AAAA-MM-DD.");
+                                    lista_log.Add(System.Environment.NewLine);
+                                    registro_valido = false;
+                                }
+                                    
+                            }
+
+
+                            //ContratacionIncondicionalPS - Obligatorio X(1) [S,N]
+                            //g.contratacion_incondicional_ps = Convert.ToString(workSheet.Cells[f, 6].Value).Substring(0, 1);
+                            if (workSheet.Cells[f, 6].Value != null && Convert.ToString(workSheet.Cells[f, 6].Value).Length >= 1)
+                            {
+                                if (cnmc.dic_indicativo_sino.ContainsValue(Convert.ToString(workSheet.Cells[f, 6].Value).Substring(0, 1).ToUpper()))
+                                {
+                                    g.contratacion_incondicional_ps = Convert.ToString(workSheet.Cells[f, 6].Value).Substring(0, 1).ToUpper();
+                                }
+                                else
+                                {
+                                    lista_log.Add("Hoja: " + g.hoja + " Fila: " + i + " --> " + " ContratacionIncondicionalPS: el campo ContratacionIncondicionalPS no contiene un valor válido.");
+                                    lista_log.Add(System.Environment.NewLine);
+                                    registro_valido = false;
+                                }
+                            }
+                            else
+                            {
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " Fila: " + i + " ContratacionIncondicionalPS: el campo ContratacionIncondicionalPS es nulo o no tiene una longitud válida X(1).");
+                                lista_log.Add(System.Environment.NewLine);
+                                registro_valido = false;
+                            }
+
+                            //ContratacionIncondicionalBS - Obligatorio X(1) [S,N]
+                            //Siempre a 'N'
+                            g.contratacion_incondicional_bs = "N";
+
+
+                            //TipoIdentificador - Obligatorio X(2) [Tabla 6]
+                            //g.tipo_identificador = Convert.ToString(workSheet.Cells[f, 8].Value);
+                            if (workSheet.Cells[f, 8].Value != null && Convert.ToString(workSheet.Cells[f, 8].Value).Length >= 2)
+                            {
+                                // [24/01/2025 GUS]
+                                // if (cnmc.dic_identificador.ContainsValue(Convert.ToString(workSheet.Cells[f, 8].Value).Substring(0, 2).ToUpper()))
+                                if (cnmc.dic_identificador.ContainsKey(Convert.ToString(workSheet.Cells[f, 8].Value).ToUpper()))
+                                {
+                                    // [24/01/2025 GUS]
+                                    //g.tipo_identificador = Convert.ToString(workSheet.Cells[f, 8].Value).Substring(0, 2).ToUpper();
+                                    g.tipo_identificador = Convert.ToString(workSheet.Cells[f, 8].Value).ToUpper();
+                                }
+                                else
+                                {
+                                    lista_log.Add("Hoja: " + g.hoja + " Fila: " + i + " --> " + " TipoIdentificador: el campo Tipo_indentificador no contiene un valor válido.");
+                                    lista_log.Add(System.Environment.NewLine);
+                                    registro_valido = false;
+                                }
+                            }
+                            else
+                            {
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " Fila: " + i + " TipoIdentificador: el campo Tipo_indentificador es nulo o no tiene una longitud válida X(2).");
+                                lista_log.Add(System.Environment.NewLine);
+                                registro_valido = false;
+                            }
+
+                            //Identificador - Obligatorio X(14) Longitud según TipoIdentificador, como máximo 14
+                            g.n_identificador = Convert.ToString(workSheet.Cells[f, 9].Value);
+
+
+                            
+                            //TipoPersona - NO Obligatorio X(1) [F, J]
+                            g.tipo_persona = Convert.ToString(workSheet.Cells[f, 10].Value).Substring(0, 1);
+
+                            if (g.tipo_persona == "J")
+                                g.razon_social = Convert.ToString(workSheet.Cells[f, 11].Value);
+                            else
+                            {
+                                g.nombre_de_pila = Convert.ToString(workSheet.Cells[f, 12].Value);
+                                g.primer_apellido = Convert.ToString(workSheet.Cells[f, 13].Value);
+                            }
+                                                        
+                            g.telefono = Convert.ToString(workSheet.Cells[f, 14].Value);
+                            g.entorno = Convert.ToString(workSheet.Cells[f, 15].Value);
+                            g.tipo_cliente = Convert.ToString(workSheet.Cells[f, 16].Value);
+                            
+                            
+
+                            if (Convert.ToString(workSheet.Cells[f, 17].Value) != "")
+                                g.observaciones = Convert.ToString(workSheet.Cells[f, 17].Value);
+
+                            if (registro_valido)
+                            {
+                                lista_datos_excel_extrasistemas.Add(g);
+                                if (dic_total_registros.TryGetValue(g.hoja, out o))
+                                    o.registros = o.registros + 1;
+                            }
+                        }
+                    }
+                    // C201 Alta Cambio Comercializadora Con Cambios
+                    else if (workSheet.Name == "ACC + CAMBIOS")
+                    {
+                        //NO PROCESAMOS ESTA PESTAÑA HASTA FINALIZAR IMPLEMENTACION
+                        //FORZAMOS BREAK
+                        lista_log.Add("La pestaña ACC + CAMBIOS no se procesará, está deshabilitada temporalmente");
+                        continue;
+
+                        f = 2; // Porque la primera fila es la cabecera
+                        for (int i = 1; i < 1000000; i++)
+                        {
+
+                            registro_valido = true;
+                            f++;
+                            if (workSheet.Cells[f, 3].Value == null)
+                                break;
+
+                            acc_cambios_total++;
+
+                            EndesaEntity.extrasistemas.Global g = new EndesaEntity.extrasistemas.Global();
+                            g.hoja = workSheet.Name;
+                            g.empresa_emisora = Convert.ToString(workSheet.Cells[f, 1].Value).Substring(0, 4);
+                            g.distribuidora = Convert.ToString(workSheet.Cells[f, 2].Value);
+                            g.cups22 = Convert.ToString(workSheet.Cells[f, 3].Value);
+                            g.tipo_modificacion = Convert.ToString(workSheet.Cells[f, 4].Value);
+
+                            if(Convert.ToString(workSheet.Cells[f, 5].Value) != "")
+                                g.tipo_solicitud_administrativa = Convert.ToString(workSheet.Cells[f, 5].Value).Substring(0, 1);
+
+                            g.cnae = Convert.ToString(workSheet.Cells[f, 6].Value);
+                            g.ind_activacion = Convert.ToString(workSheet.Cells[f, 7].Value).Substring(0,1);
+
+                            if (g.ind_activacion == "F")
+                            {
+                                // Nos aseguramos que el campo contiene una fecha
+                                fecha = Convert.ToString(workSheet.Cells[f, 8].Value);
+                                if (fecha.Length != 10)
+                                {
+                                    registro_valido = false;
+                                    lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                        " El campo fecha_activación no tiene un campo fecha válido.");
+                                    lista_log.Add(System.Environment.NewLine);
+                                }
+                                else
+                                    g.fecha_activacion = Convert.ToDateTime(workSheet.Cells[f, 8].Value);
+                            }
+                            
+                            g.contratacion_incondicional_ps = Convert.ToString(workSheet.Cells[f, 9].Value).Substring(0,1);
+                            g.contratacion_incondicional_bs = "N";
+
+                            
+                            g.tipo_contrato = Convert.ToString(workSheet.Cells[f, 11].Value);                            
+                            
+                            // Nos aseguramos que el campo contiene una fecha
+                            fecha = Convert.ToString(workSheet.Cells[f, 12].Value);
+                            if (fecha.Length == 10)
+                            {
+                                g.fecha_finalizacion = Convert.ToDateTime(workSheet.Cells[f, 12].Value);
+                            }                           
+                                
+                            g.tipo_autoconsumo = Convert.ToString(workSheet.Cells[f, 13].Value);
+                            g.solicitud_modificacion_tension = Convert.ToString(workSheet.Cells[f, 14].Value).Substring(0,1);
+
+                            if(g.solicitud_modificacion_tension == "S")
+                                g.tension_solicitada = Convert.ToString(workSheet.Cells[f, 15].Value);
+
+
+                            if(Convert.ToString(workSheet.Cells[f, 16].Value) == "")
+                            {
+                                registro_valido = false;
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                    " --> El campo tarifa_actual no tiene un valor válido.");
+                                lista_log.Add(System.Environment.NewLine);
+
+                            }
+                            else
+                                g.tarifa = Convert.ToString(workSheet.Cells[f, 16].Value);
+
+
+                            for (int pot = 0; pot < 6; pot++)
+                            {
+                                if (Convert.ToString(workSheet.Cells[f, 16 + pot].Value) != "")
+                                {                                    
+                                    g.potencias[pot] = Convert.ToInt32(workSheet.Cells[f, 16 + pot].Value);
+                                    if (g.potencias[pot] < 1000)
+                                    {
+                                        registro_valido = false;
+                                        lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                            " --> El campo P" + (pot + 1) + " (w) no tiene un valor válido.");
+                                        lista_log.Add(System.Environment.NewLine);
+                                    }
+                                }
+                                    
+                            }
+
+
+                            if (Convert.ToString(workSheet.Cells[f, 23].Value) != "")
+                                g.modo_control_potencia = Convert.ToString(workSheet.Cells[f, 23].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 24].Value) != "")
+                                g.persona_contacto = Convert.ToString(workSheet.Cells[f, 24].Value);
+
+
+                            g.tlf_contacto = Convert.ToString(workSheet.Cells[f, 25].Value);
+                            g.tipo_identificador = Convert.ToString(workSheet.Cells[f, 26].Value);
+                            g.n_identificador = Convert.ToString(workSheet.Cells[f, 27].Value);
+                            g.tipo_persona = Convert.ToString(workSheet.Cells[f, 28].Value).Substring(0, 1);
+
+                            if (g.tipo_persona == "J")
+                                g.razon_social = Convert.ToString(workSheet.Cells[f, 29].Value);
+                            else
+                            {
+                                g.nombre_de_pila = Convert.ToString(workSheet.Cells[f, 30].Value);
+                                g.primer_apellido = Convert.ToString(workSheet.Cells[f, 31].Value);
+                            }
+
+                            g.telefono = g.tlf_contacto;
+
+                            if (Convert.ToString(workSheet.Cells[f, 32].Value) != "")
+                                g.indicador_tipo_direccion = Convert.ToString(workSheet.Cells[f, 32].Value).Substring(0,1);
+                            else
+                            {
+                                registro_valido = false;
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                    " --> El campo IndicadorTipoDireccion no tiene un valor válido.");
+                                lista_log.Add(System.Environment.NewLine);
+                            }
+
+                            // Direccion
+                            g.pais = Convert.ToString(workSheet.Cells[f, 33].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 34].Value) != "")
+                                g.provincia = Convert.ToString(workSheet.Cells[f, 34].Value).Substring(0,2);
+                            else
+                            {
+                                registro_valido = false;
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                " El campo Provincia no tiene un valor válido." );
+                                lista_log.Add(System.Environment.NewLine);
+                            }
+
+                            if (Convert.ToString(workSheet.Cells[f, 35].Value) != "")
+                            {
+                                g.municipio = Convert.ToString(workSheet.Cells[f, 35].Value);
+
+
+                                if (cnmc.GetCodigoMunicipio(g.provincia, g.municipio) == "")
+                                {
+                                    registro_valido = false;
+                                    lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                    " El campo Municipio no tiene un valor válido: " + g.municipio);
+                                    lista_log.Add(System.Environment.NewLine);
+                                }
+                            }
+
+                            if (Convert.ToString(workSheet.Cells[f, 36].Value) != "")
+                                g.codigo_postal = Convert.ToString(workSheet.Cells[f, 36].Value).PadLeft(5, '0'); 
+                            else
+                            {
+                                registro_valido = false;
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                " El campo Codigo postal no tiene un valor válido: ");
+                                lista_log.Add(System.Environment.NewLine);
+                            }
+
+                            g.tipo_via = Convert.ToString(workSheet.Cells[f, 37].Value).Substring(0,2);
+                            g.nombre_via = Convert.ToString(workSheet.Cells[f, 38].Value);
+                            g.numero = Convert.ToString(workSheet.Cells[f, 39].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 40].Value) != "")
+                                g.entorno = Convert.ToString(workSheet.Cells[f, 40].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 41].Value) != "")
+                                g.tipo_cliente = Convert.ToString(workSheet.Cells[f, 41].Value);
+
+                            g.observaciones = Convert.ToString(workSheet.Cells[f, 42].Value);
+
+
+
+
+                            
+
+                            c = 42;
+
+                            // TipoDocAportado DireccionUrl
+
+                            for (int j = 1; j <= 10; j++)
+                            {
+                                c++;
+                                Documentacion doc = new Documentacion();
+                                if (Convert.ToString(workSheet.Cells[f, c].Value) != "" && Convert.ToString(workSheet.Cells[f, c + 1].Value) != "")
+                                {
+                                    doc.tipo_doc_aportado = Convert.ToString(workSheet.Cells[f, c].Value);
+                                    doc.tipo_doc_aportado = doc.tipo_doc_aportado.Substring(0, doc.tipo_doc_aportado.IndexOf(' ')).PadLeft(2, '0');
+                                    doc.direccion_url = Convert.ToString(workSheet.Cells[f, c + 1].Value);
+                                    g.lista_documentacion.Add(doc);
+                                }
+                            }
+
+                            if (registro_valido)
+                            {
+                                lista_datos_excel_extrasistemas.Add(g);
+                                if (dic_total_registros.TryGetValue(g.hoja, out o))
+                                    o.registros = o.registros + 1;
+                            }
+                        }
+                    }
+                    // M101 
+                    else if (workSheet.Name == "MOD")
+                    {
+                        //NO PROCESAMOS ESTA PESTAÑA HASTA FINALIZAR IMPLEMENTACION
+                        //FORZAMOS BREAK
+                        lista_log.Add("La pestaña MOD no se procesará, está deshabilitada temporalmente");
+                        continue;
+
+                        f = 2; // Porque la primera fila es la cabecera
+                        for (int i = 1; i < 1000000; i++)
+                        {
+                            registro_valido = true;
+                            f++;
+                            if (workSheet.Cells[f, 3].Value == null)
+                                break;
+
+                            mod_total++;
+
+                            EndesaEntity.extrasistemas.Global g = new EndesaEntity.extrasistemas.Global();
+                            g.hoja = workSheet.Name;
+                            g.empresa_emisora = Convert.ToString(workSheet.Cells[f, 1].Value).Substring(0, 4);
+                            g.distribuidora = Convert.ToString(workSheet.Cells[f, 2].Value);
+                            g.cups22 = Convert.ToString(workSheet.Cells[f, 3].Value);
+                            g.tipo_modificacion = Convert.ToString(workSheet.Cells[f, 4].Value).Substring(0,1);
+
+                            if(g.tipo_modificacion == "A" || g.tipo_modificacion == "S")
+                                g.tipo_solicitud_administrativa = Convert.ToString(workSheet.Cells[f, 5].Value).Substring(0, 1);
+
+
+                            if (Convert.ToString(workSheet.Cells[f, 6].Value) != "")
+                                g.cnae = Convert.ToString(workSheet.Cells[f, 6].Value).Substring(0,4);
+
+                            g.ind_activacion = Convert.ToString(workSheet.Cells[f, 7].Value).Substring(0, 1);
+
+                            if (g.ind_activacion == "F")
+                                g.fecha_activacion = Convert.ToDateTime(workSheet.Cells[f, 8].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 9].Value) != "")
+                                g.tipo_contrato = Convert.ToString(workSheet.Cells[f, 9].Value).Substring(0, 2);
+
+                            if(g.tipo_contrato == "02" || g.tipo_contrato == "03" || g.tipo_contrato == "10")
+                                if (Convert.ToString(workSheet.Cells[f, 10].Value) != "")
+                                {
+                                    registro_valido = false;
+                                    lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                    " --> El campo fecha finalización no tiene un valor válido.");
+                                    lista_log.Add(System.Environment.NewLine);
+                                }
+                                else 
+                                    g.fecha_finalizacion = Convert.ToDateTime(workSheet.Cells[f, 10].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 11].Value) != "")
+                            {
+                                g.tipo_autoconsumo = Convert.ToString(workSheet.Cells[f, 11].Value);
+                            }
+                            else
+                            {
+                                registro_valido = false;
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                " --> El campo SOLICITUD MODIFICACION TENSION no tiene un valor válido.");
+                                lista_log.Add(System.Environment.NewLine);
+                            }
+                                
+
+
+                            g.solicitud_modificacion_tension = Convert.ToString(workSheet.Cells[f, 12].Value).Substring(0,1);
+
+                            if(g.solicitud_modificacion_tension == "S")
+                                g.tension_solicitada = Convert.ToString(workSheet.Cells[f, 13].Value).Substring(0, 2);
+
+                            if (Convert.ToString(workSheet.Cells[f, 14].Value) != "")
+                                g.tarifa = Convert.ToString(workSheet.Cells[f, 14].Value).Substring(0,3);
+
+                            for (int pot = 0; pot < 6; pot++)
+                            {
+                                if (Convert.ToString(workSheet.Cells[f, 15 + pot].Value) != "")
+                                    g.potencias[pot] = Convert.ToInt32(workSheet.Cells[f, 15 + pot].Value);
+                            }
+
+
+                            if (Convert.ToString(workSheet.Cells[f, 21].Value) != "")
+                                g.modo_control_potencia = Convert.ToString(workSheet.Cells[f, 21].Value);
+                            
+
+                            if (Convert.ToString(workSheet.Cells[f, 22].Value) != "")
+                                g.tipo_identificador = Convert.ToString(workSheet.Cells[f, 22].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 23].Value) != "")
+                                g.n_identificador = Convert.ToString(workSheet.Cells[f, 23].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 24].Value) != "")
+                                g.tipo_persona = Convert.ToString(workSheet.Cells[f, 24].Value).Substring(0, 1);
+
+                            if(g.tipo_persona == "J")
+                                g.razon_social = Convert.ToString(workSheet.Cells[f, 25].Value);
+                            else
+                            {
+                                g.nombre_de_pila = Convert.ToString(workSheet.Cells[f, 26].Value);
+                                g.primer_apellido = Convert.ToString(workSheet.Cells[f, 27].Value);
+                            }
+
+                            if (Convert.ToString(workSheet.Cells[f, 28].Value) != "")
+                            {
+                                g.telefono = Convert.ToString(workSheet.Cells[f, 28].Value);
+                                g.tlf_contracto = g.telefono;
+                            }
+                            
+                            else
+                            {
+                                registro_valido = false;
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                    " El campo teléfono no tiene un valor válido.");
+                                lista_log.Add(System.Environment.NewLine);
+                            }
+
+                            if (Convert.ToString(workSheet.Cells[f, 29].Value) != "")
+                            {
+                                g.persona_contacto = Convert.ToString(workSheet.Cells[f, 29].Value);
+                                g.contacto = g.persona_contacto;
+                            }
+                                
+
+                            if (Convert.ToString(workSheet.Cells[f, 30].Value) != "")
+                                g.indicador_tipo_direccion = Convert.ToString(workSheet.Cells[f, 30].Value).Substring(0, 1);
+                            else
+                            {
+                                registro_valido = false;
+                                lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                    " El campo IndicadorTipoDireccion no tiene un valor válido.");
+                                lista_log.Add(System.Environment.NewLine);
+                            }
+
+
+                            if (Convert.ToString(workSheet.Cells[f, 31].Value) != "")
+                                g.pais = Convert.ToString(workSheet.Cells[f, 31].Value); 
+
+                            // Direccion
+
+                            g.provincia = Convert.ToString(workSheet.Cells[f, 32].Value).Substring(0,2);
+
+                            if (Convert.ToString(workSheet.Cells[f, 33].Value) != "")
+                            {
+                                g.municipio = Convert.ToString(workSheet.Cells[f, 33].Value);
+                                if(cnmc.GetCodigoMunicipio(g.provincia, g.municipio) == "")
+                                {
+                                    registro_valido = false;
+                                    lista_log.Add("Hoja: " + g.hoja + " --> " + " CUPS: " + g.cups22 +
+                                    " El campo Municipio no tiene un valor válido: " + g.municipio);
+                                    lista_log.Add(System.Environment.NewLine);
+                                }
+                            }
+                                
+
+                            if (Convert.ToString(workSheet.Cells[f, 34].Value) != "")
+                                g.codigo_postal = Convert.ToString(workSheet.Cells[f, 34].Value).PadLeft(5,'0');
+
+                            if (Convert.ToString(workSheet.Cells[f, 35].Value) != "")
+                                g.tipo_via = Convert.ToString(workSheet.Cells[f, 35].Value).Substring(0,2);
+
+                            if (Convert.ToString(workSheet.Cells[f, 36].Value) != "")
+                                g.nombre_via = Convert.ToString(workSheet.Cells[f, 36].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 37].Value) != "")
+                                g.numero = Convert.ToString(workSheet.Cells[f, 37].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 38].Value) != "")
+                                g.entorno = Convert.ToString(workSheet.Cells[f, 38].Value);
+
+                            if (Convert.ToString(workSheet.Cells[f, 39].Value) != "")
+                                g.tipo_cliente = Convert.ToString(workSheet.Cells[f, 39].Value);
+
+                            c = 39;
+
+                            // TipoDocAportado DireccionUrl
+
+                            for (int j = 1; j <= 10; j++)
+                            {
+                                c++;
+                                Documentacion doc = new Documentacion();
+                                if (Convert.ToString(workSheet.Cells[f, c].Value) != "" && Convert.ToString(workSheet.Cells[f, c + 1].Value) != "")
+                                {
+                                    doc.tipo_doc_aportado = Convert.ToString(workSheet.Cells[f, c].Value);
+                                    doc.tipo_doc_aportado = doc.tipo_doc_aportado.Substring(0, doc.tipo_doc_aportado.IndexOf(' ')).PadLeft(2, '0');
+                                    doc.direccion_url = Convert.ToString(workSheet.Cells[f, c + 1].Value);
+                                    g.lista_documentacion.Add(doc);
+                                }
+                            }
+                            
+                            if (registro_valido)
+                            {
+                                lista_datos_excel_extrasistemas.Add(g);
+                                if (dic_total_registros.TryGetValue(g.hoja, out o))
+                                    o.registros = o.registros + 1;
+                            }
+                        }
+                    }
+                    // B101
+                    else if (workSheet.Name == "BAJA")
+                    {
+                        //NO PROCESAMOS ESTA PESTAÑA HASTA FINALIZAR IMPLEMENTACION
+                        //FORZAMOS BREAK
+                        lista_log.Add("La pestaña BAJA no se procesará, está deshabilitada temporalmente");
+                        continue;
+
+                        f = 1; // Porque la primera fila es la cabecera
+                        for (int i = 1; i < 1000000; i++)
+                        {
+                            registro_valido = true;
+                            f++;
+                            if (workSheet.Cells[f, 3].Value == null)
+                                break;
+
+                            baja_total++;
+
+                            EndesaEntity.extrasistemas.Global g = new EndesaEntity.extrasistemas.Global();
+                            g.hoja = workSheet.Name;
+                            g.empresa_emisora = Convert.ToString(workSheet.Cells[f, 1].Value).Substring(0, 4);
+                            g.distribuidora = Convert.ToString(workSheet.Cells[f, 2].Value);
+                            g.cups22 = Convert.ToString(workSheet.Cells[f, 3].Value);
+
+                            g.ind_activacion = Convert.ToString(workSheet.Cells[f, 4].Value).Substring(0, 1);
+                            if (g.ind_activacion == "F")
+                                g.fecha_activacion = Convert.ToDateTime(workSheet.Cells[f, 5].Value);
+
+
+                            g.motivo_baja = Convert.ToString(workSheet.Cells[f, 6].Value).Substring(0, 2);
+                            g.tipo_identificador = Convert.ToString(workSheet.Cells[f, 7].Value);
+                            g.n_identificador = Convert.ToString(workSheet.Cells[f, 8].Value);
+                            g.tipo_persona = Convert.ToString(workSheet.Cells[f, 9].Value).Substring(0, 1);
+
+                            if (g.tipo_persona == "F")
+                            {
+                                g.nombre_de_pila = Convert.ToString(workSheet.Cells[f, 11].Value);
+                                g.primer_apellido = Convert.ToString(workSheet.Cells[f, 12].Value);
+                            }
+                            else
+                                g.razon_social = Convert.ToString(workSheet.Cells[f, 10].Value);
+
+                            
+                            g.telefono = Convert.ToString(workSheet.Cells[f, 13].Value);
+                            g.persona_contacto = Convert.ToString(workSheet.Cells[f, 14].Value);
+                            g.entorno = Convert.ToString(workSheet.Cells[f, 15].Value);
+                            g.tipo_cliente = Convert.ToString(workSheet.Cells[f, 16].Value);                            
+                            g.observaciones = Convert.ToString(workSheet.Cells[f, 17].Value);
+
+                            if (registro_valido)
+                            {
+                                lista_datos_excel_extrasistemas.Add(g);
+                                if (dic_total_registros.TryGetValue(g.hoja, out o))
+                                    o.registros = o.registros + 1;
+                            }
+
+                        }
+                    }
+                }
+                fs = null;
+                excelPackage = null;
+
+                if(dic_total_registros.Count > 0)
+                {
+                    lista_log.Add(System.Environment.NewLine);
+                    lista_log.Add("Fin de la importación. Puede generar los XML");
+                }
+                else
+                {
+                    lista_log.Add(System.Environment.NewLine);
+                    lista_log.Add("Fin de la importación. No se cargado ningún registro.");
+                }
+
+
+                //GuardaDatos_AD(lista_datos_excel_extrasistemas);
+                // GuardaDatos_ACC(lista);
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,
+                      "Extrasistemas.CargaExcel",
+                      MessageBoxButtons.OK,
+                      MessageBoxIcon.Error);
+                
+            }
+        }
+
+        public void Crea_XML()
+        {
+            if (lista_datos_excel_extrasistemas.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("¿Desea generar los archivos XML de los registros validados?",
+               "Creador Pasos XML",
+            MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    GeneraXML(lista_datos_excel_extrasistemas);
+
+                    MessageBox.Show("Proceso completado.",
+                      "Creador Pasos XML",
+                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+            }
+                
+        }
+
+        private void GuardaDatos_AD(List<EndesaEntity.extrasistemas.Global> lista_excel)
+        {
+            StringBuilder sb = new StringBuilder();
+            bool firstOnly = true;
+            MySQLDB db;
+            MySqlCommand command;
+            int x = 0;
+
+            try
+            {
+
+                List<EndesaEntity.extrasistemas.Global> lista = lista_excel.Where(z => z.hoja == "AD").ToList();
+
+                foreach (EndesaEntity.extrasistemas.Global p in lista)
+                {
+
+                    x++;
+                    if (firstOnly)
+                    {
+                        sb.Append("REPLACE INTO cont.extrasistemas_excel_ad");
+                        sb.Append(" (hoja, empresa_emisora, distribuidora, cups22,");
+                        sb.Append(" cnae, ind_activacion, fecha_activacion,");
+                        sb.Append(" tipo_contrato_atr, fecha_finalizacion, tipo_autoconsumo, tarifa,");
+                        sb.Append(" p1, p2, p3, p4, p5, p6,");
+                        sb.Append(" tipo_identificador, n_identificador, tipo_persona, razon_social, nombre_pila,");
+                        sb.Append(" primer_apellido, telefono, persona_contacto, indicador_tipo_direccion, pais, provincia,");
+                        sb.Append(" municipio, codigo_postal, tipo_via, nombre_via, numero, entorno, tipo_cliente,");
+                        sb.Append(" tipo_doc_aportado, direccion_url, observaciones, xml_generado, fichero,");
+                        sb.Append(" created_by, created_date) values ");
+
+                        firstOnly = false;
+                    }
+
+                    sb.Append("('").Append(p.hoja).Append("',");
+                    sb.Append("'").Append(p.empresa_emisora).Append("',");
+                    sb.Append("'").Append(p.distribuidora).Append("',");
+                    sb.Append("'").Append(p.cups22).Append("',");                    
+
+                    if (p.cnae != null)
+                        sb.Append("'").Append(p.cnae).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.ind_activacion != null)
+                        sb.Append("'").Append(p.ind_activacion).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.fecha_activacion > DateTime.MinValue)
+                        sb.Append("'").Append(p.fecha_activacion.ToString("yyyy-MM-dd")).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.tipo_contrato_atr != null)
+                        sb.Append("'").Append(p.tipo_contrato_atr).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.fecha_finalizacion > DateTime.MinValue)
+                        sb.Append("'").Append(p.fecha_finalizacion.ToString("yyyy-MM-dd")).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.tipo_autoconsumo != null)
+                        sb.Append("'").Append(p.tipo_autoconsumo).Append("',");
+                    else
+                        sb.Append("null,");                   
+
+                    if (p.tarifa != null)
+                        sb.Append("'").Append(p.tarifa).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    for(int pot = 0; pot < 6; pot++)
+                    {
+                        if (p.potencias[pot] > 0)
+                            sb.Append(p.potencias[pot]).Append(",");
+                        else
+                            sb.Append(" null,");
+                    }
+
+                    if (p.tipo_identificador != null)
+                        sb.Append("'").Append(p.tipo_identificador).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.n_identificador != null)
+                        sb.Append("'").Append(p.n_identificador).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.tipo_persona != null)
+                        sb.Append("'").Append(p.tipo_persona).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.razon_social != null)
+                        sb.Append("'").Append(p.razon_social).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.nombre_de_pila != null)
+                        sb.Append("'").Append(p.nombre_de_pila).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.primer_apellido != null)
+                        sb.Append("'").Append(p.primer_apellido).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.telefono != null)
+                        sb.Append("'").Append(p.telefono).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.persona_contacto != null)
+                        sb.Append("'").Append(p.persona_contacto).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.indicador_tipo_direccion != null)
+                        sb.Append("'").Append(p.indicador_tipo_direccion).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.pais != null)
+                        sb.Append("'").Append(p.pais).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.provincia != null)
+                        sb.Append("'").Append(p.provincia).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.municipio != null)
+                        sb.Append("'").Append(p.municipio).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.codigo_postal != null)
+                        sb.Append("'").Append(p.codigo_postal).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.tipo_via != null)
+                        sb.Append("'").Append(p.tipo_via).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.nombre_via != null)
+                        sb.Append("'").Append(p.nombre_via).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.numero != null)
+                        sb.Append("'").Append(p.numero).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.entorno != null)
+                        sb.Append("'").Append(p.entorno).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.tipo_cliente != null)
+                        sb.Append("'").Append(p.tipo_cliente).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    //if (p.tipo_doc_aportado != null)
+                    //    sb.Append("'").Append(p.tipo_doc_aportado).Append("',");
+                    //else
+                    //    sb.Append(" null,");
+
+                    if (p.direccion_url != null)
+                        sb.Append("'").Append(p.direccion_url).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    if (p.observaciones != null)
+                        sb.Append("'").Append(p.observaciones).Append("',");
+                    else
+                        sb.Append(" null,");
+
+                    // xml_generado
+                    sb.Append("'N',");
+                    sb.Append("'").Append(p.fichero).Append("',");
+                    sb.Append("'").Append(System.Environment.UserName.ToUpper()).Append("',");
+                    sb.Append("'").Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Append("'),");
+
+                    if (x == 100)
+                    {                        
+                        firstOnly = true;
+                        db = new MySQLDB(MySQLDB.Esquemas.CON);
+                        command = new MySqlCommand(sb.ToString().Substring(0, sb.Length - 1), db.con);
+                        command.ExecuteNonQuery();
+                        db.CloseConnection();
+                        sb = null;
+                        sb = new StringBuilder();
+                        x = 0;
+                    }
+
+                }
+
+                if (x > 0)
+                {
+                    firstOnly = true;
+                    db = new MySQLDB(MySQLDB.Esquemas.CON);
+                    command = new MySqlCommand(sb.ToString().Substring(0, sb.Length - 1), db.con);
+                    command.ExecuteNonQuery();
+                    db.CloseConnection();
+                    sb = null;
+                    sb = new StringBuilder();
+                    x = 0;
+                }
+
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,
+                       "GuardaDatos_AD",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Error);
+            }
+        }
+        private void GuardaDatos_ACC(List<EndesaEntity.extrasistemas.Global> lista_excel)
+        {
+            StringBuilder sb = new StringBuilder();
+            bool firstOnly = true;
+            MySQLDB db;
+            MySqlCommand command;
+            int x = 0;
+
+            try
+            {
+
+                List<EndesaEntity.extrasistemas.Global> lista = lista_excel.Where(z => z.hoja == "ACC").ToList();
+
+                foreach (EndesaEntity.extrasistemas.Global p in lista)
+                {
+
+                    x++;
+                    if (firstOnly)
+                    {
+                        sb.Append("REPLACE INTO cont.extrasistemas_excel_ad");
+                        sb.Append(" (hoja, empresa_emisora, distribuidora, cups22,");
+                        sb.Append(" ind_activacion, fecha_activacion,");
+                        sb.Append(" contrato_incondicional_ps, contratos_incondicional_bs,");                        
+                        sb.Append(" tipo_idenficador, n_identificador, tipo_persona, razon_social, nombre_pila,");
+                        sb.Append(" primer_apellido, telefono, entorno, tipo_cliente,");
+                        sb.Append(" xml_generado, fichero,");
+                        sb.Append(" created_by, created_date) values ");
+
+                        firstOnly = false;
+                    }
+
+                    sb.Append("('").Append(p.hoja).Append("',");
+                    sb.Append("'").Append(p.empresa_emisora).Append("',");
+                    sb.Append("'").Append(p.distribuidora).Append("',");
+                    sb.Append("'").Append(p.cups22).Append("',");                    
+
+                    if (p.ind_activacion != null)
+                        sb.Append("'").Append(p.ind_activacion).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.fecha_activacion > DateTime.MinValue)
+                        sb.Append("'").Append(p.fecha_activacion.ToString("yyyy-MM-dd")).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.contratacion_incondicional_ps != null)
+                        sb.Append("'").Append(p.contratacion_incondicional_ps).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.contratacion_incondicional_bs != null)
+                        sb.Append("'").Append(p.contratacion_incondicional_bs).Append("',");
+                    else
+                        sb.Append("null,");                    
+
+                    if (p.tipo_identificador != null)
+                        sb.Append("'").Append(p.tipo_identificador).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.n_identificador != null)
+                        sb.Append("'").Append(p.n_identificador).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.tipo_persona != null)
+                        sb.Append("'").Append(p.tipo_persona).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.razon_social != null)
+                        sb.Append("'").Append(p.razon_social).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.nombre_de_pila != null)
+                        sb.Append("'").Append(p.nombre_de_pila).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.primer_apellido != null)
+                        sb.Append("'").Append(p.primer_apellido).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.telefono != null)
+                        sb.Append("'").Append(p.telefono).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    
+
+                    if (p.entorno != null)
+                        sb.Append("'").Append(p.entorno).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.tipo_cliente != null)
+                        sb.Append("'").Append(p.tipo_cliente).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    if (p.observaciones != null)
+                        sb.Append("'").Append(p.observaciones).Append("',");
+                    else
+                        sb.Append("null,");
+
+                    // xml_generado
+                    sb.Append("'N',");
+                    sb.Append("'").Append(System.Environment.UserName.ToUpper()).Append("',");
+                    sb.Append("'").Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Append("'),");
+
+                    if (x == 100)
+                    {
+                        firstOnly = true;
+                        db = new MySQLDB(MySQLDB.Esquemas.CON);
+                        command = new MySqlCommand(sb.ToString().Substring(0, sb.Length - 1), db.con);
+                        command.ExecuteNonQuery();
+                        db.CloseConnection();
+                        sb = null;
+                        sb = new StringBuilder();
+                        x = 0;
+                    }
+
+                }
+
+                if (x > 0)
+                {
+                    firstOnly = true;
+                    db = new MySQLDB(MySQLDB.Esquemas.CON);
+                    command = new MySqlCommand(sb.ToString().Substring(0, sb.Length - 1), db.con);
+                    command.ExecuteNonQuery();
+                    db.CloseConnection();
+                    sb = null;
+                    sb = new StringBuilder();
+                    x = 0;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,
+                       "GuardaDatos_AD",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Error);
+            }
+        }
+
+        private void GeneraXML(List<EndesaEntity.extrasistemas.Global> lista)
+        {
+            XmlWriterSettings settings;
+            XmlWriter writer;
+            XmlSerializer serializer;
+            FileInfo file;
+            
+            string mensaje_error = "";
+
+            try
+            {
+
+                foreach(EndesaEntity.extrasistemas.Global p in lista)
+                {
+                    if (p.hoja == "AD")
+                    {
+
+                        file = new FileInfo(param.GetValue("ruta_salida_xml") + "A301"
+                            + "_" + p.cups22 + "_" + DateTime.Now.ToString("yyMMddHHmmss") + ".xml");
+
+                        EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 a301 =
+                            new EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301();
+                        #region Cabecera
+
+                        EndesaEntity.cnmc.V21_2019_12_17.Cabecera cabecera = new EndesaEntity.cnmc.V21_2019_12_17.Cabecera();
+
+                        cabecera.CodigoREEEmpresaEmisora = p.empresa_emisora;
+
+                        cabecera.CodigoREEEmpresaDestino = cnmc.Distribuidora(p.distribuidora);
+                        cabecera.CodigoDelProceso = "A3";
+                        cabecera.CodigoDePaso = "01";
+                        cabecera.CodigoDeSolicitud = DateTime.Now.ToString("yyMMddHHmmss");
+                        cabecera.SecuencialDeSolicitud = "00";
+                        cabecera.FechaSolicitud = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+                        cabecera.CUPS = p.cups22;
+
+                        a301.Cabecera = cabecera;
+                        #endregion
+
+                        #region DatosSolicitud
+
+                        a301.Alta.DatosSolicitud.cnae = p.cnae;
+                        a301.Alta.DatosSolicitud.IndActivacion = p.ind_activacion;
+
+                        if(p.ind_activacion == "F")
+                            a301.Alta.DatosSolicitud.fechaPrevistaAccion = p.fecha_activacion.ToString("yyyy-MM-dd");
+
+                        a301.Alta.DatosSolicitud.SolicitudTension = "N";
+                        
+                        #endregion
+
+                        #region Contrato
+                        {
+
+                            // a301.Alta.Contrato.FechaFinzalizacion = p.fecha_finalizacion.ToString("yyyy-MM-dd");
+                            a301.Alta.Contrato.TipoAutoconsumo = cnmc.GetTipo_Autoconsumo(p.tipo_autoconsumo);
+                            a301.Alta.Contrato.TipoContratoATR = p.tipo_contrato;
+                            {
+                                #region CondicionesContractuales
+                                a301.Alta.Contrato.CondicionesContractuales.TarifaATR = p.tarifa.Substring(0,3);
+                                PotenciasContratadas potenciasContratadas = new PotenciasContratadas();
+                                
+
+                                for (int i = 1; i <= 6; i++)
+                                {
+                                    if(p.potencias[i-1] != 0)
+                                    {
+                                        Potencia potencia = new Potencia();
+                                        potencia.periodo = Convert.ToString(i);
+                                        potencia.potencia = Convert.ToString(p.potencias[i-1]);
+                                        potenciasContratadas.Potencia.Add(potencia);
+                                    }
+                                        
+                                }
+                                a301.Alta.Contrato.CondicionesContractuales.PotenciasContratadas = potenciasContratadas;
+                                #endregion
+
+
+                                #region Contacto
+                                EndesaEntity.cnmc.V21_2019_12_17.Contacto contacto = new Contacto();
+                                contacto.PersonaDeContacto = p.persona_contacto;
+                                a301.Alta.Contrato.Contacto = contacto;
+
+                                //a301.Alta.Contrato.Contacto.Telefono.PrefijoPais = "0034";
+                                //a301.Alta.Contrato.Contacto.Telefono.Numero = p.telefono;
+
+                                #endregion
+
+                            }
+                        }
+                        #endregion
+
+                        #region Cliente
+                        {
+                            a301.Alta.Cliente.IdCliente.TipoIdentificador = cnmc.GetTipo_Identificador(p.tipo_identificador);
+                            a301.Alta.Cliente.IdCliente.Identificador = p.n_identificador;
+                            a301.Alta.Cliente.IdCliente.TipoPersona = p.tipo_persona.Substring(0,1);
+
+                            if (a301.Alta.Cliente.IdCliente.TipoPersona == "J")
+                                a301.Alta.Cliente.Nombre.RazonSocial = p.razon_social;
+                            else
+                            {
+                                a301.Alta.Cliente.Nombre.NombreDePila = p.nombre_de_pila;
+                                a301.Alta.Cliente.Nombre.PrimerApellido = p.primer_apellido;
+                            }
+
+                            a301.Alta.Cliente.Telefono.PrefijoPais = "0034";
+                            a301.Alta.Cliente.Telefono.Numero = p.telefono;
+
+
+                            a301.Alta.Cliente.IndicadorTipoDireccion = p.indicador_tipo_direccion.Substring(0, 1);
+                            a301.Alta.Cliente.Direccion.Pais = p.pais;
+                            a301.Alta.Cliente.Direccion.Provincia = p.provincia.Substring(0, 2);
+                            a301.Alta.Cliente.Direccion.Municipio =
+                                cnmc.GetCodigoMunicipio(a301.Alta.Cliente.Direccion.Provincia, p.municipio);
+                            a301.Alta.Cliente.Direccion.CodPostal = p.codigo_postal;
+                            a301.Alta.Cliente.Direccion.Via.TipoVia = p.tipo_via;
+                            a301.Alta.Cliente.Direccion.Via.Calle = p.nombre_via;
+                            a301.Alta.Cliente.Direccion.Via.NumeroFinca = p.numero;
+
+                        }
+                        #endregion
+
+
+                        foreach(Documentacion pp in p.lista_documentacion)
+                        {
+                            RegistroDoc regdoc = new RegistroDoc();
+                            regdoc.TipoDocAportado = pp.tipo_doc_aportado;
+                            regdoc.DireccionUrl = pp.direccion_url;
+                            a301.Alta.RegistrosDocumento.RegistroDoc.Add(regdoc);
+                        }                        
+
+                        if (!System.IO.Directory.Exists(param.GetValue("ruta_salida_xml")))
+                        {
+                            System.IO.Directory.CreateDirectory(param.GetValue("ruta_salida_xml"));
+                        }
+
+                        settings = new XmlWriterSettings();
+                        settings.Indent = true;
+                        settings.Encoding = Encoding.UTF8;
+                        settings.OmitXmlDeclaration = true;
+                        writer = XmlWriter.Create(file.FullName, settings);
+
+                        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+                        ns.Add("", @"http://localhost/elegibilidad");
+                        serializer = new XmlSerializer(typeof(EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301));
+
+                        serializer.Serialize(writer, a301, ns);
+                        writer.Close();
+
+                        mensaje_error = ValidateSchema(file.FullName, 
+                            System.Environment.CurrentDirectory + param_cnmc.GetValue("xsd_a301"));
+
+                        if (mensaje_error != "")
+                        {
+                            lista_log.Add(System.Environment.NewLine);
+                            lista_log.Add("Hoja: " + p.hoja + " CUPS: " + p.cups22 +
+                                        " --> " + mensaje_error);
+                        }else
+                        {
+                            lista_log.Add(System.Environment.NewLine);
+                            lista_log.Add("Hoja: " + p.hoja + " CUPS: " + p.cups22 +
+                                        " --> " + "XML generado correctamente");
+                        }
+                            
+
+                        
+
+                        if (mensaje_error != "")
+                        {
+                            //file.Delete();
+                            mensaje_error = "";
+                        }
+                            
+
+
+                        //if (!valido)
+                        //    MessageBox.Show("XML no validado por ",
+                        //       "GeneraXML",
+                        //       MessageBoxButtons.OK,
+                        //       MessageBoxIcon.Error);
+                    }
+
+                    if (p.hoja == "ACC")
+                    {
+
+                        file = new FileInfo(param.GetValue("ruta_salida_xml") + "C101"
+                            + "_" + p.cups22 + "_" + DateTime.Now.ToString("yyMMddHHmmss") + ".xml");
+
+                        EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101 c101 = new EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101();
+                        #region Cabecera
+
+                        EndesaEntity.cnmc.V21_2019_12_17.Cabecera cabecera = new EndesaEntity.cnmc.V21_2019_12_17.Cabecera();
+
+                        cabecera.CodigoREEEmpresaEmisora = p.empresa_emisora;
+
+                        // 27/06/2024 GUS: modificamos porque recibimos directamente el código de la distribuidora
+                        //cabecera.CodigoREEEmpresaDestino = cnmc.Distribuidora(p.distribuidora);
+                        cabecera.CodigoREEEmpresaDestino = p.distribuidora;
+                        cabecera.CodigoDelProceso = "C1";
+                        cabecera.CodigoDePaso = "01";
+                        cabecera.CodigoDeSolicitud = DateTime.Now.ToString("yyMMddHHmmss");
+                        cabecera.SecuencialDeSolicitud = "00";
+                        cabecera.FechaSolicitud = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+                        cabecera.CUPS = p.cups22;
+                        c101.Cabecera = cabecera;
+                        #endregion
+
+                        #region DatosSolicitud
+                                               
+
+                        c101.CambiodeComercializadorSinCambios.DatosSolicitud.indActivacion = p.ind_activacion;
+
+                        if (c101.CambiodeComercializadorSinCambios.DatosSolicitud.indActivacion == "F")
+                            c101.CambiodeComercializadorSinCambios.DatosSolicitud.fechaPrevistaAccion = p.fecha_activacion.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);    //[24/01/2025 GUS] p.fecha_activacion;
+
+                        c101.CambiodeComercializadorSinCambios.DatosSolicitud.contratacionIncondicionalPS = p.contratacion_incondicional_ps;
+                             
+
+                        // Siempre N
+                        c101.CambiodeComercializadorSinCambios.DatosSolicitud.contratacionIncondicionalBS = "N";
+
+
+                        #endregion
+
+                        #region Cliente
+
+                        EndesaEntity.cnmc.V21_2019_12_17.Cliente cliente = new EndesaEntity.cnmc.V21_2019_12_17.Cliente();
+                        cliente.IdCliente.TipoIdentificador =  cnmc.GetTipo_Identificador(p.tipo_identificador);
+                        cliente.IdCliente.Identificador = p.n_identificador;
+
+                        // Leer primer carácter
+                        cliente.IdCliente.TipoPersona = p.tipo_persona;
+
+                        c101.CambiodeComercializadorSinCambios.DatosSolicitud.Cliente = cliente;
+                        #endregion
+
+                        #region Nombre
+                        if (c101.CambiodeComercializadorSinCambios.DatosSolicitud.Cliente.IdCliente.TipoPersona == "F")
+                        {
+                            c101.CambiodeComercializadorSinCambios.DatosSolicitud.Cliente.Nombre.NombreDePila =
+                                p.nombre_de_pila;
+                            c101.CambiodeComercializadorSinCambios.DatosSolicitud.Cliente.Nombre.PrimerApellido =
+                                p.primer_apellido;
+                        }
+                        else
+                        {
+                            c101.CambiodeComercializadorSinCambios.DatosSolicitud.Cliente.Nombre.RazonSocial =
+                                p.razon_social;
+                        }
+                        #endregion
+
+                        c101.CambiodeComercializadorSinCambios.DatosSolicitud.Cliente.Telefono.PrefijoPais = "0034";
+                        c101.CambiodeComercializadorSinCambios.DatosSolicitud.Cliente.Telefono.Numero = p.telefono;
+                        c101.CambiodeComercializadorSinCambios.DatosSolicitud.Cliente.Telefono.CorreoElectronico = p.contacto;
+
+                        foreach (Documentacion pp in p.lista_documentacion)
+                        {
+                            RegistroDoc regdoc = new RegistroDoc();
+                            regdoc.TipoDocAportado = pp.tipo_doc_aportado;
+                            regdoc.DireccionUrl = pp.direccion_url;
+                            c101.CambiodeComercializadorSinCambios.RegistrosDocumento.RegistroDoc.Add(regdoc);
+                        }
+                        
+                        if (!System.IO.Directory.Exists(param.GetValue("ruta_salida_xml")))
+                        {
+                            System.IO.Directory.CreateDirectory(param.GetValue("ruta_salida_xml"));
+                        }
+
+
+                        settings = new XmlWriterSettings();
+                        settings.Indent = true;
+                        settings.Encoding = Encoding.UTF8;
+                        settings.OmitXmlDeclaration = true;
+                        writer = XmlWriter.Create(file.FullName, settings);
+
+                        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+                        ns.Add("", "http://localhost/elegibilidad");
+                        serializer = new XmlSerializer(typeof(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101));
+                       
+                        serializer.Serialize(writer, c101, ns);
+                        writer.Close();
+
+                        mensaje_error = ValidateSchema(file.FullName, System.Environment.CurrentDirectory + param_cnmc.GetValue("xsd_c101"));
+
+                       
+                    }
+
+                    if(p.hoja == "ACC + CAMBIOS")
+                    {
+                        file = new FileInfo(param.GetValue("ruta_salida_xml") + "C201"
+                            + "_" + p.cups22 + "_" + DateTime.Now.ToString("yyMMddHHmmss") + ".xml");
+
+                        EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeB101 b101 =
+                            new EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeB101();
+                        #region Cabecera
+
+                        EndesaEntity.cnmc.V21_2019_12_17.Cabecera cabecera = new EndesaEntity.cnmc.V21_2019_12_17.Cabecera();
+
+                        cabecera.CodigoREEEmpresaEmisora = p.empresa_emisora;
+
+                        cabecera.CodigoREEEmpresaDestino = cnmc.Distribuidora(p.distribuidora);
+                        cabecera.CodigoDelProceso = "C2";
+                        cabecera.CodigoDePaso = "01";
+                        cabecera.CodigoDeSolicitud = DateTime.Now.ToString("yyMMddHHmmss");
+                        cabecera.SecuencialDeSolicitud = "00";
+                        cabecera.FechaSolicitud = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+                        cabecera.CUPS = p.cups22;
+                        b101.Cabecera = cabecera;
+                        #endregion
+
+
+                        if (!System.IO.Directory.Exists(param.GetValue("ruta_salida_xml")))
+                        {
+                            System.IO.Directory.CreateDirectory(param.GetValue("ruta_salida_xml"));
+                        }
+
+
+                        settings = new XmlWriterSettings();
+                        settings.Indent = true;
+                        settings.Encoding = Encoding.UTF8;
+                        settings.OmitXmlDeclaration = true;
+                        writer = XmlWriter.Create(file.FullName, settings);
+
+                        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+                        ns.Add("", @"http://localhost/elegibilidad");
+                        serializer = new XmlSerializer(typeof(EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeB101));
+
+                        serializer.Serialize(writer, b101, ns);
+                        writer.Close();
+
+                        mensaje_error = ValidateSchema(file.FullName,
+                            System.Environment.CurrentDirectory + param_cnmc.GetValue("xsd_b101"));
+
+                        if (mensaje_error != "")
+                        {
+                            lista_log.Add(System.Environment.NewLine);
+                            lista_log.Add("Hoja: " + p.hoja + " CUPS: " + p.cups22 +
+                                        " --> " + mensaje_error);
+                        }
+                        else
+                        {
+                            lista_log.Add(System.Environment.NewLine);
+                            lista_log.Add("Hoja: " + p.hoja + " CUPS: " + p.cups22 +
+                                        " --> " + "XML generado correctamente");
+                        }
+
+                    }
+
+                    if (p.hoja == "MOD")
+                    {
+                        file = new FileInfo(param.GetValue("ruta_salida_xml") + "M101" 
+                            + "_" + p.cups22 + "_" + DateTime.Now.ToString("yyMMddHHmmss") + ".xml");
+
+                        EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeM101 m101 =
+                            new EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeM101();
+
+                        #region Cabecera
+
+                        EndesaEntity.cnmc.V21_2019_12_17.Cabecera cabecera = 
+                            new EndesaEntity.cnmc.V21_2019_12_17.Cabecera();
+
+                        cabecera.CodigoREEEmpresaEmisora = p.empresa_emisora;
+                        cabecera.CodigoREEEmpresaDestino = cnmc.Distribuidora(p.distribuidora);
+                        cabecera.CodigoDelProceso = "M1";
+                        cabecera.CodigoDePaso = "01";
+                        cabecera.CodigoDeSolicitud = DateTime.Now.ToString("yyMMddHHmmss");
+                        cabecera.SecuencialDeSolicitud = "00";
+                        cabecera.FechaSolicitud = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+                        cabecera.CUPS = p.cups22;
+                        m101.Cabecera = cabecera;
+                        #endregion
+
+                        DatosSolicitud_M1 datosSolicitud = new DatosSolicitud_M1();
+                        
+                        datosSolicitud.TipoModificacion = p.tipo_modificacion;
+
+                        if (p.tipo_modificacion == "S" || p.tipo_modificacion == "A")
+                            datosSolicitud.TipoSolicitudAdministrativa = p.tipo_solicitud_administrativa;
+
+                        if(p.cnae != null)
+                            datosSolicitud.CNAE = p.cnae;
+
+                        datosSolicitud.IndActivacion = p.ind_activacion;
+                        if (p.ind_activacion == "F")
+                            datosSolicitud.FechaPrevistaAccion = p.fecha_activacion.ToString("yyyy-MM-dd");
+
+
+                        m101.ModificacionDeATR.DatosSolicitud = datosSolicitud;
+
+                        m101.ModificacionDeATR.Contrato.TipoAutoconsumo = cnmc.GetTipo_Autoconsumo(p.tipo_autoconsumo);
+                        m101.ModificacionDeATR.Contrato.TipoContratoATR = p.tipo_contrato;
+
+                        if(p.tarifa != null)
+                            m101.ModificacionDeATR.Contrato.CondicionesContractuales.TarifaATR = p.tarifa.Substring(0,3);
+
+
+                        PotenciasContratadas potenciasContratadas = new PotenciasContratadas();
+
+
+                        for (int i = 1; i <= 6; i++)
+                        {
+                            if (p.potencias[i - 1] != 0)
+                            {
+                                Potencia potencia = new Potencia();
+                                potencia.periodo = Convert.ToString(i);
+                                potencia.potencia = Convert.ToString(p.potencias[i - 1]);
+                                potenciasContratadas.Potencia.Add(potencia);
+                            }
+
+                        }
+                        m101.ModificacionDeATR.Contrato.CondicionesContractuales.PotenciasContratadas = potenciasContratadas;
+
+                        if (p.modo_control_potencia != null)
+                            m101.ModificacionDeATR.Contrato.CondicionesContractuales.ModoControlPotencia = p.modo_control_potencia.Substring(0, 1);
+
+                        if(p.contacto != null)
+                        {
+                            EndesaEntity.cnmc.V21_2019_12_17.Contacto contacto = new Contacto();
+                            contacto.PersonaDeContacto = p.persona_contacto;
+
+                            Telefono telefono_contacto = new Telefono();
+                            telefono_contacto.PrefijoPais = "0034";
+                            telefono_contacto.Numero = p.telefono;
+
+                            contacto.Telefono = telefono_contacto;
+
+                            m101.ModificacionDeATR.Contrato.Contacto = contacto;
+                        }
+                            
+                        
+
+                        m101.ModificacionDeATR.Cliente.IdCliente.TipoIdentificador = cnmc.GetTipo_Identificador(p.tipo_identificador);
+                        m101.ModificacionDeATR.Cliente.IdCliente.Identificador = p.n_identificador;
+                        m101.ModificacionDeATR.Cliente.IdCliente.TipoPersona = p.tipo_persona.Substring(0, 1);
+
+                        if (m101.ModificacionDeATR.Cliente.IdCliente.TipoPersona == "J")
+                            m101.ModificacionDeATR.Cliente.Nombre.RazonSocial = p.razon_social;
+                        else
+                        {
+                            m101.ModificacionDeATR.Cliente.Nombre.NombreDePila = p.nombre_de_pila;
+                            m101.ModificacionDeATR.Cliente.Nombre.PrimerApellido = p.primer_apellido;
+                        }
+
+                        
+                        // Siempre se pone el telf de contacto
+                        m101.ModificacionDeATR.Cliente.Telefono.PrefijoPais = "0034";
+                        m101.ModificacionDeATR.Cliente.Telefono.Numero = p.telefono;
+                        
+
+
+                        m101.ModificacionDeATR.Cliente.IndicadorTipoDireccion = p.indicador_tipo_direccion.Substring(0, 1);
+                        m101.ModificacionDeATR.Cliente.Direccion.Pais = p.pais;
+                        m101.ModificacionDeATR.Cliente.Direccion.Provincia = p.provincia.Substring(0, 2);
+                        m101.ModificacionDeATR.Cliente.Direccion.Municipio =
+                            cnmc.GetCodigoMunicipio(m101.ModificacionDeATR.Cliente.Direccion.Provincia, p.municipio);
+                        m101.ModificacionDeATR.Cliente.Direccion.CodPostal = p.codigo_postal;
+                        m101.ModificacionDeATR.Cliente.Direccion.Via.TipoVia = p.tipo_via;
+                        m101.ModificacionDeATR.Cliente.Direccion.Via.Calle = p.nombre_via;
+                        m101.ModificacionDeATR.Cliente.Direccion.Via.NumeroFinca = p.numero;
+
+
+                        foreach (Documentacion pp in p.lista_documentacion)
+                        {
+                            RegistroDoc regdoc = new RegistroDoc();
+                            regdoc.TipoDocAportado = pp.tipo_doc_aportado;
+                            regdoc.DireccionUrl = pp.direccion_url;
+                            m101.ModificacionDeATR.RegistrosDocumento.RegistroDoc.Add(regdoc);
+                        }
+
+
+
+                        settings = new XmlWriterSettings();
+                        settings.Indent = true;
+                        settings.Encoding = Encoding.UTF8;
+                        settings.OmitXmlDeclaration = true;                        
+                        writer = XmlWriter.Create(file.FullName, settings);
+
+                        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();                        
+                        ns.Add("", @"http://localhost/elegibilidad");
+                        
+                        serializer = new XmlSerializer(typeof(EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeM101));
+
+                        serializer.Serialize(writer, m101, ns);
+                        writer.Close();
+
+                        mensaje_error = ValidateSchema(file.FullName, System.Environment.CurrentDirectory + param_cnmc.GetValue("xsd_m101"));
+                        
+
+                        if (mensaje_error != "")
+                        {
+                            lista_log.Add(System.Environment.NewLine);
+                            lista_log.Add("Hoja: " + p.hoja + " CUPS: " + p.cups22 +
+                                        " --> " + mensaje_error);
+                        }
+                        else
+                        {
+                            lista_log.Add(System.Environment.NewLine);
+                            lista_log.Add("Hoja: " + p.hoja + " CUPS: " + p.cups22 +
+                                        " --> " + "XML generado correctamente");
+                        }
+
+
+                    }
+
+                    if (p.hoja == "BAJA")
+                    {
+
+                        file = new FileInfo(param.GetValue("ruta_salida_xml") + "B101"
+                            + "_" + p.cups22 + "_" + DateTime.Now.ToString("yyMMddHHmmss") + ".xml");
+                        
+
+                        EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeB101 b101 =
+                            new EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeB101();
+                        #region Cabecera
+
+                        EndesaEntity.cnmc.V21_2019_12_17.Cabecera cabecera = new EndesaEntity.cnmc.V21_2019_12_17.Cabecera();
+
+                        cabecera.CodigoREEEmpresaEmisora = p.empresa_emisora;
+
+                        cabecera.CodigoREEEmpresaDestino = cnmc.Distribuidora(p.distribuidora);
+                        cabecera.CodigoDelProceso = "B1";
+                        cabecera.CodigoDePaso = "01";
+                        cabecera.CodigoDeSolicitud = DateTime.Now.ToString("yyMMddHHmmss");
+                        cabecera.SecuencialDeSolicitud = "00";
+                        cabecera.FechaSolicitud = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+                        cabecera.CUPS = p.cups22;
+                        b101.Cabecera = cabecera;
+                        #endregion
+
+                        #region DatosSolicitud
+
+
+                        b101.BajaSuspension.DatosSolicitud.IndActivacion = p.ind_activacion;
+
+                        if (p.ind_activacion == "F")
+                            b101.BajaSuspension.DatosSolicitud.fechaPrevistaAccion = 
+                                p.fecha_activacion.ToString("yyyy-MM-dd");
+
+                        b101.BajaSuspension.DatosSolicitud.Motivo = p.motivo_baja;
+
+
+                        #endregion
+
+                        #region Cliente
+
+                        EndesaEntity.cnmc.V30_2022_21_01.Cliente cliente = new EndesaEntity.cnmc.V30_2022_21_01.Cliente();
+                        cliente.IdCliente.TipoIdentificador = cnmc.GetTipo_Identificador(p.tipo_identificador);
+                        cliente.IdCliente.Identificador = p.n_identificador;
+
+                        // Leer primer carácter
+                        cliente.IdCliente.TipoPersona = p.tipo_persona;
+
+                        b101.BajaSuspension.Cliente = cliente;
+                        #endregion
+
+                        #region Nombre
+                        if (p.tipo_persona == "F")
+                        {
+                            b101.BajaSuspension.Cliente.Nombre.NombreDePila = p.nombre_de_pila;
+                            b101.BajaSuspension.Cliente.Nombre.PrimerApellido = p.primer_apellido;
+                        }
+                        else
+                        {
+                            b101.BajaSuspension.Cliente.Nombre.RazonSocial = p.razon_social;
+                        }
+                        #endregion
+
+                        b101.BajaSuspension.Cliente.Telefono.PrefijoPais = "0034";
+                        b101.BajaSuspension.Cliente.Telefono.Numero = p.telefono;
+
+                        b101.BajaSuspension.Contacto.PersonaDeContacto = p.contacto;
+
+
+                        foreach (Documentacion pp in p.lista_documentacion)
+                        {
+                            RegistroDoc regdoc = new RegistroDoc();
+                            regdoc.TipoDocAportado = pp.tipo_doc_aportado;
+                            regdoc.DireccionUrl = pp.direccion_url;
+                            b101.BajaSuspension.RegistroDocumento.RegistroDoc.Add(regdoc);
+                        }
+
+                        if (!System.IO.Directory.Exists(param.GetValue("ruta_salida_xml")))
+                        {
+                            System.IO.Directory.CreateDirectory(param.GetValue("ruta_salida_xml"));
+                        }
+
+
+                        settings = new XmlWriterSettings();
+                        settings.Indent = true;
+                        settings.Encoding = Encoding.UTF8;
+                        settings.OmitXmlDeclaration = true;
+                        writer = XmlWriter.Create(file.FullName, settings);
+
+                        XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+                        ns.Add("", @"http://localhost/elegibilidad");
+                        serializer = new XmlSerializer(typeof(EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeB101));
+
+                        serializer.Serialize(writer, b101, ns);
+                        writer.Close();
+
+                        mensaje_error = ValidateSchema(file.FullName, 
+                            System.Environment.CurrentDirectory + param_cnmc.GetValue("xsd_b101"));
+
+                        if (mensaje_error != "")
+                        {
+                            lista_log.Add(System.Environment.NewLine);
+                            lista_log.Add("Hoja: " + p.hoja + " CUPS: " + p.cups22 +
+                                        " --> " + mensaje_error);
+                        }
+                        else
+                        {
+                            lista_log.Add(System.Environment.NewLine);
+                            lista_log.Add("Hoja: " + p.hoja + " CUPS: " + p.cups22 +
+                                        " --> " + "XML generado correctamente");
+                        }
+
+
+                    }
+
+                }
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,
+                       "GeneraXML",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Error);
+            }
+        }
+
+        public string ValidateSchema(string xmlPath, string xsdPath)
+        {
+
+            string mensaje = "";
+            XmlDocument xml = new XmlDocument();
+            xml.Load(xmlPath);
+
+            xml.Schemas.Add(null, xsdPath);
+
+            try
+            {
+                xml.Validate(null);
+            }
+            catch (XmlSchemaValidationException e)
+            {
+                if(!e.Message.Contains("http://localhost/elegibilidad"))
+                    return e.Message;
+            }
+            return mensaje;
+        }
+
+        private void BorradoDatosMySQL()
+        {
+            MySQLDB db;
+            MySqlCommand command;
+            string strSql = "";
+
+            strSql = "delete from extrasistemas_excel_ad where created_by = '" + System.Environment.UserName + "'";
+            db = new MySQLDB(MySQLDB.Esquemas.CON);
+            command = new MySqlCommand(strSql, db.con);
+            command.ExecuteNonQuery();
+            db.CloseConnection();
+        }
+
+
+
+        public List<EndesaEntity.xml.Plantilla_Extrasistemas_total_registros> Totales_Registros()
+        {
+
+            List<EndesaEntity.xml.Plantilla_Extrasistemas_total_registros> lista =
+                new List<EndesaEntity.xml.Plantilla_Extrasistemas_total_registros>();
+            foreach (KeyValuePair<string, EndesaEntity.xml.Plantilla_Extrasistemas_total_registros> p in dic_total_registros)
+            {
+                lista.Add(p.Value);
+            }
+            return lista;
+        }
+
+        private Dictionary<string, EndesaEntity.xml.Plantilla_Extrasistemas_total_registros> Inicializa_Lista_Totales()
+        {
+            Dictionary<string, EndesaEntity.xml.Plantilla_Extrasistemas_total_registros> d =
+                new Dictionary<string, EndesaEntity.xml.Plantilla_Extrasistemas_total_registros>();
+
+
+            EndesaEntity.xml.Plantilla_Extrasistemas_total_registros c = 
+                new EndesaEntity.xml.Plantilla_Extrasistemas_total_registros();
+
+            c.hoja = "AD";
+            c.descripcion = "Alta Directa A301";
+            c.registros = 0;
+            d.Add(c.hoja,c);
+
+            c = new EndesaEntity.xml.Plantilla_Extrasistemas_total_registros();
+            c.hoja = "ACC";
+            c.descripcion = "ACC C101";
+            c.registros = 0;
+            d.Add(c.hoja, c);
+
+            c = new EndesaEntity.xml.Plantilla_Extrasistemas_total_registros();
+            c.hoja = "ACC + Cambios";
+            c.descripcion = "ACC+ C201";
+            c.registros = 0;
+            d.Add(c.hoja, c);
+
+            c = new EndesaEntity.xml.Plantilla_Extrasistemas_total_registros();
+            c.hoja = "MOD";
+            c.descripcion = "Modificación M101";
+            c.registros = 0;
+            d.Add(c.hoja, c);
+
+            c = new EndesaEntity.xml.Plantilla_Extrasistemas_total_registros();
+            c.hoja = "BAJA";
+            c.descripcion = "Baja B101";
+            c.registros = 0;
+            d.Add(c.hoja, c);
+
+            return d;
+
+        }
+
+
+
+    }
+}

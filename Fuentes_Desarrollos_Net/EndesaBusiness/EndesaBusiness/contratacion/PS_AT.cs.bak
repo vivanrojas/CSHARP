@@ -1,0 +1,214 @@
+﻿using EndesaBusiness.servidores;
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EndesaBusiness.contratacion
+{
+    public class PS_AT: EndesaEntity.contratacion.PS_AT_Tabla
+    {
+        public Dictionary<string, EndesaEntity.contratacion.PS_AT_Tabla> dic { get; set; }
+
+        public PS_AT(List<string> lista_cups_20)
+        {
+
+            dic = new Dictionary<string, EndesaEntity.contratacion.PS_AT_Tabla>();
+            if (lista_cups_20.Count > 0)
+                Carga(GetQuery(lista_cups_20));
+        }
+
+        public PS_AT()
+        {
+            dic = new Dictionary<string, EndesaEntity.contratacion.PS_AT_Tabla>();
+            Carga(GetQuery());
+        }
+
+        public PS_AT(bool cups_corto)
+        {
+            dic = new Dictionary<string, EndesaEntity.contratacion.PS_AT_Tabla>();
+            Carga_Cups13(GetQuery());
+        }
+
+        private string GetQuery(List<string> lista_cups_20)
+        {
+            string strSql;
+            strSql = "SELECT CUPS20, cliente, NIF, Empresa, ec.Descripcion, provincia,"
+                + " ps.CONTREXT"
+                + " from PS_AT ps inner join cont_estadoscontrato ec on"
+                + " ec.Cod_Estado = ps.estadoCont"
+                + " where CUPS20 in ('" + lista_cups_20[0] + "'";
+
+            for (int i = 1; i < lista_cups_20.Count; i++)
+                strSql += " ,'" + lista_cups_20[i] + "'";
+            
+            strSql += ") and estadoCont in ('001','003','004','008')"
+                + " GROUP BY CUPS20, fAltaCont";
+
+            return strSql;
+        }
+
+        private string GetQuery()
+        {
+            string strSql;
+
+            strSql = "SELECT IDU as cups13, CUPS20, CUPS22 as cups22, substr(CUPS22,1,20) as cups20, cliente, NIF," 
+                + " Empresa, ec.Descripcion, provincia, TARIFA, ps.CONTREXT, ps.Version, ps.fPrevBajaCont, ps.fBajaCont"
+                + " from PS_AT ps inner join cont_estadoscontrato ec on"
+                + " ec.Cod_Estado = ps.estadoCont"
+                + " where estadoCont  in ('001','003','004','008')"
+                + " GROUP BY CUPS20, fAltaCont";
+
+            return strSql;
+        }
+
+
+        private void Carga(string query)
+        {
+            MySQLDB db;
+            MySqlCommand command;
+            MySqlDataReader r;
+            int fecha = 0;
+
+            db = new MySQLDB(servidores.MySQLDB.Esquemas.CON);
+            command = new MySqlCommand(query, db.con);
+            r = command.ExecuteReader();
+            while (r.Read())
+            {
+                EndesaEntity.contratacion.PS_AT_Tabla c = new EndesaEntity.contratacion.PS_AT_Tabla();
+                if (r["cups20"] != System.DBNull.Value)
+                {
+                    c.cups22 = r["cups22"].ToString();
+                    c.cups20 = r["cups20"].ToString();
+                    c.cups13 = r["cups13"].ToString();
+                    c.nombre_cliente = r["cliente"].ToString();
+                    c.cif = r["NIF"].ToString();
+                    c.empresa = r["EMPRESA"].ToString();
+                    c.estado_contrato_descripcion = r["Descripcion"].ToString();
+                    c.contrext = r["CONTREXT"].ToString();
+
+                    if (r["TARIFA"] != System.DBNull.Value)
+                        c.tarifa = r["TARIFA"].ToString();
+
+                    if (r["provincia"] != System.DBNull.Value)
+                        c.provincia = r["provincia"].ToString();
+
+                    if (r["fPrevBajaCont"] != System.DBNull.Value)
+                    {
+                        fecha = Convert.ToInt32(r["fPrevBajaCont"]);
+                        if (fecha > 40000000)
+                            c.fecha_prevista_baja = new DateTime(4000, 12, 31);
+
+
+                        if(fecha > 0 && fecha < 40000000)
+                            c.fecha_prevista_baja = new DateTime(Convert.ToInt32(fecha.ToString().Substring(0, 4)),
+                                                Convert.ToInt32(fecha.ToString().Substring(4, 2)),
+                                                Convert.ToInt32(fecha.ToString().Substring(6, 2)));
+                        
+                    }
+
+                    if (r["fBajaCont"] != System.DBNull.Value)
+                    {
+                        fecha = Convert.ToInt32(r["fBajaCont"]);
+                        if (fecha > 40000000)
+                            c.fecha_baja_contrato = new DateTime(4000, 12, 31);
+
+
+                        if (fecha > 0 && fecha < 40000000)
+                            c.fecha_baja_contrato = new DateTime(Convert.ToInt32(fecha.ToString().Substring(0, 4)),
+                                                Convert.ToInt32(fecha.ToString().Substring(4, 2)),
+                                                Convert.ToInt32(fecha.ToString().Substring(6, 2)));
+
+                    }
+
+
+                    EndesaEntity.contratacion.PS_AT_Tabla o;
+                    if (!dic.TryGetValue(c.cups20, out o))
+                        dic.Add(c.cups20, c);
+                }
+
+            }
+            db.CloseConnection();
+        }
+        private void Carga_Cups13(string query)
+        {
+            MySQLDB db;
+            MySqlCommand command;
+            MySqlDataReader r;
+
+            db = new MySQLDB(servidores.MySQLDB.Esquemas.CON);
+            command = new MySqlCommand(query, db.con);
+            r = command.ExecuteReader();
+            while (r.Read())
+            {
+                EndesaEntity.contratacion.PS_AT_Tabla c = new EndesaEntity.contratacion.PS_AT_Tabla();
+                if (r["cups13"] != System.DBNull.Value)
+                {
+                    if (r["cups20"] != System.DBNull.Value)
+                    {
+                        c.cups22 = r["cups22"].ToString();
+                        c.cups20 = r["cups20"].ToString();
+                    }
+
+                    c.cups13 = r["cups13"].ToString();
+                    c.nombre_cliente = r["cliente"].ToString();
+                    c.cif = r["NIF"].ToString();
+                    c.empresa = r["EMPRESA"].ToString();
+                    c.estado_contrato_descripcion = r["Descripcion"].ToString();
+                    c.contrext = r["CONTREXT"].ToString();
+
+                    if (r["TARIFA"] != System.DBNull.Value)
+                        c.tarifa = r["TARIFA"].ToString();
+
+                    if (r["provincia"] != System.DBNull.Value)
+                        c.provincia = r["provincia"].ToString();
+
+                    EndesaEntity.contratacion.PS_AT_Tabla o;
+                    if (!dic.TryGetValue(c.cups13, out o))
+                        dic.Add(c.cups20, c);
+                }
+
+            }
+            db.CloseConnection();
+        }
+
+        public bool ExisteAlta(string cups20)
+        {
+            bool existe = false;
+            EndesaEntity.contratacion.PS_AT_Tabla o;
+            if (dic.TryGetValue(cups20.Substring(0,20), out o))
+            {
+                existe = true;
+                this.cups20 = o.cups20;
+                this.empresa = o.empresa;
+                this.estado_contrato_descripcion = o.estado_contrato_descripcion;
+                this.nombre_cliente = o.nombre_cliente;
+                this.cif = o.cif;
+                this.tarifa = o.tarifa;
+                this.provincia = o.provincia;
+            }
+
+            return existe;
+        }
+
+        public bool ExisteCIF(string cif)
+        {
+            bool existe = false;
+            EndesaEntity.contratacion.PS_AT_Tabla o;
+            existe = cif.Contains("NL");
+            if (!existe)
+                foreach (KeyValuePair<string, EndesaEntity.contratacion.PS_AT_Tabla> p in dic)
+                {
+                    if (p.Value.cif == cif)
+                    {
+                        existe = true;
+                        break;
+                    }
+                }
+
+            return existe;
+        }
+    }
+}

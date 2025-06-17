@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+
+namespace EndesaEntity.cnmc.V30_2022_21_01
+{
+    [XmlRoot(ElementName = " DatosSolicitud")]
+    public class DatosSolicitud_M1
+    {
+        [XmlElement(ElementName = "TipoModificacion")] public string TipoModificacion { get; set; }
+        [XmlElement(ElementName = "TipoSolicitudAdministrativa")] public string TipoSolicitudAdministrativa { get; set; }
+        [XmlElement(ElementName = "CNAE")] public string CNAE { get; set; }
+        [XmlElement(ElementName = "IndEsencial")] public string IndEsencial { get; set; }  //  gbr - irh
+        [XmlElement(ElementName = "IndActivacion")] public string IndActivacion { get; set; }
+        [XmlElement(ElementName = "FechaPrevistaAccion")] public string FechaPrevistaAccion { get; set; }
+
+        //[XmlElement(ElementName = "FechaFinalizacion")] public string FechaFinalizacion { get; set; }  //  irh
+    }
+}
