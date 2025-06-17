@@ -11,10 +11,7 @@ namespace EndesaEntity.cnmc.V21_2019_12_17
     [XmlRoot(ElementName = "Contrato")]
     public class ContratoAlta
     {
-        // irh
-        public IdContrato IdContrato { get; set; } 
-        // irh f
-
+        public IdContrato IdContrato { get; set; }
         [XmlElement(ElementName = "FechaFinalizacion")] public string FechaFinalizacion { get; set; }
         
         public AutoconsumoSolicitudAlta Autoconsumo { get; set; }

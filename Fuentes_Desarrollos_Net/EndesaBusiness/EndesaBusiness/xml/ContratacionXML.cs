@@ -196,6 +196,99 @@ namespace EndesaBusiness.xml
             
         }
 
+        public EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 CargaDatosV30(int id)
+        {
+            servidores.MySQLDB db;
+            MySqlCommand command;
+            MySqlDataReader r;
+            string strSql;
+
+            EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 xml =
+                new EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301();
+
+            try
+            {
+
+                strSql = "SELECT cab.CodigoREEEmpresaEmisora, cab.CodigoREEEmpresaDestino, cab.CodigoDelProceso,"
+                    + " cab.CodigoDePaso, cab.CodigoDeSolicitud, cab.SecuencialDeSolicitud, cab.FechaSolicitud,"
+                    + " cab.CUPS,sol.CNAE, sol.IndActivacion, sol.SolicitudTension, sol.TipoAutoconsumo, sol.TipoContratoATR,"
+                    + " sol.TarifaATR,sol.Potencia1, sol.Potencia2, sol.Potencia3, sol.Potencia4, sol.Potencia5,"
+                    + " sol.Potencia6, sol.ModoControlPotencia,con.PersonaDeContacto, con.PrefijoPais, con.Numero,"
+                    + " cli.TipoIdentificador, cli.Identificador, cli.TipoPersona,cli.NombreDePila, cli.PrimerApellido,"
+                    + " cli.SegundoApellido, cli.RazonSocial"
+                    + " FROM cnmc_t_cabecera cab"
+                    + " INNER JOIN cnmc_t_datossolicitud sol ON"
+                    + " sol.id = cab.id"
+                    + " INNER JOIN cnmc_t_cliente cli ON"
+                    + " cli.id = cab.id"
+                    + " LEFT JOIN cnmc_t_contacto con ON"
+                    + " con.id = cab.id"
+                    + " WHERE cab.id = " + id;
+                db = new MySQLDB(MySQLDB.Esquemas.CON);
+                command = new MySqlCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    xml.Cabecera.CodigoREEEmpresaEmisora = r["CodigoREEEmpresaEmisora"].ToString();
+                    xml.Cabecera.CodigoREEEmpresaDestino = r["CodigoREEEmpresaDestino"].ToString();
+                    xml.Cabecera.CodigoDelProceso = r["CodigoDelProceso"].ToString();
+                    xml.Cabecera.CodigoDePaso = r["CodigoDePaso"].ToString();
+                    xml.Cabecera.CodigoDeSolicitud = r["CodigoDeSolicitud"].ToString();
+                    xml.Cabecera.SecuencialDeSolicitud = r["SecuencialDeSolicitud"].ToString();
+                    xml.Cabecera.FechaSolicitud = r["FechaSolicitud"].ToString();
+                    xml.Cabecera.CUPS = r["CUPS"].ToString();
+
+                    if (r["CNAE"] != System.DBNull.Value)
+                        xml.Alta.DatosSolicitud.cnae = r["CNAE"].ToString();
+
+                    if (r["IndActivacion"] != System.DBNull.Value)
+                        xml.Alta.DatosSolicitud.IndActivacion = r["IndActivacion"].ToString();
+
+                    if (r["SolicitudTension"] != System.DBNull.Value)
+                        xml.Alta.DatosSolicitud.SolicitudTension = r["SolicitudTension"].ToString();
+                    else
+                        xml.Alta.DatosSolicitud.SolicitudTension = "N";
+
+                    if (r["TipoAutoconsumo"] != System.DBNull.Value)
+                    {
+                        xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
+                        xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
+                    }
+
+                    if (r["TipoContratoATR"] != System.DBNull.Value)
+                        xml.Alta.Contrato.TipoContratoATR = r["TipoContratoATR"].ToString();
+
+                    if (r["TarifaATR"] != System.DBNull.Value)
+                        xml.Alta.Contrato.CondicionesContractuales.TarifaATR = r["TarifaATR"].ToString();
+
+                    for (int j = 1; j <= 6; j++)
+                        if (r["Potencia" + j] != System.DBNull.Value)
+                        {
+                            EndesaEntity.cnmc.V21_2019_12_17.Potencia p = new Potencia();
+                            p.periodo = j.ToString();
+                            p.potencia = r["Potencia" + j].ToString();
+
+                            xml.Alta.Contrato.CondicionesContractuales.
+                               PotenciasContratadas.Potencia.Add(p);
+
+
+                        }
+
+
+
+                }
+                db.CloseConnection();
+                return xml;
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+
+
+        }
+
         public void CreaMensajeA302_A(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA302_A a302a)
         {
 
@@ -217,14 +310,14 @@ namespace EndesaBusiness.xml
             writer.Close();
 
 
-            bool valido = ValidateSchema(fichero, System.Environment.CurrentDirectory + p.GetValue("xsd_a302a"));
-            if(valido)
+            string mensaje = ValidateSchema(fichero, System.Environment.CurrentDirectory + p.GetValue("xsd_a302a"));
+            if(mensaje == "")
             {
                 MessageBox.Show("El XML sea ha generado correctamente en " + fichero.ToString(), "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("El XML no es válido según el esquema.", "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El XML no es válido según el esquema: " + mensaje, "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -249,67 +342,37 @@ namespace EndesaBusiness.xml
             writer.Close();
            
 
-            bool valido = ValidateSchema(fichero, System.Environment.CurrentDirectory + p.GetValue("xsd_a302r"));
-            if (valido)
+            string mensaje = ValidateSchema(fichero, System.Environment.CurrentDirectory + p.GetValue("xsd_a302r"));
+            if (mensaje == "")
             {
                 MessageBox.Show("El XML sea ha generado correctamente en " + fichero.ToString(), "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("El XML no es válido según el esquema.", "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El XML no es válido según el esquema: " + mensaje, "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
-      
-        public void CreaMensajeA305(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA305 a305)
-        //  public void CreaMensajeA305(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA301 a301 )
+
+        public void CreaMensajeA305(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA301 a301)
         {
-            //List<Potencia> lista_potencias = new List<Potencia>();
+            List<Potencia> lista_potencias = new List<Potencia>();
 
-            //EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA305 xml = new TipoMensajeA305();
-            //xml.Cabecera.CodigoREEEmpresaEmisora = a301.Cabecera.CodigoREEEmpresaDestino;
-            //xml.Cabecera.CodigoREEEmpresaDestino = a301.Cabecera.CodigoREEEmpresaEmisora;
-            //xml.Cabecera.CodigoDelProceso = a301.Cabecera.CodigoDelProceso;
-            //xml.Cabecera.CodigoDePaso = "02";
-            //xml.Cabecera.CodigoDeSolicitud = a301.Cabecera.CodigoDeSolicitud;
-            //xml.Cabecera.SecuencialDeSolicitud = a301.Cabecera.SecuencialDeSolicitud;
-            //xml.Cabecera.FechaSolicitud = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss").ToString();
-            //xml.Cabecera.CUPS = a301.Cabecera.CUPS;
-
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.Indent = true;
-            settings.Encoding = Encoding.UTF8;
-            string fichero = @"c:\Temp\XML_A305_"
-                + (a305.Cabecera.CodigoDeSolicitud) + "_"
-                + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml";
-
-            XmlWriter writer = XmlWriter.Create(fichero, settings);
-
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
-            ns.Add("", "http://localhost/elegibilidad");
-
-
-            XmlSerializer serializer = new XmlSerializer(typeof(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA305));
-           serializer.Serialize(writer, a305, ns);
-            writer.Close();
-
-
-            bool valido = ValidateSchema(fichero, System.Environment.CurrentDirectory + p.GetValue("xsd_a305"));
-            if (valido)
-            {
-                MessageBox.Show("El XML sea ha generado correctamente en " + fichero.ToString(), "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("El XML no es válido según el esquema.", "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
+            EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA305 xml = new TipoMensajeA305();
+            xml.Cabecera.CodigoREEEmpresaEmisora = a301.Cabecera.CodigoREEEmpresaDestino;
+            xml.Cabecera.CodigoREEEmpresaDestino = a301.Cabecera.CodigoREEEmpresaEmisora;
+            xml.Cabecera.CodigoDelProceso = a301.Cabecera.CodigoDelProceso;
+            xml.Cabecera.CodigoDePaso = "02";
+            xml.Cabecera.CodigoDeSolicitud = a301.Cabecera.CodigoDeSolicitud;
+            xml.Cabecera.SecuencialDeSolicitud = a301.Cabecera.SecuencialDeSolicitud;
+            xml.Cabecera.FechaSolicitud = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss").ToString();
+            xml.Cabecera.CUPS = a301.Cabecera.CUPS;
         }
 
 
-        public bool ValidateSchema(string xmlPath, string xsdPath)
+        public string ValidateSchema(string xmlPath, string xsdPath)
         {
+            string mensaje = "";
             XmlDocument xml = new XmlDocument();
             xml.Load(xmlPath);
 
@@ -319,11 +382,11 @@ namespace EndesaBusiness.xml
             {
                 xml.Validate(null);
             }
-            catch (XmlSchemaValidationException)
+            catch (XmlSchemaValidationException e)
             {
-                return false;
+                return e.Message;
             }
-            return true;
+            return mensaje;
         }
 
 

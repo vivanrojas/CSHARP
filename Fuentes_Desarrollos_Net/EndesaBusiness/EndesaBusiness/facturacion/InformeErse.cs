@@ -37,11 +37,11 @@ namespace EndesaBusiness.facturacion
             fd = new DateTime();
             fh = new DateTime();
 
-            fact_list_MT = new Dictionary<string, EndesaEntity.facturacion.ErseMT>();
-            fact_list_BTE = new Dictionary<string, EndesaEntity.facturacion.ErseBTE>();
-            fact_list_BTN = new Dictionary<string, EndesaEntity.facturacion.ErseBTN>();
+            //fact_list_MT = new Dictionary<string, EndesaEntity.facturacion.ErseMT>();
+            //fact_list_BTE = new Dictionary<string, EndesaEntity.facturacion.ErseBTE>();
+            //fact_list_BTN = new Dictionary<string, EndesaEntity.facturacion.ErseBTN>();
             fact_list_SAP = new Dictionary<int, EndesaEntity.facturacion.ErseSAP>();
-            tcon_list = new Dictionary<string, EndesaEntity.facturacion.Tcon>();
+            //tcon_list = new Dictionary<string, EndesaEntity.facturacion.Tcon>();
         }
 
         public void CargaDatosMT(bool usarFechaFactura, DateTime fd, DateTime fh)
@@ -663,110 +663,24 @@ namespace EndesaBusiness.facturacion
             }
 
         }
-        public void CargaDatosSAP(bool usarFechaFactura, DateTime fd, DateTime fh, string entorno)
+        public void CargaDatosSAP(bool usarFechaFactura, DateTime fd, DateTime fh)
         {
             servidores.RedShiftServer db;
             OdbcCommand command;
             OdbcDataReader reader;
             string strSql = "";
-
             bool hayDatos = false;
-
             int  clave = 0;
 
 
             try
             {
-                #region old query ERSE SAP (GUS mod. 15/04/2025)
-                //strSql = "SELECT de_seg_merc_por,sap_tfactura_n0.fh_ult_ejec, nm_id as CIF, nm_doc_oficial as CFACTURA, " +
-                //"fh_contab as  FFACTURA,fh_desde_fact as FFACTDES, fh_hasta_fact as FFACTHAS, im_factura as IFACTURA, im_impuesto1 as IMPUESTO1, " +
-                //"nm_base_ise as CONSUMO, im_base_ise as ISE, " +
-                //"im_base_imp1 as BASE_IVA_NORMAL, im_total_cuota_1 as IVA_NORMAL, " +
-                //"case when im_base_imp2 =0 then im_base_imp3 else im_base_imp2 end  as BASE_IVA_REDUCIDO, " +
-                //"case when im_total_cuota_2=0 then im_total_cuota_3 else im_total_cuota_2 end as IVA_REDUCIDO, " +
-                //// Tasa Audiovisual GGCC PT es el concepto ZP07 - ZTAUDI
-                //"case when CD_CONCEP1 in ('ZP07','ZTAUDI') then im_comcep1 else 0 end + " +
-                //"case when CD_CONCEP2 in ('ZP07','ZTAUDI') then im_comcep2 else 0 end + " +
-                //"case when CD_CONCEP3 in ('ZP07','ZTAUDI') then im_comcep3 else 0 end + " +
-                //"case when CD_CONCEP4 in ('ZP07','ZTAUDI') then im_comcep4 else 0 end + " +
-                //"case when CD_CONCEP5 in ('ZP07','ZTAUDI') then im_comcep5 else 0 end + " +
-                //"case when CD_CONCEP6 in ('ZP07','ZTAUDI') then im_comcep6 else 0 end + " +
-                //"case when CD_CONCEP7 in ('ZP07','ZTAUDI') then im_comcep7 else 0 end + " +
-                //"case when CD_CONCEP8 in ('ZP07','ZTAUDI') then im_comcep8 else 0 end + " +
-                //"case when CD_CONCEP9 in ('ZP07','ZTAUDI') then im_comcep9 else 0 end + " +
-                //"case when CD_CONCEP10 in ('ZP07','ZTAUDI') then im_comcep10 else 0 end + " +
-                //"case when CD_CONCEP11 in ('ZP07','ZTAUDI') then im_comcep11 else 0 end + " +
-                //"case when CD_CONCEP12 in ('ZP07','ZTAUDI') then im_comcep12 else 0 end + " +
-                //"case when CD_CONCEP13 in ('ZP07','ZTAUDI') then im_comcep13 else 0 end + " +
-                //"case when CD_CONCEP14 in ('ZP07','ZTAUDI') then im_comcep14 else 0 end + " +
-                //"case when CD_CONCEP15 in ('ZP07','ZTAUDI') then im_comcep15 else 0 end + " +
-                //"case when CD_CONCEP16 in ('ZP07','ZTAUDI') then im_comcep16 else 0 end + " +
-                //"case when CD_CONCEP17 in ('ZP07','ZTAUDI') then im_comcep17 else 0 end + " +
-                //"case when CD_CONCEP18 in ('ZP07','ZTAUDI') then im_comcep18 else 0 end + " +
-                //"case when CD_CONCEP19 in ('ZP07','ZTAUDI') then im_comcep19 else 0 end + " +
-                //"case when CD_CONCEP20 in ('ZP07','ZTAUDI') then im_comcep20 else 0 end + " +
-                //"case when CD_CONCEP21 in ('ZP07','ZTAUDI') then im_comcep21 else 0 end + " +
-                //"case when CD_CONCEP22 in ('ZP07','ZTAUDI') then im_comcep22 else 0 end + " +
-                //"case when CD_CONCEP23 in ('ZP07','ZTAUDI') then im_comcep23 else 0 end + " +
-                //"case when CD_CONCEP24 in ('ZP07','ZTAUDI') then im_comcep24 else 0 end + " +
-                //"case when CD_CONCEP25 in ('ZP07','ZTAUDI') then im_comcep25 else 0 end + " +
-                //"case when CD_CONCEP26 in ('ZP07','ZTAUDI') then im_comcep26 else 0 end + " +
-                //"case when CD_CONCEP27 in ('ZP07','ZTAUDI') then im_comcep27 else 0 end + " +
-                //"case when CD_CONCEP28 in ('ZP07','ZTAUDI') then im_comcep28 else 0 end + " +
-                //"case when CD_CONCEP29 in ('ZP07','ZTAUDI') then im_comcep29 else 0 end + " +
-                //"case when CD_CONCEP30 in ('ZP07','ZTAUDI') then im_comcep30 else 0 end + " +
-                //"case when CD_CONCEP31 in ('ZP07','ZTAUDI') then im_comcep31 else 0 end + " +
-                //"case when CD_CONCEP32 in ('ZP07','ZTAUDI') then im_comcep32 else 0 end + " +
-                //"case when CD_CONCEP33 in ('ZP07','ZTAUDI') then im_comcep33 else 0 end + " +
-                //"case when CD_CONCEP34 in ('ZP07','ZTAUDI') then im_comcep34 else 0 end + " +
-                //"case when CD_CONCEP35 in ('ZP07','ZTAUDI') then im_comcep35 else 0 end + " +
-                //"case when CD_CONCEP36 in ('ZP07','ZTAUDI') then im_comcep36 else 0 end + " +
-                //"case when CD_CONCEP37 in ('ZP07','ZTAUDI') then im_comcep37 else 0 end + " +
-                //"case when CD_CONCEP38 in ('ZP07','ZTAUDI') then im_comcep38 else 0 end + " +
-                //"case when CD_CONCEP39 in ('ZP07','ZTAUDI') then im_comcep39 else 0 end + " +
-                //"case when CD_CONCEP40 in ('ZP07','ZTAUDI') then im_comcep40 else 0 end + " +
-                //"case when CD_CONCEP41 in ('ZP07','ZTAUDI') then im_comcep41 else 0 end + " +
-                //"case when CD_CONCEP42 in ('ZP07','ZTAUDI') then im_comcep42 else 0 end + " +
-                //"case when CD_CONCEP43 in ('ZP07','ZTAUDI') then im_comcep43 else 0 end + " +
-                //"case when CD_CONCEP44 in ('ZP07','ZTAUDI') then im_comcep44 else 0 end + " +
-                //"case when CD_CONCEP45 in ('ZP07','ZTAUDI') then im_comcep45 else 0 end + " +
-                //"case when CD_CONCEP46 in ('ZP07','ZTAUDI') then im_comcep46 else 0 end + " +
-                //"case when CD_CONCEP47 in ('ZP07','ZTAUDI') then im_comcep47 else 0 end + " +
-                //"case when CD_CONCEP48 in ('ZP07','ZTAUDI') then im_comcep48 else 0 end + " +
-                //"case when CD_CONCEP49 in ('ZP07','ZTAUDI') then im_comcep49 else 0 end + " +
-                //"case when CD_CONCEP50 in ('ZP07','ZTAUDI') then im_comcep50 else 0 end " +
-                //"as CAV, " +
-                //"nm_cons_act_tramo1 as CONSUMO_ACTIVA1,nm_cons_act_tramo2 as CONSUMO_ACTIVA2,nm_cons_act_tramo3 as CONSUMO_ACTIVA3,nm_cons_act_tramo4 as CONSUMO_ACTIVA4, " +
-                //"cd_pun_notif as CUPSREE,nm_vol_calc +  nm_num_decimales as POTENCIA " +
-                //"FROM ed_owner.sap_tfactura_n0 " +
-                //"inner join ed_owner.t_ed_h_sap_dc " +
-                //"on sap_tfactura_n0.cd_dc= t_ed_h_sap_dc.cd_dc " +
-                //"LEFT outer JOIN ed_owner.t_ed_h_sap_dc_lineas " +
-                //"ON t_ed_h_sap_dc.cd_dc= t_ed_h_sap_dc_lineas.cd_dc " +
-                //"and  cd_clase_pos_doc in ('ZP03', 'ZPOBTE','ZPOBTN') " +
-                //// Término Potencia Portugal es el ZP03 donde tenemos el calculo de CAV 
-                //"where de_seg_merc_por in ('" + entorno + "') " +
-                //"and sap_tfactura_n0.lg_origen='SAP' " +
-                //"and cd_territorio1='INTERNACIONAL OFICIN' ";
-                ////"and sap_tfactura_n0.fh_ult_ejec >= '2023-10-01 00:00:00' ";
-                #endregion
 
                 #region new query ERSE SAP (GUS add. 15/04/2025)
                 strSql = ConsultaSAP();
                 
-                if (usarFechaFactura)
-                {
-                    strSql = strSql + " and (FFACTURA >= '" + fd.ToString("yyyy-MM-dd") + "' and"
+                strSql = strSql + " and (FFACTURA >= '" + fd.ToString("yyyy-MM-dd") + "' and"
                     + " FFACTURA <= '" + fh.ToString("yyyy-MM-dd") + "')";
-                }
-                else
-                {
-                    strSql = strSql + " and (FFACTDES >= '" + fd.ToString("yyyy-MM-dd") + "' and"
-                + " FFACTHAS <= '" + fh.ToString("yyyy-MM-dd") + "')";
-                }
-
-                //strSql = strSql + " GROUP BY f.CREFEREN, f.SECFACTU, f.TESTFACT";
-
                 #endregion
 
                 db = new servidores.RedShiftServer(RedShiftServer.Entornos.PROD);
@@ -1509,7 +1423,7 @@ namespace EndesaBusiness.facturacion
 
         }
 
-        public void ExportExcelSAP(string fichero, string entorno)
+        public void ExportExcelSAP(string fichero)
         {
             int f = 1;
             int c = 1;
@@ -1522,7 +1436,7 @@ namespace EndesaBusiness.facturacion
 
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.Commercial;
             ExcelPackage excelPackage = new ExcelPackage(fileInfo);
-            var workSheet = excelPackage.Workbook.Worksheets.Add("SAP-"+entorno);
+            var workSheet = excelPackage.Workbook.Worksheets.Add("SAP");
 
 
             var headerCells = workSheet.Cells[1, 1, 1, 25];
@@ -1732,6 +1646,103 @@ namespace EndesaBusiness.facturacion
             "and n.lg_origen='SAP' " +
             "and cd_territorio1='INTERNACIONAL OFICIN' " +
             "and n.fh_ult_ejec >= '2024-10-01 00:00:00' ";
+            #endregion
+
+            return consulta;
+        }
+        private string Consulta_ERSE_SAP_INDIVIDUALES(DateTime fd, DateTime fh)
+        {
+            string consulta;
+
+            #region query ERSE SAP INDIVIDUALES
+            consulta =
+            "select " +
+            "dc.cd_empr as CEMPTITU,  " +
+            "cf.de_seg_merc_por,	 " +
+            "f.cd_est_fact as TESTFACT,  " +
+            "f.fh_actual_dtmco as fh_ult_ejec, " +
+            "c.cd_nif_cif_cli as CIF,  " +
+            "f.id_fact as CFACTURA,  " +
+            "f.fh_fact as FFACTURA,  " +
+            "f.fh_ini_fact as FFACTDES,   " +
+            "f.fh_fin_fact as FFACTHAS,   " +
+            "f.im_factdo_con_iva as IFACTURA,  " +
+            "f.im_impuesto_1 as IMPUESTO1, " +
+            "f.im_impuesto_1 as IMPUESTO2, " +
+            "f.im_impuesto_1 as IMPUESTO3, " +
+            "f.im_base_imp1, " +
+            "f.im_base_imp2, " +
+            "f.im_base_imp3, " +
+            "(f.im_factdo_sin_iva - f.im_impto_elect) as IBASEISE, " +
+            "f.im_impto_elect as ISE,  " +
+            "f.im_factdo_sin_iva as BASEIVA, " +
+            "case when f.nm_total_iva is null then (f.im_factdo_con_iva-f.im_factdo_sin_iva) else f.nm_total_iva end as IVA, ";
+            #region CAV
+            for(int cont = 1; cont<50; cont++)
+            {
+                consulta += $"case when f.cd_concepto_{cont} in ('ZP07','ZTAUDI') then f.im_concepto_{cont} else 0 end + ";
+            }
+            consulta += "case when f.cd_concepto_50 in ('ZP07','ZTAUDI') then f.im_concepto_50 else 0 end  as CAV, ";
+            #endregion
+
+            #region importe_redes
+            for (int cont = 1; cont <50; cont++)
+            {
+                consulta += $"case when f.cd_concepto_{cont} in ('ZEN_A3','ZEN_A2','ZEN_A1','ZENATR','ZEXATR','ZATBTE','ZEN_T2','ZEN_T3','ZEN_T1','ZENAFV','ZENTFV','ZPO9') then f.im_concepto_{cont} else 0 end + ";
+            }
+            consulta += "case when f.cd_concepto_50 in ('ZEN_A3','ZEN_A2','ZEN_A1','ZENATR','ZEXATR','ZATBTE','ZEN_T2','ZEN_T3','ZEN_T1','ZENAFV','ZENTFV','ZPO9') then f.im_concepto_50 else 0 end as IMPORTE_REDES, " +
+            #endregion
+            "case when f.nm_cons_per_1=0 then f.nm_cons_punta else f.nm_cons_per_1 end as CONSUMO_ACTIVA1, " +
+            "case when f.nm_cons_per_2=0 then f.nm_cons_llano else f.nm_cons_per_1 end as CONSUMO_ACTIVA2, " +
+            "case when f.nm_cons_per_3=0 then f.nm_cons_valle else f.nm_cons_per_1 end as CONSUMO_ACTIVA3, " +
+            "case when f.nm_cons_per_4=0 then f.nm_cons_valle_bajo else f.nm_cons_per_1 end as CONSUMO_ACTIVA4, " +
+            "f.NM_ENER_CONSMDA as ENERGIA_CONSUMIDA, " +
+            "f.NM_ENER_FACTDA as ENERGIA_FACTURADA, " +
+            "case when dc.cd_cups_ext is null then dc.cd_cups_gas_ext else dc.cd_cups_ext end as CUPSREE, " +
+            "GREATEST(f.nm_pot_max_1, " +
+                "f.nm_pot_max_2, " +
+                "f.nm_pot_max_3, " +
+                "f.nm_pot_max_4, " +
+                "f.nm_pot_max_5, " +
+                "f.nm_pot_max_6, " +
+                "f.nm_pot_max_7, " +
+                "f.nm_pot_punta, " +
+                "f.nm_pot_llano, " +
+                "f.nm_pot_valle) as POTENCIA, " +
+                "f.cd_di as DI,   " +
+                "f.cd_tp_fact  as TFACTURA,  " +
+                "c.tx_apell_cli as DAPERSOC,  	  " +
+                "dc.cd_linea_negocio as CSEGMERC,  " +
+                "case dc.cd_linea_negocio when '001' then 'L' when '002' then 'G' else 'L' end as TIPONEGOCIO " +
+            "from ed_owner.t_ed_h_sap_facts f  " +
+            "inner join  " +
+                "ed_owner.t_ed_h_sap_dc dc on f.cd_di=dc.cd_di  " +
+            "left join  " +
+                "ed_owner.t_ed_f_clis c on f.cl_cli = c.cl_cli  " +
+            "left join " +
+                "(SELECT id_crto_ext, de_seg_merc_por, MAX(cd_sec_crto) AS valor_maximo_version " +
+                "FROM ed_owner.t_ed_h_sap_crto_front " +
+                "GROUP BY id_crto_ext, de_seg_merc_por) cf on cf.id_crto_ext = dc.id_crto_ext " +
+            "where   " +
+                //"f.im_factdo_con_iva > 0 and   " +
+                "f.fh_ini_fact is not null and " +
+                "f.fh_fin_fact is not null and " +
+                "f.fh_fact >='" + fd.ToString("yyyy-MM-dd") + "' and   " +
+                "f.fh_fact <='" + fh.ToString("yyyy-MM-dd") + "' and   " +
+                "f.cl_empr = '006' and dc.cd_empr ='PT1Q' and   " +
+                "f.id_fact is not null and " +
+                "dc.cd_linea_negocio = '001' " +
+            "group by cemptitu,de_seg_merc_por,testfact,fh_ult_ejec,cif,cfactura,ffactura,ffactdes,ffacthas,ifactura,impuesto1,impuesto2,impuesto3,im_base_imp1,im_base_imp2,im_base_imp3,ibaseise,ise,baseiva,iva,cav,importe_redes,consumo_activa1,consumo_activa2,consumo_activa3,consumo_activa4,ENERGIA_CONSUMIDA,ENERGIA_FACTURADA,cupsree,potencia,DI,tfactura,dapersoc,csegmerc,tiponegocio;";
+            #endregion
+
+            return consulta;
+        }
+        private string Consulta_ERSE_SAP_AGRUPADAS()
+        {
+            string consulta;
+
+            #region query ERSE SAP AGRUPADAS
+            consulta = " ";
             #endregion
 
             return consulta;
