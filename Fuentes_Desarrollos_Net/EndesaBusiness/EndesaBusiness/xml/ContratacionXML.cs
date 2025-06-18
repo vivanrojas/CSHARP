@@ -251,7 +251,17 @@ namespace EndesaBusiness.xml
 
                     if (r["TipoAutoconsumo"] != System.DBNull.Value)
                     {
+                        // xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
+                        // xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
+                        //irh
+                        if (xml.Alta == null)
+                            xml.Alta = new AltaA301();
+                        if (xml.Alta.Contrato == null)
+                            xml.Alta.Contrato = new ContratoAlta();
+
                         xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
+                        xml.Alta.Contrato.Autoconsumo.DatosCAU = new DatosCAUAlta();
+
                         xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
                     }
 
