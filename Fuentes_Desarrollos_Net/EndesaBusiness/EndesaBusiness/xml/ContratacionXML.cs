@@ -288,7 +288,87 @@ namespace EndesaBusiness.xml
 
 
         }
+        public EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101 CargaDatosC1(int id)
+        {
+            servidores.MySQLDB db;
+            MySqlCommand command;
+            MySqlDataReader r;
+            string strSql;
 
+            EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101 xml =
+                new EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101();
+
+            try
+            {
+
+                strSql = "SELECT cab.CodigoREEEmpresaEmisora, cab.CodigoREEEmpresaDestino, cab.CodigoDelProceso,"
+                    + " cab.CodigoDePaso, cab.CodigoDeSolicitud, cab.SecuencialDeSolicitud, cab.FechaSolicitud,"
+                    + " cab.CUPS,sol.CNAE, sol.IndActivacion, sol.SolicitudTension, sol.TipoAutoconsumo, sol.TipoContratoATR,"
+                    + " sol.TarifaATR,sol.Potencia1, sol.Potencia2, sol.Potencia3, sol.Potencia4, sol.Potencia5,"
+                    + " sol.Potencia6, sol.ModoControlPotencia,con.PersonaDeContacto, con.PrefijoPais, con.Numero,"
+                    + " cli.TipoIdentificador, cli.Identificador, cli.TipoPersona,cli.NombreDePila, cli.PrimerApellido,"
+                    + " cli.SegundoApellido, cli.RazonSocial"
+                    + " FROM cnmc_t_cabecera cab"
+                    + " INNER JOIN cnmc_t_datossolicitud sol ON"
+                    + " sol.id = cab.id"
+                    + " INNER JOIN cnmc_t_cliente cli ON"
+                    + " cli.id = cab.id"
+                    + " LEFT JOIN cnmc_t_contacto con ON"
+                    + " con.id = cab.id"
+                    + " WHERE cab.id = " + id;
+                db = new MySQLDB(MySQLDB.Esquemas.CON);
+                command = new MySqlCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    xml.Cabecera.CodigoREEEmpresaEmisora = r["CodigoREEEmpresaEmisora"].ToString();
+                    xml.Cabecera.CodigoREEEmpresaDestino = r["CodigoREEEmpresaDestino"].ToString();
+                    xml.Cabecera.CodigoDelProceso = r["CodigoDelProceso"].ToString();
+                    xml.Cabecera.CodigoDePaso = r["CodigoDePaso"].ToString();
+                    xml.Cabecera.CodigoDeSolicitud = r["CodigoDeSolicitud"].ToString();
+                    xml.Cabecera.SecuencialDeSolicitud = r["SecuencialDeSolicitud"].ToString();
+                    xml.Cabecera.FechaSolicitud = r["FechaSolicitud"].ToString();
+                    xml.Cabecera.CUPS = r["CUPS"].ToString();
+
+                    // DatosSolicitud_C1
+                    var datos = xml.CambiodeComercializadorSinCambios.DatosSolicitud;
+                    if (r["CNAE"] != DBNull.Value) datos.cnae = r["CNAE"].ToString();
+                    if (r["IndActivacion"] != DBNull.Value) datos.indActivacion = r["IndActivacion"].ToString();
+                    if (r["SolicitudTension"] != DBNull.Value) datos.solicitudTension = r["SolicitudTension"].ToString();
+                    if (r["TipoModificacion"] != DBNull.Value) datos.tipoModificacion = r["TipoModificacion"].ToString();
+                    if (r["TipoSolicitudAdministrativa"] != DBNull.Value) datos.tipoSolicitudAdministrativa = r["TipoSolicitudAdministrativa"].ToString();
+                    if (r["FechaPrevistaAccion"] != DBNull.Value) datos.fechaPrevistaAccion = r["FechaPrevistaAccion"].ToString();
+                    if (r["ContratacionIncondicionalPS"] != DBNull.Value) datos.contratacionIncondicionalPS = r["ContratacionIncondicionalPS"].ToString();
+                    if (r["ContratacionIncondicionalBS"] != DBNull.Value) datos.contratacionIncondicionalBS = r["ContratacionIncondicionalBS"].ToString();
+                    if (r["TensionSolicitada"] != DBNull.Value) datos.TensionSolicitada = r["TensionSolicitada"].ToString();
+
+                    // Cliente
+                    var cli = new Cliente();
+
+                    if (r["TipoIdentificador"] != DBNull.Value) cli.IdCliente.TipoIdentificador = r["TipoIdentificador"].ToString();
+                    if (r["Identificador"] != DBNull.Value) cli.IdCliente.Identificador = r["Identificador"].ToString();
+                    if (r["TipoPersona"] != DBNull.Value) cli.IdCliente.TipoPersona = r["TipoPersona"].ToString();
+
+                    if (r["NombreDePila"] != DBNull.Value) cli.Nombre.NombreDePila = r["NombreDePila"].ToString();
+                    if (r["PrimerApellido"] != DBNull.Value) cli.Nombre.PrimerApellido = r["PrimerApellido"].ToString();
+                    if (r["SegundoApellido"] != DBNull.Value) cli.Nombre.SegundoApellido = r["SegundoApellido"].ToString();
+                    if (r["RazonSocial"] != DBNull.Value) cli.Nombre.RazonSocial = r["RazonSocial"].ToString();
+
+                    xml.CambiodeComercializadorSinCambios.Cliente = cli;
+
+                  
+                }
+                db.CloseConnection();
+                return xml;
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+
+
+        }
         public void CreaMensajeA302_A(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA302_A a302a)
         {
 
@@ -368,7 +448,38 @@ namespace EndesaBusiness.xml
             xml.Cabecera.FechaSolicitud = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss").ToString();
             xml.Cabecera.CUPS = a301.Cabecera.CUPS;
         }
+        public void CreaMensajeA305v2(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA305 a305)
+        {
 
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.Encoding = Encoding.UTF8;
+            string fichero = @"c:\Temp\XML_A305_"
+                + (a305.Cabecera.CodigoDeSolicitud) + "_"
+                + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml";
+
+            XmlWriter writer = XmlWriter.Create(fichero, settings);
+
+            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            ns.Add("", "http://localhost/elegibilidad");
+
+
+            XmlSerializer serializer = new XmlSerializer(typeof(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA305));
+            serializer.Serialize(writer, a305, ns);
+            writer.Close();
+
+
+            string mensaje = ValidateSchema(fichero, System.Environment.CurrentDirectory + p.GetValue("xsd_a305"));
+            if (mensaje == "")
+            {
+                MessageBox.Show("El XML sea ha generado correctamente en " + fichero.ToString(), "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El XML no es válido según el esquema: " + mensaje, "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
 
         public string ValidateSchema(string xmlPath, string xsdPath)
         {
@@ -513,6 +624,72 @@ namespace EndesaBusiness.xml
             {
 
             }
+        }
+
+        public void Guarda_XMLc101(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101 xml)
+        {
+            servidores.MySQLDB db;
+            MySqlCommand command;
+            StringBuilder sb = new StringBuilder();
+            bool firstOnly = true;
+            int i = 0;
+            int id = 0;
+            try
+            {
+                if (firstOnly)
+                {
+                    sb.Append("REPLACE INTO cnmc_t_cabecera");
+                    sb.Append(" (id, CodigoREEEmpresaEmisora, CodigoREEEmpresaDestino, CodigoDelProceso,");
+                    sb.Append(" CodigoDePaso, CodigoDeSolicitud, SecuencialDeSolicitud, FechaSolicitud,");
+                    sb.Append(" CUPS, created_by, created_date) values ");
+                    firstOnly = false;
+                }
+                i++;
+                id = GetID(xml.Cabecera.CodigoDelProceso, xml.Cabecera.CodigoDePaso,
+                    xml.Cabecera.CodigoDeSolicitud);
+                sb.Append("(").Append(id).Append(",");
+                sb.Append("'").Append(xml.Cabecera.CodigoREEEmpresaEmisora).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CodigoREEEmpresaDestino).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CodigoDelProceso).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CodigoDePaso).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CodigoDeSolicitud).Append("',");
+                sb.Append("'").Append(xml.Cabecera.SecuencialDeSolicitud).Append("',");
+                sb.Append("'").Append(Convert.ToDateTime(xml.Cabecera.FechaSolicitud).ToString("yyyy-MM-dd HH:mm:ss")).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CUPS).Append("',");
+                sb.Append("'").Append(System.Environment.UserName.ToUpper()).Append("',");
+                sb.Append("'").Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Append("'),");
+
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+            }
+            finally
+            {
+                if (i == 1)
+                {
+                    firstOnly = true;
+                    db = new MySQLDB(MySQLDB.Esquemas.CON);
+                    command = new MySqlCommand(sb.ToString().Substring(0, sb.Length - 1), db.con);
+                    command.ExecuteNonQuery();
+                    db.CloseConnection();
+                    sb = null;
+                    sb = new StringBuilder();
+                    i = 0;
+                }
+            }
+        }
+
+        public void Guarda_XMLb101(EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeB101 xml) // ojo version 30 y v21
+        {
+        }
+
+        public void Guarda_XMLc201(EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeC201 xml) 
+        {
+        }
+
+        public void Guarda_XMLm101(EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeM101 xml)
+        {
         }
 
         private void Guarda_DatosSolicitud(int id, EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA301 xml)

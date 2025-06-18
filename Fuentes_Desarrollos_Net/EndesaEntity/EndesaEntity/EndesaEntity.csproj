@@ -153,7 +153,7 @@
     <Compile Include="cnmc\V21_2019_12_17\TipoMensajeT105.cs" />
     <Compile Include="cnmc\PeajeGas.cs" />
     <Compile Include="cnmc\V21_2019_12_17\Via.cs" />
-    <Compile Include="cnmc\V30_2022_21_01\ActivacionAlta.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\ActivacionAltaA3.cs" />
     <Compile Include="cnmc\V30_2022_21_01\BajaSuspension.cs" />
     <Compile Include="cnmc\V30_2022_21_01\Cliente.cs" />
     <Compile Include="cnmc\V30_2022_21_01\CondicionesContractuales_C201.cs" />
