@@ -682,6 +682,62 @@
     <Compile Include="utilidades\UtilidadesArchivo.cs" />
     <Compile Include="utilidades\ZIP.cs" />
     <Compile Include="utilidades\ZipUnZip.cs" />
+    <Compile Include="Validators\CellValidationResult.cs" />
+    <Compile Include="Validators\ICellValidator.cs" />
+    <Compile Include="Validators\OpenOfficeSheetValidator.cs" />
+    <Compile Include="Validators\SheetValidationResult.cs" />
+    <Compile Include="Validators\SheetValidator.cs" />
+    <Compile Include="Validators\Validations\CauValidation.cs" />
+    <Compile Include="Validators\Validations\CNAEValidation.cs" />
+    <Compile Include="Validators\Validations\CodigopostalValidation.cs" />
+    <Compile Include="Validators\Validations\ColectivoValidation.cs" />
+    <Compile Include="Validators\Validations\ContratacionIncondicionalPSValidation.cs" />
+    <Compile Include="Validators\Validations\ContratIncondBSValidation.cs" />
+    <Compile Include="Validators\Validations\Cups22Validation.cs" />
+    <Compile Include="Validators\Validations\DireccionUrlValidation.cs" />
+    <Compile Include="Validators\Validations\DistribuidoraValidation.cs" />
+    <Compile Include="Validators\Validations\EmpresaEmisoraValidation.cs" />
+    <Compile Include="Validators\Validations\EntornoValidation.cs" />
+    <Compile Include="Validators\Validations\FechaactivacionValidation.cs" />
+    <Compile Include="Validators\Validations\FechadeFinalizacionValidation.cs" />
+    <Compile Include="Validators\Validations\IndActivacionValidation.cs" />
+    <Compile Include="Validators\Validations\IndicadorTipoDireccionValidation.cs" />
+    <Compile Include="Validators\Validations\IntegerValidation.cs" />
+    <Compile Include="Validators\Validations\ModoControlPotenciaValidation.cs" />
+    <Compile Include="Validators\Validations\MunicipioValidation.cs" />
+    <Compile Include="Validators\Validations\NIdentificadorValidation.cs" />
+    <Compile Include="Validators\Validations\NombreDePilaValidation.cs" />
+    <Compile Include="Validators\Validations\NombreViaValidation.cs" />
+    <Compile Include="Validators\Validations\NumeroValidation.cs" />
+    <Compile Include="Validators\Validations\PaisValidation.cs" />
+    <Compile Include="Validators\Validations\PersonadeContactoValidation.cs" />
+    <Compile Include="Validators\Validations\PisoValidation.cs" />
+    <Compile Include="Validators\Validations\PotenciaWValidation.cs" />
+    <Compile Include="Validators\Validations\PotInstaladaGenValidation.cs" />
+    <Compile Include="Validators\Validations\PrimerApellidoValidation.cs" />
+    <Compile Include="Validators\Validations\ProvinciaValidation.cs" />
+    <Compile Include="Validators\Validations\PuertaValidation.cs" />
+    <Compile Include="Validators\Validations\RazonSocialValidation.cs" />
+    <Compile Include="Validators\Validations\SolicitudmodificaciontensionValidation.cs" />
+    <Compile Include="Validators\Validations\SsaaValidation.cs" />
+    <Compile Include="Validators\Validations\StringNotNullValidation.cs" />
+    <Compile Include="Validators\Validations\TarifaValidation.cs" />
+    <Compile Include="Validators\Validations\TelefonoValidation.cs" />
+    <Compile Include="Validators\Validations\TensionsolicitadaValidation.cs" />
+    <Compile Include="Validators\Validations\TipoclienteValidation.cs" />
+    <Compile Include="Validators\Validations\TipocontratoValidation.cs" />
+    <Compile Include="Validators\Validations\TipoCupsValidation.cs" />
+    <Compile Include="Validators\Validations\TipodeautoconsumoValidatiions.cs" />
+    <Compile Include="Validators\Validations\TipodeviaValidation.cs" />
+    <Compile Include="Validators\Validations\TipoDocAportadoValidation.cs" />
+    <Compile Include="Validators\Validations\TipoindentificadorValidations.cs" />
+    <Compile Include="Validators\Validations\TipoInstalacionValidation.cs" />
+    <Compile Include="Validators\Validations\TipomodifcacionValidation.cs" />
+    <Compile Include="Validators\Validations\TipoPersonaValidation.cs" />
+    <Compile Include="Validators\Validations\TiposolicitudadministrativaValidation.cs" />
+    <Compile Include="Validators\Validations\TipoSubseccionValidation.cs" />
+    <Compile Include="Validators\Validations\TlfcontactoValidation.cs" />
+    <Compile Include="Validators\Validations\UnicoContratoValidations.cs" />
     <Compile Include="xml\ContratacionXML.cs" />
     <Compile Include="xml\Extrasistemas.cs" />
     <Compile Include="xml\XMLFunciones.cs" />
@@ -709,6 +765,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Validators\Validations\.editorconfig" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
