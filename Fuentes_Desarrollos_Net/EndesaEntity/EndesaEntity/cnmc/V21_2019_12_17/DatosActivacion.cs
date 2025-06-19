@@ -7,7 +7,9 @@ using System.Xml.Serialization;
 
 namespace EndesaEntity.cnmc.V21_2019_12_17
 {
-    [XmlRoot(ElementName = "DatosActivacion")]
+    // [XmlRoot(ElementName = "DatosActivacion")]
+    [XmlRoot(ElementName = "DatosActivacion", Namespace = "http://localhost/elegibilidad")]
+    [XmlType(Namespace = "http://localhost/elegibilidad")]
     public class DatosActivacion
     {
         [XmlElement(ElementName = "FechaActivacion")] public string fechaActivacion { get; set; }

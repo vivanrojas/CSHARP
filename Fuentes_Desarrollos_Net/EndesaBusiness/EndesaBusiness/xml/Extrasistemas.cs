@@ -5142,23 +5142,29 @@ namespace EndesaBusiness.xml
         public string ValidateSchema(string xmlPath, string xsdPath)
         {
 
-            string mensaje = "";
+            //string mensaje = "";
+            string mensaje = string.Empty;
             XmlDocument xml = new XmlDocument();
             xml.Load(xmlPath);
 
             xml.Schemas.Add(null, xsdPath);
 
-            try
-            {
-                xml.Validate(null);
-            }
-            catch (XmlSchemaValidationException e)
-            {
-                //[06/03/2025 GUS]: if(!e.Message.Contains("http://localhost/elegibilidad"))
-                //if (e.Message.Contains("http://localhost/elegibilidad"))
-                    return e.Message;
-            }
-            return mensaje;
+            //try
+            //{
+            //    xml.Validate(null);
+            //}
+            //catch (XmlSchemaValidationException e)
+             xml.Validate((sender, args) =>
+             {
+                 //[06/03/2025 GUS]: if(!e.Message.Contains("http://localhost/elegibilidad"))
+                 //if (e.Message.Contains("http://localhost/elegibilidad"))
+                 //        return e.Message;
+                 //}
+                 //return mensaje;
+                 mensaje += args.Severity + ": " + args.Message + Environment.NewLine;
+             });
+
+            return mensaje.Trim();
         }
 
         private void BorradoDatosMySQL()

@@ -493,21 +493,28 @@ namespace EndesaBusiness.xml
 
         public string ValidateSchema(string xmlPath, string xsdPath)
         {
-            string mensaje = "";
+           // string mensaje = "";
+             string mensaje = string.Empty;
             XmlDocument xml = new XmlDocument();
             xml.Load(xmlPath);
 
             xml.Schemas.Add(null, xsdPath);
 
-            try
-            {
-                xml.Validate(null);
-            }
-            catch (XmlSchemaValidationException e)
-            {
-                return e.Message;
-            }
-            return mensaje;
+            //try
+            //{
+            //    xml.Validate(null);
+            //}
+            //catch (XmlSchemaValidationException e)
+              xml.Validate((sender, args) =>
+
+              {
+                  //  return e.Message;
+                  //  }
+                  //  return mensaje;
+                  mensaje += args.Severity + ": " + args.Message + Environment.NewLine;
+              });
+
+            return mensaje.Trim();
         }
 
 

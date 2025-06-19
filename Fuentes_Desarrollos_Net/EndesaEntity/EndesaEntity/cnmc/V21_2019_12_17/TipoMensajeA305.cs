@@ -20,6 +20,8 @@ namespace EndesaEntity.cnmc.V21_2019_12_17
         public TipoMensajeA305()
         {
             Cabecera = new Cabecera();
+            // irh
+           // ActivacionAlta = new ActivacionAlta();
         }
     }
 }
