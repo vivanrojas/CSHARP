@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.Xml;
 using System.Xml.Schema;
+using EndesaEntity.cnmc.V30_2022_21_01;
 
 namespace EndesaBusiness.xml
 {
@@ -211,9 +212,111 @@ namespace EndesaBusiness.xml
             
         }
 
+        //public EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 CargaDatosV30(int id)
+        //{
+        //    servidores.MySQLDB db;
+        //    MySqlCommand command;
+        //    MySqlDataReader r;
+        //    string strSql;
+
+        //    EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 xml =
+        //        new EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301();
+
+        //    try
+        //    {
+
+        //        strSql = "SELECT cab.CodigoREEEmpresaEmisora, cab.CodigoREEEmpresaDestino, cab.CodigoDelProceso,"
+        //            + " cab.CodigoDePaso, cab.CodigoDeSolicitud, cab.SecuencialDeSolicitud, cab.FechaSolicitud,"
+        //            + " cab.CUPS,sol.CNAE, sol.IndActivacion, sol.SolicitudTension, sol.TipoAutoconsumo, sol.TipoContratoATR,"
+        //            + " sol.TarifaATR,sol.Potencia1, sol.Potencia2, sol.Potencia3, sol.Potencia4, sol.Potencia5,"
+        //            + " sol.Potencia6, sol.ModoControlPotencia,con.PersonaDeContacto, con.PrefijoPais, con.Numero,"
+        //            + " cli.TipoIdentificador, cli.Identificador, cli.TipoPersona,cli.NombreDePila, cli.PrimerApellido,"
+        //            + " cli.SegundoApellido, cli.RazonSocial"
+        //            + " FROM cnmc_t_cabecera cab"
+        //            + " INNER JOIN cnmc_t_datossolicitud sol ON"
+        //            + " sol.id = cab.id"
+        //            + " INNER JOIN cnmc_t_cliente cli ON"
+        //            + " cli.id = cab.id"
+        //            + " LEFT JOIN cnmc_t_contacto con ON"
+        //            + " con.id = cab.id"
+        //            + " WHERE cab.id = " + id;
+        //        db = new MySQLDB(MySQLDB.Esquemas.CON);
+        //        command = new MySqlCommand(strSql, db.con);
+        //        r = command.ExecuteReader();
+        //        while (r.Read())
+        //        {
+        //            xml.Cabecera.CodigoREEEmpresaEmisora = r["CodigoREEEmpresaEmisora"].ToString();
+        //            xml.Cabecera.CodigoREEEmpresaDestino = r["CodigoREEEmpresaDestino"].ToString();
+        //            xml.Cabecera.CodigoDelProceso = r["CodigoDelProceso"].ToString();
+
+        //            xml.Cabecera.CodigoDePaso = r["CodigoDePaso"].ToString();
+        //            xml.Cabecera.CodigoDeSolicitud = r["CodigoDeSolicitud"].ToString();
+        //            xml.Cabecera.SecuencialDeSolicitud = r["SecuencialDeSolicitud"].ToString();
+        //            xml.Cabecera.FechaSolicitud = r["FechaSolicitud"].ToString();
+        //            xml.Cabecera.CUPS = r["CUPS"].ToString();
+
+        //            if (r["CNAE"] != System.DBNull.Value)
+        //                xml.Alta.DatosSolicitud.cnae = r["CNAE"].ToString();
+
+        //            if (r["IndActivacion"] != System.DBNull.Value)
+        //                xml.Alta.DatosSolicitud.IndActivacion = r["IndActivacion"].ToString();
+
+        //            if (r["SolicitudTension"] != System.DBNull.Value)
+        //                xml.Alta.DatosSolicitud.SolicitudTension = r["SolicitudTension"].ToString();
+        //            else
+        //                xml.Alta.DatosSolicitud.SolicitudTension = "N";
+
+        //            if (r["TipoAutoconsumo"] != System.DBNull.Value)
+        //            {
+        //                xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
+        //                xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
+
+        //                if (xml.Alta == null)
+        //                    xml.Alta = new AltaA301();
+        //                if (xml.Alta.Contrato == null)
+        //                    xml.Alta.Contrato = new ContratoAlta();
+
+        //                xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
+        //                xml.Alta.Contrato.Autoconsumo.DatosCAU = new DatosCAUAlta();
+
+        //                xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
+        //            }
+
+
+        //            if (r["TipoContratoATR"] != System.DBNull.Value)
+        //                xml.Alta.Contrato.TipoContratoATR = r["TipoContratoATR"].ToString();
+
+        //            if (r["TarifaATR"] != System.DBNull.Value)
+        //                xml.Alta.Contrato.CondicionesContractuales.TarifaATR = r["TarifaATR"].ToString();
+
+        //            for (int j = 1; j <= 6; j++)
+        //                if (r["Potencia" + j] != System.DBNull.Value)
+        //                {
+        //                    EndesaEntity.cnmc.V21_2019_12_17.Potencia p = new Potencia();
+        //                    p.periodo = j.ToString();
+        //                    p.potencia = r["Potencia" + j].ToString();
+
+        //                    xml.Alta.Contrato.CondicionesContractuales.
+        //                       PotenciasContratadas.Potencia.Add(p);
+
+
+        //                }
+
+
+
+        //        }
+        //        db.CloseConnection();
+        //        return xml;
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        return null;
+        //    }
+        // }
         public EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 CargaDatosV30(int id)
         {
-            servidores.MySQLDB db;
+            servidores.MySQLDB db  = null;
             MySqlCommand command;
             MySqlDataReader r;
             string strSql;
@@ -223,22 +326,24 @@ namespace EndesaBusiness.xml
 
             try
             {
-
                 strSql = "SELECT cab.CodigoREEEmpresaEmisora, cab.CodigoREEEmpresaDestino, cab.CodigoDelProceso,"
                     + " cab.CodigoDePaso, cab.CodigoDeSolicitud, cab.SecuencialDeSolicitud, cab.FechaSolicitud,"
-                    + " cab.CUPS,sol.CNAE, sol.IndActivacion, sol.SolicitudTension, sol.TipoAutoconsumo, sol.TipoContratoATR,"
-                    + " sol.TarifaATR,sol.Potencia1, sol.Potencia2, sol.Potencia3, sol.Potencia4, sol.Potencia5,"
-                    + " sol.Potencia6, sol.ModoControlPotencia,con.PersonaDeContacto, con.PrefijoPais, con.Numero,"
-                    + " cli.TipoIdentificador, cli.Identificador, cli.TipoPersona,cli.NombreDePila, cli.PrimerApellido,"
-                    + " cli.SegundoApellido, cli.RazonSocial"
+                    + " cab.CUPS, sol.CNAE, sol.IndActivacion, sol.SolicitudTension, sol.TipoAutoconsumo, sol.TipoContratoATR,"
+                    + " sol.TarifaATR, sol.Potencia1, sol.Potencia2, sol.Potencia3, sol.Potencia4, sol.Potencia5,"
+                    + " sol.Potencia6, sol.ModoControlPotencia, sol.TipoCUPS, sol.cau, sol.TipoSubseccion,"
+                    + " sol.Colectivo, sol.PotInstaladaGen, sol.TipoInstalacion, sol.SSAA, sol.UnicoContrato,"
+                    + " sol.RefCatastro, sol.CIL, sol.TecGenerado, sol.IndEsencial, sol.fechaPrevistaAccion,"
+                    + " sol.TensionSolicitada, sol.CodContrato, sol.Fecha_finalizacion, sol.TipoActivacionPrevista,"
+                    + " sol.CUPSPrincipal, sol.FechaActivacionPrevista, sol.TensionDelSuministro, sol.VAsTrafo,"
+                    + " sol.PeriodicidadFacturacion, sol.TipoTelegestion,"
+                    + " cli.TipoIdentificador, cli.Identificador, cli.TipoPersona, cli.NombreDePila,"
+                    + " cli.PrimerApellido, cli.SegundoApellido, cli.RazonSocial"
                     + " FROM cnmc_t_cabecera cab"
-                    + " INNER JOIN cnmc_t_datossolicitudnew sol ON"
-                    + " sol.id = cab.id"
-                    + " INNER JOIN cnmc_t_cliente cli ON"
-                    + " cli.id = cab.id"
-                    + " LEFT JOIN cnmc_t_contacto con ON"
-                    + " con.id = cab.id"
+                    + " INNER JOIN cnmc_t_datossolicitudnew sol ON sol.id = cab.id"
+                    + " INNER JOIN cnmc_t_cliente cli ON cli.id = cab.id"
+                    + " LEFT JOIN cnmc_t_contacto con ON con.id = cab.id"
                     + " WHERE cab.id = " + id;
+
                 db = new MySQLDB(MySQLDB.Esquemas.CON);
                 command = new MySqlCommand(strSql, db.con);
                 r = command.ExecuteReader();
@@ -247,74 +352,162 @@ namespace EndesaBusiness.xml
                     xml.Cabecera.CodigoREEEmpresaEmisora = r["CodigoREEEmpresaEmisora"].ToString();
                     xml.Cabecera.CodigoREEEmpresaDestino = r["CodigoREEEmpresaDestino"].ToString();
                     xml.Cabecera.CodigoDelProceso = r["CodigoDelProceso"].ToString();
-                    
                     xml.Cabecera.CodigoDePaso = r["CodigoDePaso"].ToString();
                     xml.Cabecera.CodigoDeSolicitud = r["CodigoDeSolicitud"].ToString();
                     xml.Cabecera.SecuencialDeSolicitud = r["SecuencialDeSolicitud"].ToString();
                     xml.Cabecera.FechaSolicitud = r["FechaSolicitud"].ToString();
                     xml.Cabecera.CUPS = r["CUPS"].ToString();
 
-                    if (r["CNAE"] != System.DBNull.Value)
-                        xml.Alta.DatosSolicitud.cnae = r["CNAE"].ToString();
+                    var datos = xml.Alta.DatosSolicitud;
+                    var contrato = xml.Alta.Contrato;
 
-                    if (r["IndActivacion"] != System.DBNull.Value)
-                        xml.Alta.DatosSolicitud.IndActivacion = r["IndActivacion"].ToString();
+                    if (r["CNAE"] != DBNull.Value)
+                        datos.cnae = r["CNAE"].ToString();
 
-                    if (r["SolicitudTension"] != System.DBNull.Value)
-                        xml.Alta.DatosSolicitud.SolicitudTension = r["SolicitudTension"].ToString();
+                    if (r["IndActivacion"] != DBNull.Value)
+                        datos.IndActivacion = r["IndActivacion"].ToString();
+
+                    if (r["SolicitudTension"] != DBNull.Value)
+                        datos.SolicitudTension = r["SolicitudTension"].ToString();
                     else
-                        xml.Alta.DatosSolicitud.SolicitudTension = "N";
+                        datos.SolicitudTension = "N";
 
-                    if (r["TipoAutoconsumo"] != System.DBNull.Value)
+                    // AUTOCONSUMO
+                    if (r["TipoAutoconsumo"] != DBNull.Value)
                     {
-                        xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
-                        xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
-                        
-                        if (xml.Alta == null)
-                            xml.Alta = new AltaA301();
-                        if (xml.Alta.Contrato == null)
-                            xml.Alta.Contrato = new ContratoAlta();
-
-                        xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
-                        xml.Alta.Contrato.Autoconsumo.DatosCAU = new DatosCAUAlta();
-
-                        xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
-                    }
-
-
-                    if (r["TipoContratoATR"] != System.DBNull.Value)
-                        xml.Alta.Contrato.TipoContratoATR = r["TipoContratoATR"].ToString();
-
-                    if (r["TarifaATR"] != System.DBNull.Value)
-                        xml.Alta.Contrato.CondicionesContractuales.TarifaATR = r["TarifaATR"].ToString();
-
-                    for (int j = 1; j <= 6; j++)
-                        if (r["Potencia" + j] != System.DBNull.Value)
+                        if (xml.Alta.Contrato.Autoconsumo == null)
                         {
-                            EndesaEntity.cnmc.V21_2019_12_17.Potencia p = new Potencia();
-                            p.periodo = j.ToString();
-                            p.potencia = r["Potencia" + j].ToString();
-
-                            xml.Alta.Contrato.CondicionesContractuales.
-                               PotenciasContratadas.Potencia.Add(p);
-
+                            xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
+                            xml.Alta.Contrato.Autoconsumo.DatosCAU = new DatosCAUAlta();
+                            xml.Alta.Contrato.Autoconsumo.DatosSuministro = new DatosSuministroSolicitud();
 
                         }
 
+                        var auto = xml.Alta.Contrato.Autoconsumo;
+                        auto.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
+
+                        // NUEVOS CAMPOS de Autoconsumo
+                        if (r["TipoCUPS"] != DBNull.Value)
+                            auto.DatosSuministro.TipoCUPS = r["TipoCUPS"].ToString();
+
+                        if (r["cau"] != DBNull.Value)
+                            auto.DatosCAU.CAU = r["cau"].ToString();
+
+                        if (r["TipoSubseccion"] != DBNull.Value)
+                            auto.DatosCAU.TipoSubseccion = r["TipoSubseccion"].ToString();
+
+                        if (r["Colectivo"] != DBNull.Value)
+                            auto.DatosCAU.Colectivo = r["Colectivo"].ToString();
+
+                        if (auto.DatosCAU.DatosInstGen == null)
+                            xml.Alta.Contrato.Autoconsumo.DatosCAU = new DatosCAUAlta();
+
+                        //xml.Alta.Contrato.Autoconsumo.DatosCAU.DatosInstGen = auto.DatosCAU.DatosInstGen.
 
 
+                        var datosInstGen = auto.DatosCAU.DatosInstGen;
+
+                        if (r["PotInstaladaGen"] != DBNull.Value)
+                            datosInstGen.PotInstaladaGen = r["PotInstaladaGen"].ToString();
+
+                        if (r["TipoInstalacion"] != DBNull.Value)
+                            datosInstGen.TipoInstalacion = r["TipoInstalacion"].ToString();
+
+                        if (r["SSAA"] != DBNull.Value)
+                            datosInstGen.SSAA = r["SSAA"].ToString();
+
+                        if (r["UnicoContrato"] != DBNull.Value)
+                            datosInstGen.UnicoContrato = r["UnicoContrato"].ToString();
+
+                        if (r["RefCatastro"] != DBNull.Value)
+                            datosInstGen.RefCatastro = r["RefCatastro"].ToString();
+
+                        if (r["CIL"] != DBNull.Value)
+                            datosInstGen.CIL = r["CIL"].ToString();
+
+                        if (r["TecGenerado"] != DBNull.Value)
+                            datosInstGen.TecGenerador = r["TecGenerado"].ToString();
+                    }
+
+                    if (r["TipoContratoATR"] != DBNull.Value)
+                        contrato.TipoContratoATR = r["TipoContratoATR"].ToString();
+
+                    if (r["TarifaATR"] != DBNull.Value)
+                        contrato.CondicionesContractuales.TarifaATR = r["TarifaATR"].ToString();
+
+                    // NUEVOS CAMPOS de DatosSolicitud
+                    if (r["IndEsencial"] != DBNull.Value)
+                        datos.IndEsencial = r["IndEsencial"].ToString();
+
+                    if (r["fechaPrevistaAccion"] != DBNull.Value)
+                        datos.fechaPrevistaAccion = r["fechaPrevistaAccion"].ToString();
+
+                    if (r["TensionSolicitada"] != DBNull.Value)
+                        datos.TensionSolicitada = r["TensionSolicitada"].ToString();
+
+                    // Potencias
+                    for (int j = 1; j <= 6; j++)
+                    {
+                        if (r["Potencia" + j] != DBNull.Value)
+                        {
+                            var p = new EndesaEntity.cnmc.V21_2019_12_17.Potencia
+                            {
+                                periodo = j.ToString(),
+                                potencia = r["Potencia" + j].ToString()
+                            };
+
+                            contrato.CondicionesContractuales.PotenciasContratadas.Potencia.Add(p);
+                        }
+                    }
+
+                    if (r["ModoControlPotencia"] != DBNull.Value)
+                        contrato.CondicionesContractuales.ModoControlPotencia = r["ModoControlPotencia"].ToString();
+
+                    // NUEVOS CAMPOS de Contrato
+                    if (r["CodContrato"] != DBNull.Value)
+                    {
+                        if (contrato.IdContrato == null)
+                          //  contrato.IdContrato = new EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301.a                                
+                               // .IdContrato();
+                        contrato.IdContrato.CodContrato = r["CodContrato"].ToString();
+                    }
+
+                    if (r["Fecha_finalizacion"] != DBNull.Value)
+                        contrato.FechaFinalizacion = r["Fecha_finalizacion"].ToString();
+
+                    if (r["TipoActivacionPrevista"] != DBNull.Value)
+                        contrato.TipoActivacionPrevista = r["TipoActivacionPrevista"].ToString();
+
+                    if (r["CUPSPrincipal"] != DBNull.Value)
+                        contrato.CUPSPrincipal = r["CUPSPrincipal"].ToString();
+
+                    if (r["FechaActivacionPrevista"] != DBNull.Value)
+                        contrato.FechaActivacionPrevista = r["FechaActivacionPrevista"].ToString();
+
+                    if (r["TensionDelSuministro"] != DBNull.Value)
+                        contrato.CondicionesContractuales.TensionDelSuministro = r["TensionDelSuministro"].ToString();
+
+                    if (r["VAsTrafo"] != DBNull.Value)
+                        contrato.CondicionesContractuales.VAsTrafo = r["VAsTrafo"].ToString();
+
+                    if (r["PeriodicidadFacturacion"] != DBNull.Value)
+                        contrato.CondicionesContractuales.PeriodicidadFacturacion = r["PeriodicidadFacturacion"].ToString();
+
+                    if (r["TipoTelegestion"] != DBNull.Value)
+                        contrato.CondicionesContractuales.TipoTelegestion = r["TipoTelegestion"].ToString();
                 }
+
                 db.CloseConnection();
                 return xml;
             }
             catch (Exception ex)
             {
-
+                db?.CloseConnection();
                 return null;
             }
-
-
         }
+
+
         public EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeC101 CargaDatosC1(int id)
         {
             servidores.MySQLDB db;
@@ -370,8 +563,8 @@ namespace EndesaBusiness.xml
                     if (r["TensionSolicitada"] != DBNull.Value) datos.TensionSolicitada = r["TensionSolicitada"].ToString();
 
                     // Cliente
-                    var cli = new Cliente();
-
+                    var cli = new EndesaEntity.cnmc.V21_2019_12_17.Cliente();
+                                        
                     if (r["TipoIdentificador"] != DBNull.Value) cli.IdCliente.TipoIdentificador = r["TipoIdentificador"].ToString();
                     if (r["Identificador"] != DBNull.Value) cli.IdCliente.Identificador = r["Identificador"].ToString();
                     if (r["TipoPersona"] != DBNull.Value) cli.IdCliente.TipoPersona = r["TipoPersona"].ToString();
