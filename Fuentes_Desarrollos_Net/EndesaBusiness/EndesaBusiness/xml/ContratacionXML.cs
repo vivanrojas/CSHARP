@@ -57,7 +57,22 @@ namespace EndesaBusiness.xml
                     if (r["CodigoREEEmpresaDestino"] != System.DBNull.Value)
                         c.CodigoREEEmpresaDestino = r["CodigoREEEmpresaDestino"].ToString();
                     if (r["CodigoDelProceso"] != System.DBNull.Value)
-                        c.CodigoDelProceso = r["CodigoDelProceso"].ToString();
+                       c.CodigoDelProceso = r["CodigoDelProceso"].ToString();
+                    //irh
+                    var reemplazos = new Dictionary<string, string>
+                    {
+                          { "A3", "AD" },
+                          { "C1", "ACC" },
+                          { "B1", "BA" },
+                          { "M1", "MOD" },
+                          { "C2", "ACCMOD" }
+                     };
+
+                    if (reemplazos.ContainsKey(c.CodigoDelProceso))
+                    {
+                        c.CodigoDelProceso = reemplazos[c.CodigoDelProceso];
+                    }
+
                     if (r["CodigoDePaso"] != System.DBNull.Value)
                         c.CodigoDePaso = r["CodigoDePaso"].ToString();
 
@@ -217,7 +232,7 @@ namespace EndesaBusiness.xml
                     + " cli.TipoIdentificador, cli.Identificador, cli.TipoPersona,cli.NombreDePila, cli.PrimerApellido,"
                     + " cli.SegundoApellido, cli.RazonSocial"
                     + " FROM cnmc_t_cabecera cab"
-                    + " INNER JOIN cnmc_t_datossolicitud sol ON"
+                    + " INNER JOIN cnmc_t_datossolicitudnew sol ON"
                     + " sol.id = cab.id"
                     + " INNER JOIN cnmc_t_cliente cli ON"
                     + " cli.id = cab.id"
@@ -232,6 +247,7 @@ namespace EndesaBusiness.xml
                     xml.Cabecera.CodigoREEEmpresaEmisora = r["CodigoREEEmpresaEmisora"].ToString();
                     xml.Cabecera.CodigoREEEmpresaDestino = r["CodigoREEEmpresaDestino"].ToString();
                     xml.Cabecera.CodigoDelProceso = r["CodigoDelProceso"].ToString();
+                    
                     xml.Cabecera.CodigoDePaso = r["CodigoDePaso"].ToString();
                     xml.Cabecera.CodigoDeSolicitud = r["CodigoDeSolicitud"].ToString();
                     xml.Cabecera.SecuencialDeSolicitud = r["SecuencialDeSolicitud"].ToString();
@@ -251,9 +267,9 @@ namespace EndesaBusiness.xml
 
                     if (r["TipoAutoconsumo"] != System.DBNull.Value)
                     {
-                        // xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
-                        // xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
-                        //irh
+                        xml.Alta.Contrato.Autoconsumo = new AutoconsumoSolicitudAlta();
+                        xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
+                        
                         if (xml.Alta == null)
                             xml.Alta = new AltaA301();
                         if (xml.Alta.Contrato == null)
@@ -264,6 +280,7 @@ namespace EndesaBusiness.xml
 
                         xml.Alta.Contrato.Autoconsumo.DatosCAU.TipoAutoconsumo = r["TipoAutoconsumo"].ToString();
                     }
+
 
                     if (r["TipoContratoATR"] != System.DBNull.Value)
                         xml.Alta.Contrato.TipoContratoATR = r["TipoContratoATR"].ToString();
@@ -487,6 +504,8 @@ namespace EndesaBusiness.xml
             else
             {
                 MessageBox.Show("El XML no es válido según el esquema: " + mensaje, "Genera XML", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                //delete
             }
 
         }
@@ -556,7 +575,11 @@ namespace EndesaBusiness.xml
                 sb.Append("'").Append(System.Environment.UserName.ToUpper()).Append("',");
                 sb.Append("'").Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Append("'),");
 
+
+                //irh
                 Guarda_DatosSolicitud(id,xml);
+                // Guarda_DatosSolicitudVa301(id,xml);
+
                 Guarda_Contacto(id,xml);
                 Guarda_Cliente(id,xml);
 
@@ -576,6 +599,75 @@ namespace EndesaBusiness.xml
 
             }
             catch(Exception ex)
+            {
+
+            }
+        }
+
+        public void Guarda_XMLV30_a301(EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 xml)
+        {
+            servidores.MySQLDB db;
+            MySqlCommand command;
+            StringBuilder sb = new StringBuilder();
+            bool firstOnly = true;
+            int i = 0;
+            int id = 0;
+            try
+            {
+
+                if (firstOnly)
+                {
+                    sb.Append("REPLACE INTO cnmc_t_cabecera");
+                    sb.Append(" (id, CodigoREEEmpresaEmisora, CodigoREEEmpresaDestino, CodigoDelProceso,");
+                    sb.Append(" CodigoDePaso, CodigoDeSolicitud, SecuencialDeSolicitud, FechaSolicitud,");
+                    sb.Append(" CUPS, created_by, created_date) values ");
+                    firstOnly = false;
+                }
+
+                i++;
+
+                id = GetID(xml.Cabecera.CodigoDelProceso, xml.Cabecera.CodigoDePaso,
+                    xml.Cabecera.CodigoDeSolicitud);
+
+                sb.Append("(").Append(id).Append(",");
+                sb.Append("'").Append(xml.Cabecera.CodigoREEEmpresaEmisora).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CodigoREEEmpresaDestino).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CodigoDelProceso).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CodigoDePaso).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CodigoDeSolicitud).Append("',");
+                sb.Append("'").Append(xml.Cabecera.SecuencialDeSolicitud).Append("',");
+
+                sb.Append("'").Append(Convert.ToDateTime(xml.Cabecera.FechaSolicitud).ToString("yyyy-MM-dd HH:mm:ss")).Append("',");
+                sb.Append("'").Append(xml.Cabecera.CUPS).Append("',");
+                sb.Append("'").Append(System.Environment.UserName.ToUpper()).Append("',");
+              //sb.Append("'").Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Append("'),");
+                sb.Append("'").Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Append("')");
+
+                //irh
+                // Guarda_DatosSolicitud(id, xml);
+                Guarda_DatosSolicitudV30(id,xml);
+
+               //Guarda_Contacto(id, xml);
+                Guarda_ContactoV30(id, xml);
+               // Guarda_Cliente(id, xml);
+                Guarda_ClienteV30(id, xml);
+
+                if (i == 1)
+                {
+
+                    firstOnly = true;
+                    db = new MySQLDB(MySQLDB.Esquemas.CON);
+                    command = new MySqlCommand(sb.ToString(), db.con);
+                //  command = new MySqlCommand(sb.ToString().Substring(0, sb.Length - 1), db.con);
+                    command.ExecuteNonQuery();
+                    db.CloseConnection();
+                    sb = null;
+                    sb = new StringBuilder();
+                    i = 0;
+                }
+
+            }
+            catch (Exception ex)
             {
 
             }
@@ -783,7 +875,251 @@ namespace EndesaBusiness.xml
 
 
         }
-        
+
+
+        //        private void Guarda_DatosSolicitudV30(int id, EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 xml)  //  irh
+        //        //  private void Guarda_DatosSolicitudVa301(int id, EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA301 xml)
+        //        {
+        //            servidores.MySQLDB db;
+        //            MySqlCommand command;
+        //            StringBuilder sb = new StringBuilder();
+
+        //            sb.Append("REPLACE INTO cnmc_t_datossolicitudnew (");
+        //            sb.Append("id, CNAE, IndActivacion, SolicitudTension, TipoAutoconsumo, TipoContratoATR, TarifaATR, ");
+        //            sb.Append("IndEsencial,fechaPrevistaAccion,TensionSolicitada, ");
+        //            sb.Append("Potencia1, Potencia2, Potencia3, Potencia4, Potencia5, Potencia6, ModoControlPotencia, ");
+        //            sb.Append("CodContrato, Fecha_finalizacion, TipoActivacionPrevista, TipoCUPS, cau, TipoSubseccion, ");
+        //            sb.Append("Colectivo, PotInstaladaGen, TipoInstalacion, SSAA, UnicoContrato, RefCatastro , ");
+        //            sb.Append("CIL, TecGenerado, CUPSPrincipal,FechaActivacionPrevista ,TensionDelSuministro, ");
+        //            sb.Append("VAsTrafo, PeriodicidadFacturacion, TipoTelegestion,  ");
+        //            sb.Append("created_by, created_date) VALUES (");
+
+        //            var datos = xml.Alta.DatosSolicitud; //  ojo version 30 _  AltaA301 Alta
+        //            var contrato = xml.Alta.Contrato;
+        //            var cond = xml.Alta.Contrato.CondicionesContractuales;  // contrato.CondicionesContractuales;
+        //            AutoconsumoSolicitudAlta autoconsumo = null;
+        //            DatosCAUAlta cau = null;
+        //            DatosInstGenSolicitud DatosInstGen = null;
+
+        //            if (xml.Alta.Contrato.Autoconsumo != null)
+        //            {
+        //                autoconsumo = xml.Alta.Contrato.Autoconsumo;
+        //                sb.Append(autoconsumo.DatosSuministro.TipoCUPS != null ? $"'{autoconsumo.DatosSuministro.TipoCUPS}'," : "null,");
+
+        //                sb.Append(autoconsumo.DatosCAU.TipoSubseccion != null ? $"'{autoconsumo.DatosCAU.TipoSubseccion}'," : "null,");
+
+        //                cau = xml.Alta.Contrato.Autoconsumo.DatosCAU;
+        //                sb.Append(cau.TipoAutoconsumo != null ? $"'{cau.TipoAutoconsumo}'," : "null,");
+        //                sb.Append(cau.Colectivo != null ? $"'{cau.Colectivo}'," : "null,");
+        //                sb.Append(autoconsumo.DatosCAU.CAU != null ? $"'{autoconsumo.DatosCAU.CAU}'," : "null,");
+
+        //                DatosInstGen = xml.Alta.Contrato.Autoconsumo.DatosCAU.DatosInstGen;
+        //                sb.Append(DatosInstGen.PotInstaladaGen != null ? $"{DatosInstGen.PotInstaladaGen}," : "null,");
+        //                sb.Append(DatosInstGen.TipoInstalacion != null ? $"'{DatosInstGen.TipoInstalacion}'," : "null,");
+        //                sb.Append(DatosInstGen.SSAA != null ? $"'{DatosInstGen.SSAA}'," : "null,");
+        //                sb.Append(DatosInstGen.UnicoContrato != null ? $"'{DatosInstGen.UnicoContrato}'," : "null,");
+        //                sb.Append(DatosInstGen.RefCatastro != null ? $"'{DatosInstGen.RefCatastro}'," : "null,");
+
+        //                sb.Append(DatosInstGen.CIL != null ? $"'{DatosInstGen.CIL}'," : "null,");
+        //                sb.Append(DatosInstGen.TecGenerador != null ? $"'{DatosInstGen.TecGenerador}'," : "null,");
+
+
+        //            }
+        //            sb.Append(id).Append(",");
+        //            sb.Append(datos.cnae != null ? $"'{datos.cnae}'," : "null,");
+        //            sb.Append(datos.IndActivacion != null ? $"'{datos.IndActivacion}'," : "null,");
+        //            sb.Append(datos.SolicitudTension != null ? $"'{datos.SolicitudTension}'," : "null,");
+
+        //            sb.Append(contrato.TipoContratoATR != null ? $"'{contrato.TipoContratoATR}'," : "null,");
+        //            sb.Append(cond.TarifaATR != null ? $"'{cond.TarifaATR}'," : "null,");   
+        //            //
+        //            sb.Append(datos.IndEsencial != null ? $"'{datos.IndEsencial}'," : "null,");
+        //            sb.Append(datos.fechaPrevistaAccion != null ? $"'{datos.fechaPrevistaAccion}'," : "null,");
+        //            sb.Append(datos.SolicitudTension != null ? $"'{datos.SolicitudTension}'," : "null,");
+        //            sb.Append(datos.TensionSolicitada != null ? $"'{datos.TensionSolicitada}'," : "null,");
+        //            //
+        //            foreach (var p in cond.PotenciasContratadas.Potencia)
+        //                sb.Append(p.periodo != null ? $"{p.potencia}," : "null,");
+        //            for (int i = cond.PotenciasContratadas.Potencia.Count; i < 6; i++)
+        //                sb.Append("null,");
+        //            sb.Append(cond.ModoControlPotencia != null ? $"'{cond.ModoControlPotencia}'," : "null,");
+        //            //-- null
+        //            // sb.Append(contrato.IdContrato.CodContrato != null ? $"'{contrato.IdContrato.CodContrato}'," : "null,");
+        //            sb.Append(
+        //                     contrato.IdContrato != null && contrato.IdContrato.CodContrato != null
+        //                     ? $"'{contrato.IdContrato.CodContrato}',"
+        //                     : "null,"
+        //);
+        //            //
+        //            sb.Append(contrato.FechaFinalizacion != null ? $"'{contrato.FechaFinalizacion}'," : "null,");
+        //            sb.Append(contrato.TipoActivacionPrevista != null ? $"'{contrato.TipoActivacionPrevista}'," : "null,");
+
+        //            // sb.Append("Colectivo, PotInstaladaGen, TipoInstalacion, SSAA, UnicoContrato, MotivoTraspaso, ");
+
+        //            sb.Append(contrato.CUPSPrincipal != null ? $"'{contrato.CUPSPrincipal}'," : "null,");
+        //            sb.Append(contrato.FechaActivacionPrevista != null ? $"'{contrato.FechaActivacionPrevista}'," : "null,");
+        //            sb.Append(cond.TensionDelSuministro != null ? $"'{cond.TensionDelSuministro}'," : "null,");
+
+        //            sb.Append(cond.VAsTrafo != null ? $"'{cond.VAsTrafo}'," : "null,");
+        //            sb.Append(cond.PeriodicidadFacturacion != null ? $"'{cond.PeriodicidadFacturacion}'," : "null,");
+        //            sb.Append(cond.TipoTelegestion != null ? $"'{cond.TipoTelegestion}'," : "null,");
+        //            sb.Append(datos.TensionSolicitada != null ? $"'{datos.TensionSolicitada}'," : "null,");
+
+        //            sb.Append($"'{Environment.UserName.ToUpper()}',");
+        //            sb.Append($"'{DateTime.Now:yyyy-MM-dd HH:mm:ss}'");
+
+        //            sb.Append(")");
+
+        //            db = new MySQLDB(MySQLDB.Esquemas.CON);
+        //            command = new MySqlCommand(sb.ToString(), db.con);
+        //            command.ExecuteNonQuery();
+        //            db.CloseConnection();
+
+        //        }
+        private void Guarda_DatosSolicitudV30(int id, EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 xml)
+        {
+            servidores.MySQLDB db;
+            MySqlCommand command;
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append("REPLACE INTO cnmc_t_datossolicitudnew (");
+            sb.Append("id, CNAE, IndActivacion, SolicitudTension, ");
+            sb.Append("TipoAutoconsumo, TipoCUPS, cau, TipoSubseccion, Colectivo, ");
+            sb.Append("PotInstaladaGen, TipoInstalacion, SSAA, UnicoContrato, RefCatastro, ");
+            sb.Append("CIL, TecGenerado, ");
+            sb.Append("TipoContratoATR, TarifaATR, IndEsencial, fechaPrevistaAccion, TensionSolicitada, ");
+            sb.Append("Potencia1, Potencia2, Potencia3, Potencia4, Potencia5, Potencia6, ");
+            sb.Append("ModoControlPotencia, CodContrato, Fecha_finalizacion, TipoActivacionPrevista, ");
+            sb.Append("CUPSPrincipal, FechaActivacionPrevista, TensionDelSuministro, ");
+            sb.Append("VAsTrafo, PeriodicidadFacturacion, TipoTelegestion, ");
+            sb.Append("created_by, created_date) VALUES (");
+
+            var datos = xml.Alta.DatosSolicitud;
+            var contrato = xml.Alta.Contrato;
+            var cond = contrato.CondicionesContractuales;
+
+            // id
+            sb.Append($"{id},");
+            // CNAE
+            sb.Append(datos?.cnae != null ? $"'{datos.cnae}'," : "null,");
+            // IndActivacion
+            sb.Append(datos?.IndActivacion != null ? $"'{datos.IndActivacion}'," : "null,");
+            // SolicitudTension
+            sb.Append(datos?.SolicitudTension != null ? $"'{datos.SolicitudTension}'," : "null,");
+
+            // ---------- AUTOCONSUMO ----------
+            if (contrato.Autoconsumo != null)
+            {
+                var auto = contrato.Autoconsumo;
+
+                sb.Append(auto.DatosCAU?.TipoAutoconsumo != null
+                    ? $"'{auto.DatosCAU.TipoAutoconsumo}'," : "null,");
+
+                sb.Append(auto.DatosSuministro?.TipoCUPS != null
+                    ? $"'{auto.DatosSuministro.TipoCUPS}'," : "null,");
+
+                sb.Append(auto.DatosCAU?.CAU != null
+                    ? $"'{auto.DatosCAU.CAU}'," : "null,");
+
+                sb.Append(auto.DatosCAU?.TipoSubseccion != null
+                    ? $"'{auto.DatosCAU.TipoSubseccion}'," : "null,");
+
+                sb.Append(auto.DatosCAU?.Colectivo != null
+                    ? $"'{auto.DatosCAU.Colectivo}'," : "null,");
+
+                var datosInstGen = auto.DatosCAU?.DatosInstGen;
+
+                sb.Append(datosInstGen?.PotInstaladaGen != null
+                    ? $"{datosInstGen.PotInstaladaGen}," : "null,");
+
+                sb.Append(datosInstGen?.TipoInstalacion != null
+                    ? $"'{datosInstGen.TipoInstalacion}'," : "null,");
+
+                sb.Append(datosInstGen?.SSAA != null
+                    ? $"'{datosInstGen.SSAA}'," : "null,");
+
+                sb.Append(datosInstGen?.UnicoContrato != null
+                    ? $"'{datosInstGen.UnicoContrato}'," : "null,");
+
+                sb.Append(datosInstGen?.RefCatastro != null
+                    ? $"'{datosInstGen.RefCatastro}'," : "null,");
+
+                sb.Append(datosInstGen?.CIL != null
+                    ? $"'{datosInstGen.CIL}'," : "null,");
+
+                sb.Append(datosInstGen?.TecGenerador != null
+                    ? $"'{datosInstGen.TecGenerador}'," : "null,");
+            }
+            else
+            {
+                // Si Autoconsumo es null, meter NULLs para todos esos campos
+                sb.Append("null,null,null,null,null,");
+                sb.Append("null,null,null,null,null,");
+                sb.Append("null,null,");
+            }
+
+            // TipoContratoATR
+            sb.Append(contrato?.TipoContratoATR != null ? $"'{contrato.TipoContratoATR}'," : "null,");
+            // TarifaATR
+            sb.Append(cond?.TarifaATR != null ? $"'{cond.TarifaATR}'," : "null,");
+            // IndEsencial
+            sb.Append(datos?.IndEsencial != null ? $"'{datos.IndEsencial}'," : "null,");
+            // fechaPrevistaAccion
+            sb.Append(datos?.fechaPrevistaAccion != null ? $"'{datos.fechaPrevistaAccion}'," : "null,");
+            // TensionSolicitada
+            sb.Append(datos?.TensionSolicitada != null ? $"'{datos.TensionSolicitada}'," : "null,");
+
+            // Potencias
+            if (cond?.PotenciasContratadas?.Potencia != null)
+            {
+                foreach (var p in cond.PotenciasContratadas.Potencia)
+                    sb.Append(p?.potencia != null ? $"{p.potencia}," : "null,");
+
+                for (int i = cond.PotenciasContratadas.Potencia.Count; i < 6; i++)
+                    sb.Append("null,");
+            }
+            else
+            {
+                // Si no hay ninguna potencia, 6 nulls
+                for (int i = 0; i < 6; i++)
+                    sb.Append("null,");
+            }
+
+            // ModoControlPotencia
+            sb.Append(cond?.ModoControlPotencia != null ? $"'{cond.ModoControlPotencia}'," : "null,");
+
+            // CodContrato
+            sb.Append(contrato?.IdContrato?.CodContrato != null
+                ? $"'{contrato.IdContrato.CodContrato}'," : "null,");
+            // Fecha_finalizacion
+            sb.Append(contrato?.FechaFinalizacion != null ? $"'{contrato.FechaFinalizacion}'," : "null,");
+            // TipoActivacionPrevista
+            sb.Append(contrato?.TipoActivacionPrevista != null ? $"'{contrato.TipoActivacionPrevista}'," : "null,");
+            // CUPSPrincipal
+            sb.Append(contrato?.CUPSPrincipal != null ? $"'{contrato.CUPSPrincipal}'," : "null,");
+            // FechaActivacionPrevista
+            sb.Append(contrato?.FechaActivacionPrevista != null ? $"'{contrato.FechaActivacionPrevista}'," : "null,");
+            // TensionDelSuministro
+            sb.Append(cond?.TensionDelSuministro != null ? $"'{cond.TensionDelSuministro}'," : "null,");
+            // VAsTrafo
+            sb.Append(cond?.VAsTrafo != null ? $"'{cond.VAsTrafo}'," : "null,");
+            // PeriodicidadFacturacion
+            sb.Append(cond?.PeriodicidadFacturacion != null ? $"'{cond.PeriodicidadFacturacion}'," : "null,");
+            // TipoTelegestion
+            sb.Append(cond?.TipoTelegestion != null ? $"'{cond.TipoTelegestion}'," : "null,");
+
+            // created_by
+            sb.Append($"'{Environment.UserName.ToUpper()}',");
+            // created_date
+            sb.Append($"'{DateTime.Now:yyyy-MM-dd HH:mm:ss}'");
+
+            sb.Append(")");
+
+            db = new MySQLDB(MySQLDB.Esquemas.CON);
+            command = new MySqlCommand(sb.ToString(), db.con);
+            command.ExecuteNonQuery();
+            db.CloseConnection();
+        }
 
         private void Guarda_Contacto(int id, EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA301 xml)
         {
@@ -820,7 +1156,42 @@ namespace EndesaBusiness.xml
 
             
         }
-        
+        private void Guarda_ContactoV30(int id, EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 xml)
+        {
+            servidores.MySQLDB db;
+            MySqlCommand command;
+            StringBuilder sb = new StringBuilder();
+           // bool firstOnly = true;
+
+            if (xml.Alta.Contrato.Contacto.PersonaDeContacto != null)
+            {
+                sb.Append("REPLACE INTO cnmc_t_contacto");
+                sb.Append(" (id, PersonaDeContacto, PrefijoPais, Numero, created_by, created_date) values ");
+                sb.Append("(").Append(id).Append(",");
+                sb.Append("'").Append(xml.Alta.Contrato.Contacto.PersonaDeContacto).Append("',");
+
+                if (xml.Alta.Contrato.Contacto.Telefono.PrefijoPais != null)
+                    sb.Append("'").Append(xml.Alta.Contrato.Contacto.Telefono.PrefijoPais).Append("',");
+                else
+                    sb.Append("null,");
+
+                if (xml.Alta.Contrato.Contacto.Telefono.Numero != null)
+                    sb.Append("'").Append(xml.Alta.Contrato.Contacto.Telefono.Numero).Append("',");
+                else
+                    sb.Append("null,");
+
+                sb.Append("'").Append(System.Environment.UserName.ToUpper()).Append("',");
+                sb.Append("'").Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Append("'),");
+
+                db = new MySQLDB(MySQLDB.Esquemas.CON);
+                command = new MySqlCommand(sb.ToString().Substring(0, sb.Length - 1), db.con);
+                command.ExecuteNonQuery();
+                db.CloseConnection();
+            }
+
+
+        }
+
         private void Guarda_Cliente(int id, EndesaEntity.cnmc.V21_2019_12_17.TipoMensajeA301 xml)
         {
             servidores.MySQLDB db;
@@ -878,6 +1249,62 @@ namespace EndesaBusiness.xml
             db.CloseConnection();
         }
 
+        private void Guarda_ClienteV30(int id, EndesaEntity.cnmc.V30_2022_21_01.TipoMensajeA301 xml)
+        {
+            servidores.MySQLDB db;
+            MySqlCommand command;
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append("REPLACE INTO cnmc_t_cliente");
+            sb.Append(" (id, TipoIdentificador, Identificador, TipoPersona, NombreDePila,");
+            sb.Append(" PrimerApellido, SegundoApellido, RazonSocial,");
+            sb.Append(" created_by, created_date) values ");
+
+            sb.Append("(").Append(id).Append(",");
+
+            if (xml.Alta.Cliente.IdCliente.TipoIdentificador != null)
+                sb.Append("'").Append(xml.Alta.Cliente.IdCliente.TipoIdentificador).Append("',");
+            else
+                sb.Append("null,");
+
+            if (xml.Alta.Cliente.IdCliente.Identificador != null)
+                sb.Append("'").Append(xml.Alta.Cliente.IdCliente.Identificador).Append("',");
+            else
+                sb.Append("null,");
+
+            if (xml.Alta.Cliente.IdCliente.TipoPersona != null)
+                sb.Append("'").Append(xml.Alta.Cliente.IdCliente.TipoPersona).Append("',");
+            else
+                sb.Append("null,");
+
+            if (xml.Alta.Cliente.Nombre.NombreDePila != null)
+                sb.Append("'").Append(xml.Alta.Cliente.Nombre.NombreDePila).Append("',");
+            else
+                sb.Append("null,");
+
+            if (xml.Alta.Cliente.Nombre.PrimerApellido != null)
+                sb.Append("'").Append(xml.Alta.Cliente.Nombre.PrimerApellido).Append("',");
+            else
+                sb.Append("null,");
+
+            if (xml.Alta.Cliente.Nombre.SegundoApellido != null)
+                sb.Append("'").Append(xml.Alta.Cliente.Nombre.SegundoApellido).Append("',");
+            else
+                sb.Append("null,");
+
+            if (xml.Alta.Cliente.Nombre.RazonSocial != null)
+                sb.Append("'").Append(xml.Alta.Cliente.Nombre.RazonSocial).Append("',");
+            else
+                sb.Append("null,");
+
+            sb.Append("'").Append(System.Environment.UserName.ToUpper()).Append("',");
+            sb.Append("'").Append(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Append("'),");
+
+            db = new MySQLDB(MySQLDB.Esquemas.CON);
+            command = new MySqlCommand(sb.ToString().Substring(0, sb.Length - 1), db.con);
+            command.ExecuteNonQuery();
+            db.CloseConnection();
+        }
         private int GetID(string proceso, string paso, string codigo_solicitud)
         {
             int id = 0;

@@ -11,6 +11,9 @@ namespace EndesaEntity.cnmc.V21_2019_12_17
     public class DatosInstGenSolicitud
     {
         [XmlElement(ElementName = "CIL")] public string CIL { get; set; }
+        //irh
+        [XmlElement(ElementName = "TecGenerador")] public string TecGenerador { get; set; }
+
         [XmlElement(ElementName = "PotInstaladaGen")] public string PotInstaladaGen { get; set; }
         [XmlElement(ElementName = "TipoInstalacion")] public string TipoInstalacion { get; set; }
         [XmlElement(ElementName = "EsquemaMedida")] public string EsquemaMedida { get; set; }

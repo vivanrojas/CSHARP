@@ -12,7 +12,7 @@ namespace EndesaEntity.cnmc.V21_2019_12_17
     {
         [XmlElement(ElementName = "TarifaATR")] public string TarifaATR { get; set; }
         [XmlElement(ElementName = "PeriodicidadFacturacion")] public string PeriodicidadFacturacion { get; set; }
-        [XmlElement(ElementName = "TipoTelegestion")] public string TipoTelegestion { get; set; }        
+        [XmlElement(ElementName = "TipodeTelegestion")] public string TipoTelegestion { get; set; }        
         public PotenciasContratadas PotenciasContratadas { get; set; }
         [XmlElement(ElementName = "ModoControlPotencia")] public string ModoControlPotencia { get; set; }
         [XmlElement(ElementName = "MarcaMedidaConPerdidas")] public string MarcaMedidaConPerdidas { get; set; }
