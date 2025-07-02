@@ -33,8 +33,9 @@ namespace EndesaBusiness.xml
 {
     public class Extrasistemas
     {
-        utilidades.Param param;
-        utilidades.Param param_cnmc;
+        public utilidades.Param param;
+        //irh  public
+        public utilidades.Param param_cnmc;
         List<EndesaEntity.extrasistemas.Global> lista_datos_excel_extrasistemas;
         Dictionary<string,EndesaEntity.xml.Plantilla_Extrasistemas_total_registros> dic_total_registros;
         public List<string> lista_log { get; set; }
