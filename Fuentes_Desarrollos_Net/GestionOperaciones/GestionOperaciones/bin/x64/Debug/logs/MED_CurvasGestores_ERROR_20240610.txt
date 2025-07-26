@@ -1,0 +1,40 @@
+10/06/2024 12:40:43 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...ETRA_OWNER.T_ED_H_CURVAS WHERE cd_cups_ext_20 in () AND (FH_...
+                                                                           ^
+
+10/06/2024 12:46:48 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...M METRA_OWNER.T_ED_H_CURVAS WHERE CD_CUPS_EXT in () AND (FH_...
+                                                                           ^
+
+10/06/2024 12:47:35 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...ETRA_OWNER.T_ED_H_CURVAS WHERE cd_cups_ext_20 in () AND (FH_...
+                                                                           ^
+
+10/06/2024 12:47:38 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...M METRA_OWNER.T_ED_H_CURVAS WHERE CD_CUPS_EXT in () AND (FH_...
+                                                                           ^
+
+10/06/2024 12:53:14 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...ETRA_OWNER.T_ED_H_CURVAS WHERE cd_cups_ext_20 in () AND (FH_...
+                                                                           ^
+
+10/06/2024 12:53:16 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...M METRA_OWNER.T_ED_H_CURVAS WHERE CD_CUPS_EXT in () AND (FH_...
+                                                                           ^
+
+10/06/2024 12:54:38 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...ETRA_OWNER.T_ED_H_CURVAS WHERE cd_cups_ext_20 in () AND (FH_...
+                                                                           ^
+
+10/06/2024 12:54:40 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...M METRA_OWNER.T_ED_H_CURVAS WHERE CD_CUPS_EXT in () AND (FH_...
+                                                                           ^
+
+10/06/2024 14:11:12 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...ETRA_OWNER.T_ED_H_CURVAS WHERE cd_cups_ext_20 in () AND (FH_...
+                                                                           ^
+
+10/06/2024 14:11:14 - gbenavides - CurvasRedShift.GetCurva: ERROR [42601] [Redshift][ODBC Driver][Server]42601:ERROR:  syntax error at or near ")"
+ LINE 1, POSITION 50: ...M METRA_OWNER.T_ED_H_CURVAS WHERE CD_CUPS_EXT in () AND (FH_...
+                                                                           ^
+

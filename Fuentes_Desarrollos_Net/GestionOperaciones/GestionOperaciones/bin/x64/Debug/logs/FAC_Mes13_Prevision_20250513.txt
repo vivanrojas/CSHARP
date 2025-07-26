@@ -1,0 +1,2 @@
+13/05/2025 11:10:47 - gbenavides - Generando Informe Excel de Estimación Factorigin 202505
+13/05/2025 11:10:47 - gbenavides - Generado Excel --> C:\Temp\factoring_202505_estimacion_20250513_102607.xlsx

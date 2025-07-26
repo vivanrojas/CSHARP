@@ -1,0 +1,2 @@
+19/02/2024 11:54:50 - gbenavides - MySQLDB: error connecting: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+19/02/2024 11:55:07 - gbenavides - MySQLDB: error connecting: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.

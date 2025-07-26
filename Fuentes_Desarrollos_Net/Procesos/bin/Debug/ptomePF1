@@ -1,0 +1,7 @@
+open 10.121.190.145 
+AIC0157 
+ago.8ago 
+cd .. 
+quote SITE XLATE=spanish 
+get SCEE.EXPT.SALIDA.BNHA2650.F220808 C:\temp\Ptome_PF220808.txt 
+bye 

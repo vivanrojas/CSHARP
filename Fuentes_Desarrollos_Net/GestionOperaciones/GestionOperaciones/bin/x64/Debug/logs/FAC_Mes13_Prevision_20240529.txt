@@ -1,0 +1,2 @@
+29/05/2024 10:29:06 - gbenavides - Generando Informe Excel de Estimación Factorigin 202402
+29/05/2024 10:29:06 - gbenavides - Generado Excel --> C:\Temp\DESA_DBPRO_factoring_202402_estimacion_20240529_100549.xlsx

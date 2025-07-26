@@ -1,0 +1,2 @@
+19/06/2024 15:37:35 - gbenavides - MySQLDB: Unable to connect to any of the specified MySQL hosts.
+19/06/2024 15:37:38 - gbenavides - MySQLDB: Unable to connect to any of the specified MySQL hosts.

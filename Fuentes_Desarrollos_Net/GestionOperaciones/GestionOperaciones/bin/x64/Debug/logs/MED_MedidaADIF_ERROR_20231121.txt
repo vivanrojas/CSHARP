@@ -1,0 +1,2 @@
+21/11/2023 8:59:00 - ES01855 - CurvasRedShift.GetCurva: Table 'med.adif_po1011' doesn't exist
+21/11/2023 12:42:31 - ES01855 - CurvasRedShift.GetCurva: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND (FECHAHORA > '2023-04-01' AND FECHAHORA <= '2023-11-01') ORDER BY CUPSREE,' at line 1

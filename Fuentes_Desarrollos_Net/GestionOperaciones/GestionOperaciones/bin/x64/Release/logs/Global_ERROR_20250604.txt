@@ -1,0 +1,2 @@
+04/06/2025 11:46:56 - gbenavides - GetID Connection must be valid and open.
+04/06/2025 11:46:56 - gbenavides - UsuarioValido Connection must be valid and open.

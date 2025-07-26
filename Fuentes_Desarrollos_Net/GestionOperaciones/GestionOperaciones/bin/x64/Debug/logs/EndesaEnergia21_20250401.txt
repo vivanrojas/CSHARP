@@ -1,0 +1,2 @@
+01/04/2025 9:50:38 - gbenavides - Se han detectado 1 xml
+01/04/2025 9:52:04 - gbenavides - leido xml: 010636033600T1000120250401075325.xml Proceso: T101

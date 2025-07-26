@@ -1,0 +1,4 @@
+17/11/2023 7:50:49 - ES01855 - Generando Informe Excel de Estimación Factorigin 202311
+17/11/2023 7:50:49 - ES01855 - Generado Excel --> C:\Temp\factoring_202311_estimacion_20231117_074351.xlsx
+17/11/2023 11:14:19 - ES01855 - Generando Informe Excel de Estimación Factorigin 202311
+17/11/2023 11:14:19 - ES01855 - Generado Excel --> C:\Temp\factoring_202311_estimacion_20231117_110157.xlsx

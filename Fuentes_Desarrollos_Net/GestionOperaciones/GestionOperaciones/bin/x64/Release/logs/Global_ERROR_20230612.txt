@@ -1,0 +1,2 @@
+12/06/2023 11:57:27 - ES01855 - GetID La secuencia no contiene ningún elemento coincidente
+12/06/2023 11:57:28 - ES01855 - UsuarioValido La secuencia no contiene ningún elemento coincidente

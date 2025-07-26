@@ -1,0 +1,656 @@
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\GO.exe.config
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\GO.exe
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\GO.pdb
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaBusiness.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaEntity.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\EPPlus.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IO.RecyclableMemoryStream.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\MySql.Data.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Renci.SshNet.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.SharePoint.Client.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Oracle.ManagedDataAccess.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\itextsharp.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Exchange.WebServices.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Identity.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\AE.Net.Mail.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\MailKit.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\MimeKit.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Core.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.Core.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Google.Protobuf.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\ZstdNet.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.Streams.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\BouncyCastle.Crypto.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Json.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Encodings.Web.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Security.Cryptography.ProtectedData.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Buffers.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.ValueTuple.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.Data.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Tokens.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Net.Http.WinHttpHandler.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Hash.xxHash.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Numerics.Vectors.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Abstractions.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Logging.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaBusiness.pdb
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaBusiness.dll.config
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaEntity.pdb
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\EPPlus.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IO.RecyclableMemoryStream.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\MySql.Data.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Renci.SshNet.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\itextsharp.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Exchange.WebServices.pdb
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Exchange.WebServices.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Identity.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\AE.Net.Mail.pdb
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\MailKit.pdb
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\MailKit.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\MimeKit.pdb
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\MimeKit.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Core.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.Core.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Google.Protobuf.pdb
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Google.Protobuf.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.Streams.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\BouncyCastle.Crypto.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Json.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Encodings.Web.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Security.Cryptography.ProtectedData.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Buffers.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.ValueTuple.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.Data.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Tokens.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Net.Http.WinHttpHandler.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Hash.xxHash.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Numerics.Vectors.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Abstractions.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Logging.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.AssemblyReference.cache
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.SuggestedBindingRedirects.cache
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.ResolveComReference.cache
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.FormStart.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.AboutForm.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.Filtros_Respuestas.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmComentarios.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmComentariosEdit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmComprobacion_Contratacion.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmDirecciones.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmDisuasoria.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmEndesaEnergia21.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmEndesaEnergia21_AvisoVentas_Manual.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmEndesaEnergia21_bajas_sin_altas.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmInformeAviso_Ventas.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmInformePaso_a_COR.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmMotivosRechazo.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmPasosXML.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmPlantillaXML.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmPS_AT_HIST.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmXML_A1550.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmXML_Respuestas.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmXML_Respuestas_Datos_A3.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmContratos.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmContratosDetalle_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmContratos_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmDistribuidoras.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmDistribuidoras_Ayuda.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmDistribuidoras_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmFechasInforme.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmInformeSolapados.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmModificacionPeaje.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmReubicaciones.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmSolicitudManual.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmActualizaFacturadores.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmCalculoPuntosBTN.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmConsumptionDataExtraction.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmCuadresPotenciaMT.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FormPuntosSofisticados_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmAgora.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmAgora_Ayuda.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmEER_FacturasManuales.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturadorEER.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmAdifFacturas.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmCredencialesWeb.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturadorInvoiceNumberEdit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturadorPortugal.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasBTE_CAPB.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasBTN.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasBTN_CAPB.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasElectricidad_BTN_Real_Estimado.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasGAS_ES_REAL_ESTIMADO.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasGAS_PT_REAL_ESTIMADO.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasOperaciones.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmIHGasEspana.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmImpagosCAP_GAS.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInformeConsumoMensualPortugal.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInformeEERcs.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInformeERSE.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInforme_Pdte_Web_PSAT_TAM.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes12BT.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13Comprobacion.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13Conversion.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegra.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegra_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13Prevision.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPrefacturas_BTN_CAP_GAS.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPuntosSofisticados.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmSIGAME_Importe_Redes.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmSofisticados.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTipologiasEspana.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTipologiasPortugal.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTunel.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTunelCuadroMando.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FormFacFestivosElectricosParam_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmAyuda.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmGlobal.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmListBox.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmParamEdit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmParameters.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmProgressBar.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmBusquedaArchivos.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmCalendarios.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmCargas.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmCarteraSalesForce.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmSeguimiento_Procesos.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifCierresEnergia.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifCierresEnergia_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifInventario.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifIventario_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif_CS.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif_Curvas_Adif.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif_Importar.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmCurvaResumen.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmCurvas.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmExportacion_PMML.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmInformeDGEG.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmInventarioBI.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmKeeReporteExtraccion.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmLicitaciones.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmPeajesFormatoF.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmPPAs.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.Properties.Resources.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.GenerateResource.cache
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.CoreCompileInputs.cache
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.CopyComplete
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.exe
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.pdb
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegraCUPS.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegraCUPS_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPendFacturacionSubestadosBI.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPendFacturacionSubestadosBi_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTunelCuadroMando_Edit.resources
+C:\desarrollos\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmEstadosSubEstadosKronos.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\GO.exe.config
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\GO.exe
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\GO.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\EPPlus.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\MySql.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Renci.SshNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.SharePoint.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Oracle.ManagedDataAccess.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\itextsharp.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Exchange.WebServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Identity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\AE.Net.Mail.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\MailKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\MimeKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Google.Protobuf.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\ZstdNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\BouncyCastle.Crypto.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Encodings.Web.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Buffers.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.ValueTuple.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Net.Http.WinHttpHandler.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Hash.xxHash.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Numerics.Vectors.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Logging.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaBusiness.dll.config
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\EPPlus.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\MySql.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Renci.SshNet.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\itextsharp.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Exchange.WebServices.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Exchange.WebServices.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Identity.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\AE.Net.Mail.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\MailKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\MailKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\MimeKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\MimeKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Google.Protobuf.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Google.Protobuf.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.Streams.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\BouncyCastle.Crypto.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Encodings.Web.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Security.Cryptography.ProtectedData.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Buffers.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.ValueTuple.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Tokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Net.Http.WinHttpHandler.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Hash.xxHash.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Numerics.Vectors.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Logging.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.FormStart.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.AboutForm.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.Filtros_Respuestas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmComentarios.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmComentariosEdit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmComprobacion_Contratacion.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmDirecciones.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmDisuasoria.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmEndesaEnergia21.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmEndesaEnergia21_AvisoVentas_Manual.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmEndesaEnergia21_bajas_sin_altas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmInformeAviso_Ventas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmInformePaso_a_COR.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmMotivosRechazo.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmPasosXML.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmPlantillaXML.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmPS_AT_HIST.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmXML_A1550.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmXML_Respuestas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmXML_Respuestas_Datos_A3.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmContratos.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmContratosDetalle_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmContratos_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmDistribuidoras.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmDistribuidoras_Ayuda.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmDistribuidoras_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmFechasInforme.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmInformeSolapados.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmModificacionPeaje.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmReubicaciones.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmSolicitudManual.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmActualizaFacturadores.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmCalculoPuntosBTN.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmConsumptionDataExtraction.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmCuadresPotenciaMT.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FormPuntosSofisticados_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmAgora.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmAgora_Ayuda.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmEER_FacturasManuales.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturadorEER.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmAdifFacturas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmCredencialesWeb.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturadorInvoiceNumberEdit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturadorPortugal.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasBTE_CAPB.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasBTN.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasBTN_CAPB.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasElectricidad_BTN_Real_Estimado.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasGAS_ES_REAL_ESTIMADO.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasGAS_PT_REAL_ESTIMADO.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasOperaciones.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmIHGasEspana.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmImpagosCAP_GAS.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInformeConsumoMensualPortugal.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInformeEERcs.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInformeERSE.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInforme_Pdte_Web_PSAT_TAM.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes12BT.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13Comprobacion.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13Conversion.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegra.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegraCUPS.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegraCUPS_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegra_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13Prevision.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPendFacturacionSubestadosBI.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPendFacturacionSubestadosBi_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPrefacturas_BTN_CAP_GAS.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPuntosSofisticados.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmSIGAME_Importe_Redes.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmSofisticados.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTipologiasEspana.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTipologiasPortugal.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTunel.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTunelCuadroMando.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTunelCuadroMando_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FormFacFestivosElectricosParam_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmAyuda.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmGlobal.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmListBox.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmParamEdit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmParameters.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmProgressBar.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmBusquedaArchivos.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmCalendarios.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmCargas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmCarteraSalesForce.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmSeguimiento_Procesos.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifCierresEnergia.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifCierresEnergia_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifInventario.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifIventario_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif_CS.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif_Curvas_Adif.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif_Importar.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmCurvaResumen.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmCurvas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmEstadosSubEstadosKronos.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmExportacion_PMML.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmInformeDGEG.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmInventarioBI.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmKeeReporteExtraccion.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmLicitaciones.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmPeajesFormatoF.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmPPAs.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.CopyComplete
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.exe
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\GO.exe.config
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\GO.exe
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\GO.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\EPPlus.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\MySql.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Renci.SshNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.SharePoint.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Oracle.ManagedDataAccess.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\itextsharp.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Exchange.WebServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Identity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\AE.Net.Mail.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\MailKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\MimeKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Google.Protobuf.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\ZstdNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\BouncyCastle.Crypto.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Encodings.Web.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Buffers.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.ValueTuple.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Net.Http.WinHttpHandler.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Hash.xxHash.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Numerics.Vectors.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Logging.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaBusiness.dll.config
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\EPPlus.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\MySql.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Renci.SshNet.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\itextsharp.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Exchange.WebServices.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Exchange.WebServices.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Identity.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\AE.Net.Mail.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\MailKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\MailKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\MimeKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\MimeKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Azure.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Graph.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Google.Protobuf.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Google.Protobuf.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.Streams.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\BouncyCastle.Crypto.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Text.Encodings.Web.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Security.Cryptography.ProtectedData.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Buffers.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.ValueTuple.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Memory.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Tokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Net.Http.WinHttpHandler.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Protocols.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Compression.LZ4.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\K4os.Hash.xxHash.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\System.Numerics.Vectors.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.Logging.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.FormStart.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.AboutForm.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.Filtros_Respuestas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmComentarios.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmComentariosEdit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmComprobacion_Contratacion.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmDirecciones.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmDisuasoria.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmEndesaEnergia21.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmEndesaEnergia21_AvisoVentas_Manual.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmEndesaEnergia21_bajas_sin_altas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmInformeAviso_Ventas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmInformePaso_a_COR.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmMotivosRechazo.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmPasosXML.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmPlantillaXML.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmPS_AT_HIST.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmXML_A1550.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmXML_Respuestas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.FrmXML_Respuestas_Datos_A3.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmContratos.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmContratosDetalle_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmContratos_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmDistribuidoras.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmDistribuidoras_Ayuda.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmDistribuidoras_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmFechasInforme.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmInformeSolapados.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmModificacionPeaje.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmReubicaciones.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmSolicitudManual.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmActualizaFacturadores.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmCalculoPuntosBTN.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmConsumptionDataExtraction.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmCuadresPotenciaMT.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FormPuntosSofisticados_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmAgora.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmAgora_Ayuda.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmEER_FacturasManuales.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturadorEER.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmAdifFacturas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmCredencialesWeb.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturadorInvoiceNumberEdit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturadorPortugal.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasBTE_CAPB.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasBTN.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasBTN_CAPB.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasElectricidad_BTN_Real_Estimado.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasGAS_ES_REAL_ESTIMADO.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasGAS_PT_REAL_ESTIMADO.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmFacturasOperaciones.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmIHGasEspana.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmImpagosCAP_GAS.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInformeConsumoMensualPortugal.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInformeEERcs.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInformeERSE.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmInforme_Pdte_Web_PSAT_TAM.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes12BT.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13Comprobacion.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13Conversion.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegra.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegraCUPS.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegraCUPS_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13ListaNegra_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmMes13Prevision.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPendFacturacionSubestadosBI.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPendFacturacionSubestadosBi_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPrefacturas_BTN_CAP_GAS.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmPuntosSofisticados.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmSIGAME_Importe_Redes.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmSofisticados.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTipologiasEspana.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTipologiasPortugal.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTunel.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTunelCuadroMando.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.facturacion.FrmTunelCuadroMando_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FormFacFestivosElectricosParam_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmAyuda.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmGlobal.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmListBox.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmParamEdit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmParameters.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.FrmProgressBar.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmBusquedaArchivos.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmCalendarios.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmCargas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmCarteraSalesForce.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.herramientas.FrmSeguimiento_Procesos.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifCierresEnergia.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifCierresEnergia_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifInventario.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdifIventario_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif_CS.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif_Curvas_Adif.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmAdif_Importar.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmCurvaResumen.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmCurvas.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmEstadosSubEstadosKronos.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmExportacion_PMML.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmInformeDGEG.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmInventarioBI.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmKeeReporteExtraccion.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmLicitaciones.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmPeajesFormatoF.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.medida.FrmPPAs.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.csproj.CopyComplete
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.exe
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GO.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\obj\x64\Release\GestionOperaciones.forms.contratacion.gas.FrmExcepcion_Edit.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\libgcc_s_seh-1.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\libgmp-10.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\libgnutls-30.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\libhogweed-6.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\libnettle-8.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\libwinpthread-1.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\FluentFTP.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\FluentFTP.GnuTLS.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\FluentFTP.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\FluentFTP.GnuTLS.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Aspose.Cells.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\GestionOperaciones\GestionOperaciones\bin\x64\Release\Aspose.Cells.xml

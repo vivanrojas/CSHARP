@@ -1,0 +1,263 @@
+﻿using EndesaBusiness.servidores;
+using EndesaEntity.medida;
+using System;
+using System.Collections.Generic;
+using System.Data.Odbc;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EndesaBusiness.medida.pendiente
+{
+    public class PendienteWeb_B2B : PendienteMedida_B2B
+    {
+        logs.Log ficheroLog;
+        Dictionary<string, List<PendienteMedida_B2B>> dic;
+        public bool existe { get; set; }
+
+        public PendienteWeb_B2B()
+        {
+            ficheroLog = new logs.Log(Environment.CurrentDirectory, "logs", "PendienteMedida_B2B");
+            dic = Carga(MaxFechaInforme());
+        }
+
+        private Dictionary<string, List<PendienteMedida_B2B>> Carga(DateTime fecha_max)
+        {
+
+            servidores.RedShiftServer db;
+            OdbcCommand command;
+            OdbcDataReader r;
+            string strSql = "";
+
+            Dictionary<string, List<PendienteMedida_B2B>> d = new Dictionary<string, List<PendienteMedida_B2B>>();
+
+            try
+            {
+                //////////strSql = "SELECT comercializadora, cups20, cups22, contrato_ps, fecha_desde, fecha_hasta,"
+                //////////    + " mes, estado, distribuidora, multipunto, ritmo_facturacion, tco_segm_back, fecha_informe, fec_act,"
+                //////////    + " cod_carga, id_pte_web"
+                //////////    + " from ed_owner.t_ed_h_pdtweb_pm_b2b"
+                //////////    + " where fec_act >= '" + fecha_max.ToString("yyyy-MM-dd HH:mm:ss") + "'";
+
+
+                //Paco- añadir fecha baja contrato KEE, hay que hacer left join con T_ED_H_GEST_DIAR_PS_B2B, hay que coger la  fecha fin de version del contrato
+                // a partir la fecha de la última actualizacion en t_ed_h_pdtweb_pm_b2b y la ultima fecha de ejecucion en T_ED_H_GEST_DIAR_PS_B2B
+                strSql = "select A.comercializadora, A.cups20, A.cups22, A.contrato_ps, A.fecha_desde, A.fecha_hasta, A.mes, A.estado, A.distribuidora, "
+                + " A.multipunto, A.ritmo_facturacion, A.tco_segm_back, A.fecha_informe, A.fec_act, A.cod_carga, A.id_pte_web ,fecha_de_fin_de_version_del_contrato_ps as Final "
+                + " from "
+                + " ( "
+                + "     SELECT comercializadora, t_ed_h_pdtweb_pm_b2b.cups20, cups22, contrato_ps, fecha_desde, fecha_hasta, mes, estado, t_ed_h_pdtweb_pm_b2b.distribuidora, "
+                + "     t_ed_h_pdtweb_pm_b2b.multipunto, t_ed_h_pdtweb_pm_b2b.ritmo_facturacion, tco_segm_back, fecha_informe, t_ed_h_pdtweb_pm_b2b.fec_act, t_ed_h_pdtweb_pm_b2b.cod_carga "
+                + "     , id_pte_web "
+                + "     from ed_owner.t_ed_h_pdtweb_pm_b2b "
+                + "     where t_ed_h_pdtweb_pm_b2b.fec_act >= '" + fecha_max.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                + " ) as A "
+                + " left join ed_owner.T_ED_H_GEST_DIAR_PS_B2B "
+                + " on ed_owner.T_ED_H_GEST_DIAR_PS_B2B.cups20 = A.cups20 "
+                + " and fh_ejecucion >= '" + fecha_max.ToString("yyyy-MM-dd HH:mm:ss") + "'"
+                + " and fecha_de_inicio_de_version_del_contrato_ps <= A.fecha_hasta "
+                + " and(fecha_de_fin_de_version_del_contrato_ps >= A.fecha_desde or fecha_de_fin_de_version_del_contrato_ps is null) "
+                + " group by  A.comercializadora, A.cups20, A.cups22, A.contrato_ps, A.fecha_desde, A.fecha_hasta, A.mes, A.estado, A.distribuidora,  "
+                + " A.multipunto, A.ritmo_facturacion, A.tco_segm_back, A.fecha_informe, A.fec_act, A.cod_carga, A.id_pte_web ,fecha_de_fin_de_version_del_contrato_ps "
+                + " order by A.cups20 asc, A.cups22 asc, A.fecha_desde asc, A.fecha_hasta asc, A.estado asc, A.distribuidora asc, A.fecha_informe desc ";
+
+                ficheroLog.Add(strSql);
+                db = new servidores.RedShiftServer(RedShiftServer.Entornos.PROD);
+                command = new OdbcCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    PendienteMedida_B2B c = new PendienteMedida_B2B();
+                    c.comercializadora = r["comercializadora"].ToString();
+                    c.cups20 = r["cups20"].ToString();
+                    c.cups22 = r["cups22"].ToString();
+                    c.contrato_ps = r["contrato_ps"].ToString();
+                    c.fecha_desde = Convert.ToDateTime(r["fecha_desde"]);
+                    c.fecha_hasta = Convert.ToDateTime(r["fecha_hasta"]);
+                    c.mes = Convert.ToInt32(r["mes"]);
+                    c.estado = r["estado"].ToString();
+                    c.cod_carga = Convert.ToInt32(r["cod_carga"]);
+
+                    if (r["Final"] != System.DBNull.Value)
+                    {
+                        c.fecha_fin_KEE = Convert.ToDateTime(r["Final"]);
+                    }
+                    //////else {
+                    //////    c.fecha_fin_KEE = DBNull.Value;
+                    //////}
+
+                    List<PendienteMedida_B2B> t;
+                    if (!d.TryGetValue(c.cups20, out t))
+                    {
+                        t = new List<PendienteMedida_B2B>();
+                        t.Add(c);
+                        d.Add(c.cups20, t);
+                    }
+                    else
+                        t.Add(c);
+
+                }
+                db.CloseConnection();
+                return d;
+
+
+            }
+            catch (Exception ex)
+            {
+                ficheroLog.addError("Carga: " + ex.Message);
+                return null;
+            }
+        }
+
+
+
+        private DateTime MaxFechaInforme()
+        {
+            // Buscamos la última fecha de publicación del informe
+
+            servidores.RedShiftServer db;
+            OdbcCommand command;
+            OdbcDataReader r;
+            string strSql = "";
+            DateTime fecha_max = new DateTime();
+
+            try
+            {
+                strSql = "select max(fecha_informe) as max_fecha from ed_owner.t_ed_h_pdtweb_pm_b2b";
+                ficheroLog.Add(strSql);
+                db = new servidores.RedShiftServer(RedShiftServer.Entornos.PROD);
+                command = new OdbcCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    fecha_max = Convert.ToDateTime(r["max_fecha"]);
+                }
+                db.CloseConnection();
+
+                return fecha_max;
+            }
+            catch (Exception ex)
+            {
+                ficheroLog.addError("MaxFechaInforme: " + ex.Message);
+                return DateTime.Now;
+            }
+
+        }
+
+
+        public List<string> GetCups(string cups20, DateTime fecha_desde, DateTime fecha_hasta)
+        {
+            List<string> lista = new List<string>();
+
+            List<PendienteMedida_B2B> o;
+            if (dic.TryGetValue(cups20, out o))
+            {
+
+          
+                lista =
+                    o.FindAll(z => z.fecha_desde == fecha_desde
+                    && z.fecha_hasta == fecha_hasta).Select(z => z.estado).ToList();
+
+            }
+
+            
+            return lista;
+
+        }
+
+
+        public List<string> GetCupsFinKEE(string cups20, DateTime fecha_desde, DateTime fecha_hasta)
+        {
+            List<string> lista = new List<string>();
+
+            List<PendienteMedida_B2B> o;
+            if (dic.TryGetValue(cups20, out o))
+            {
+
+                lista =  o.FindAll(z => z.fecha_desde == fecha_desde && z.fecha_hasta == fecha_hasta).Select(z => Convert.ToString(z.fecha_fin_KEE)).ToList();
+            }
+
+
+            return lista;
+  
+           
+
+        }
+
+        public List<string> GetCupsDetalle(string cups20, DateTime fecha_desde, DateTime fecha_hasta)
+        {
+            List<string> lista = new List<string>();
+
+            List<PendienteMedida_B2B> o;
+            if (dic.TryGetValue(cups20, out o))
+            {
+
+                //Coincide el trio recupero el estado de KEE --> Nuevas columnas de KEE en la hoja detalle
+                lista =
+                    o.FindAll(z => z.fecha_desde == fecha_desde
+                    && z.fecha_hasta == fecha_hasta).Select(z => z.estado).ToList();
+
+                if (lista.Count == 0) //No coincide el trio
+                {
+                    
+                    // Paco - Este puede ser el caso que vienen dos rangos de fechas diferentes en KEE (fechas partidas) y tendriamos que quedarnos  
+                    //con la primera, no hemos detectado todavía ningún caso 
+                    //si no coinciden  las fechas de SAP y Kronos exactamente busco todos los rangos en KEE que estan dentro de las fechas de SAP
+                    lista =
+                       o.FindAll(z => z.fecha_desde >= fecha_desde    
+                       && z.fecha_hasta <= fecha_hasta).Select(z => z.estado + "-(" + Convert.ToString(z.fecha_desde.ToString ("yyyy-MM-dd")) + "/" + Convert.ToString(z.fecha_hasta.ToString("yyyy-MM-dd")) +")").ToList(); // el periodo de KEE está contenido dentro del de SAP
+
+                    if (lista.Count == 0)
+                    {
+                        System.Windows.Forms.MessageBox.Show("Código sin probar para depurar");
+                        //Existen fechas parciales en KEE --> periodo fecha_desde/fecha_hasta comprendido parte en uno de KEE (z.fecha_desde/z.fecha_hasta)
+                        //fecha desde menor que fecha inicio de kronos y  fecha hasta >= fecha inicio de kronos
+                        lista =
+                       o.FindAll(z =>  fecha_desde < z.fecha_desde 
+                       && fecha_hasta >= z.fecha_desde ).Select(z => z.estado + "-(" + Convert.ToString(z.fecha_desde.ToString("yyyy-MM-dd")) + "/" + Convert.ToString(z.fecha_hasta.ToString("yyyy-MM-dd")) + ")").ToList(); ;  //intercalado en z.fecha_desde
+
+                        if (lista.Count == 0)
+                        {
+                            //fecha desde SAP menor que fecha hasta de kronos y  fecha hasta SAP >= fecha hasta de kronos 
+                            lista =
+                            o.FindAll(z => fecha_desde < z.fecha_hasta
+                            && fecha_hasta >= z.fecha_hasta).Select(z => z.estado + "-(" + Convert.ToString(z.fecha_desde.ToString("yyyy-MM-dd")) + "/" + Convert.ToString(z.fecha_hasta.ToString("yyyy-MM-dd")) + ")").ToList(); //intercalado en z.fecha_hasta
+                        }
+
+                        if (lista.Count == 0)
+                        {
+                            // En el caso de que en el pendiente de SAP haya un periodo pendiente en un estado de los que SI va a buscar a KEE y
+                            // no se encuentra en el pendiente de KEE, ni total ni parcialmente, se debería informar como el estado
+                            //"01.B04 Error Sistemas KEE-SAP - Recepción OL" que es el que identifica problemas en la generación del periodo 
+                            //ya sea por el envío de OL de SAP o por el proceso de KEE
+                            lista[0] = "Discrepancia: No existen fechas en el informe pendiente de KEE para el periodo - " + lista[0];
+                        }
+                        else
+                        {
+                            //Intercalado parcialmente
+                            lista[0] = "Discrepancia: Perido SAP encontrado parcialmente en el informe pendiente de KEE - " + lista[0];
+                        }
+        
+                    }
+                    else
+                    {
+                        //Periodo KEE contenido dentro del SAP, nos quedamos con el más antiguo (esta ordenado de forma asc)
+                        //ejemplo: sap de 01/08/2023 a 31/12/2023 y tengo en kronos 1/11/2023 a 30/11/2023  - 01/12/2023- 31/12/2023
+                        // z.fechadesde>= 01/08/2023 y z.fechahasta<= 31/12/2023
+                        lista[0] = "Discrepancia: Periodos del pendiente de KEE contenidos en las fechas de SAP - " + lista[0];
+                    }
+
+                }
+            }
+            else
+            {
+                //No encuentra el CUPS de SAP dentro del listado de CUPS de Kronos
+                lista.Add("Discrepancia: No existe el cups en el informe del pendiente de KEE");
+         
+            }
+
+            return lista;
+
+        }
+    }
+}

@@ -1,0 +1,60 @@
+C:\desarrollos\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.dll
+C:\desarrollos\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.pdb
+C:\desarrollos\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.dll
+C:\desarrollos\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.pdb
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.AssemblyReference.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.ResolveComReference.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.Properties.Resources.resources
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.GenerateResource.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.CoreCompileInputs.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.CopyComplete
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.dll
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.pdb
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.dll
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.pdb
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.dll
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.pdb
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.AssemblyReference.cache
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.ResolveComReference.cache
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.Properties.Resources.resources
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.GenerateResource.cache
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.CoreCompileInputs.cache
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.CopyComplete
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.dll
+C:\Temp\borrar\desarrollo\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.CopyComplete
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.CopyComplete
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.pdb
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.dll
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\x64\Debug\EndesaEntity.pdb
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.dll
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\x64\Debug\System.ServiceModel.Primitives.pdb
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.AssemblyReference.cache
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.ResolveComReference.cache
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.Properties.Resources.resources
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.GenerateResource.cache
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.csproj.CoreCompileInputs.cache
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEn.6A5E1F03.Up2Date
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.dll
+C:\CSHARP\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\x64\Debug\EndesaEntity.pdb

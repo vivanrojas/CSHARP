@@ -1,0 +1,2 @@
+22/11/2023 22:08:49 - ES01855 - GetID Connection must be valid and open.
+22/11/2023 22:08:49 - ES01855 - UsuarioValido Connection must be valid and open.

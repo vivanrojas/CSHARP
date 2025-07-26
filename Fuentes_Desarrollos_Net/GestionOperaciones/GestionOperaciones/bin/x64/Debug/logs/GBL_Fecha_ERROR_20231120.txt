@@ -1,0 +1,2 @@
+20/11/2023 13:23:05 - ES01855 - CargaFestivos: Table 'fact.fact_diasfestivos' doesn't exist
+20/11/2023 13:25:12 - ES01855 - CargaFestivos: Table 'fact.fact_diasfestivos' doesn't exist

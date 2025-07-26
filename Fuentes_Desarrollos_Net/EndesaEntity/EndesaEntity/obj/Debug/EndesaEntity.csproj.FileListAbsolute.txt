@@ -1,0 +1,21 @@
+C:\desarrollos\EndesaEntity\EndesaEntity\bin\Debug\EndesaEntity.dll
+C:\desarrollos\EndesaEntity\EndesaEntity\bin\Debug\EndesaEntity.pdb
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.csproj.AssemblyReference.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.csproj.ResolveComReference.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.Properties.Resources.resources
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.csproj.GenerateResource.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.csproj.CoreCompileInputs.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.dll
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\Debug\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\Debug\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\Debug\System.ServiceModel.Primitives.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\bin\Debug\System.ServiceModel.Primitives.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.csproj.CopyComplete
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaEntity\EndesaEntity\obj\Debug\EndesaEntity.pdb

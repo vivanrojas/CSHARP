@@ -1,0 +1,846 @@
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll.config
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.pdb
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.Policy.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.TranslationServices.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.SharePoint.Tools.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ProjectServer.Client.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.Strings.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Publishing.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.Windows.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Oracle.ManagedDataAccess.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\StartupServicesModel.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Management.ServiceModel.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Strings.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\ZstdNet.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.pdb
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.pdb
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.pdb
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.pdb
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.pdb
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.pdb
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.pdb
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.xml
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.AssemblyReference.cache
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Core.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Interop.Excel.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.ResolveComReference.cache
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.forms.FrmProgressBar.resources
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.Properties.Resources.resources
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.GenerateResource.cache
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CoreCompileInputs.cache
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CopyComplete
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.dll
+C:\desarrollos\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.pdb
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll.config
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.pdb
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.Policy.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.TranslationServices.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.SharePoint.Tools.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ProjectServer.Client.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.Strings.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Publishing.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.Windows.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Oracle.ManagedDataAccess.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\StartupServicesModel.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Management.ServiceModel.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Strings.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\ZstdNet.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.pdb
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.pdb
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.pdb
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.pdb
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.pdb
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.pdb
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.pdb
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.xml
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.AssemblyReference.cache
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Core.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.ResolveComReference.cache
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.forms.FrmProgressBar.resources
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.Properties.Resources.resources
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.GenerateResource.cache
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CoreCompileInputs.cache
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CopyComplete
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.dll
+C:\Temp\borrar\desarrollo\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll.config
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.Policy.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ProjectServer.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.Strings.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.Windows.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Oracle.ManagedDataAccess.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\StartupServicesModel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Management.ServiceModel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Strings.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\ZstdNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.forms.FrmProgressBar.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CopyComplete
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_Ver-GAB_20231229\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\libgcc_s_seh-1.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\libgmp-10.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\libgnutls-30.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\libhogweed-6.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\libnettle-8.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\libwinpthread-1.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll.config
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.GnuTLS.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.Policy.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ProjectServer.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.Strings.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.Windows.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Oracle.ManagedDataAccess.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\StartupServicesModel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Management.ServiceModel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Strings.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\ZstdNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.GnuTLS.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.forms.FrmProgressBar.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CopyComplete
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\libgcc_s_seh-1.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\libgmp-10.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\libgnutls-30.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\libhogweed-6.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\libnettle-8.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\libwinpthread-1.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll.config
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Aspose.Cells.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.GnuTLS.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.Policy.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ProjectServer.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.Strings.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.Windows.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Oracle.ManagedDataAccess.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\StartupServicesModel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Management.ServiceModel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Strings.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\ZstdNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Aspose.Cells.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.GnuTLS.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.forms.FrmProgressBar.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CopyComplete
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net_20240829_ver_SAP_KRONOS\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Aspose.Cells.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\EndesaBusiness\EndesaBusiness\bin\x64\Release\Aspose.Cells.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\libgcc_s_seh-1.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\libgmp-10.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\libgnutls-30.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\libhogweed-6.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\libnettle-8.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\libwinpthread-1.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll.config
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaBusiness.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Aspose.Cells.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.GnuTLS.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.Policy.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.Client.TranslationServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Office.SharePoint.Tools.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Online.SharePoint.Client.Tenant.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ProjectServer.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Internal.Strings.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.DocumentManagement.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Publishing.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Runtime.Windows.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.Applications.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Search.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.Taxonomy.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.UserProfiles.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.SharePoint.Client.WorkflowServices.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Oracle.ManagedDataAccess.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\StartupServicesModel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Management.ServiceModel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.Strings.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\ZstdNet.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\EndesaEntity.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\AE.Net.Mail.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Aspose.Cells.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Azure.Identity.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\BouncyCastle.Crypto.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\EPPlus.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\FluentFTP.GnuTLS.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Google.Protobuf.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\itextsharp.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Compression.LZ4.Streams.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\K4os.Hash.xxHash.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\MailKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Exchange.WebServices.Auth.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Graph.Core.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Logging.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.IdentityModel.Tokens.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.ServiceFabric.Preview.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.pdb
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\MimeKit.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\MySql.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Renci.SshNet.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Buffers.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Fabric.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Memory.Data.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Net.Http.WinHttpHandler.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Numerics.Vectors.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Security.Cryptography.ProtectedData.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Encodings.Web.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Text.Json.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\System.ValueTuple.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\bin\x64\Release\Telegram.Bot.xml
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Core.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.forms.FrmProgressBar.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.csproj.CopyComplete
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.dll
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net - CuadroMando\EndesaBusiness\EndesaBusiness\obj\x64\Release\EndesaBusiness.pdb

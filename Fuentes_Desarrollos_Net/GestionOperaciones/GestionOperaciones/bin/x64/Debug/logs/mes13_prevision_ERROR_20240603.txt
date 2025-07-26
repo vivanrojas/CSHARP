@@ -1,0 +1,1 @@
+03/06/2024 10:07:54 - gbenavides - GuardaFactura Column 'SECFACTU' cannot be null

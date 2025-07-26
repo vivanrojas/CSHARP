@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD4F6101-96E8-4BD6-B966-229C23975986}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EndesaEntity</RootNamespace>
+    <AssemblyName>EndesaEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Primitives, Version=4.10.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\System.ServiceModel.Primitives.4.10.0\lib\net461\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdifInventario.cs" />
+    <Compile Include="Adif_factura.cs" />
+    <Compile Include="Adif_impuestos.cs" />
+    <Compile Include="Adif_Medida_Horaria.cs" />
+    <Compile Include="AgoraDetalle.cs" />
+    <Compile Include="AgoraResumen.cs" />
+    <Compile Include="Agrupacion.cs" />
+    <Compile Include="Alarma.cs" />
+    <Compile Include="Audit.cs" />
+    <Compile Include="Calendario.cs" />
+    <Compile Include="cnmc\gas\A1550.cs" />
+    <Compile Include="cnmc\gas\AddressPS.cs" />
+    <Compile Include="cnmc\gas\Proceso_A15_50.cs" />
+    <Compile Include="cnmc\gas\Street.cs" />
+    <Compile Include="cnmc\gas\V25_2019_12_17\A1226.cs" />
+    <Compile Include="cnmc\gas\V25_2019_12_17\Cargas.cs" />
+    <Compile Include="cnmc\gas\V25_2019_12_17\Counter.cs" />
+    <Compile Include="cnmc\gas\V25_2019_12_17\CounterList.cs" />
+    <Compile Include="cnmc\gas\V25_2019_12_17\Heading.cs" />
+    <Compile Include="cnmc\gas\V25_2019_12_17\Informe_Reubicaciones.cs" />
+    <Compile Include="cnmc\gas\V25_2019_12_17\Proceso_A12_26.cs" />
+    <Compile Include="cnmc\Motivo_Rechazo.cs" />
+    <Compile Include="cnmc\Municipio.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\AceptacionModificacionDeATR.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\AceptacionCambioComercializadorSinCambios.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\AceptacionAlta.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\ActivacionBaja.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\ActivacionAlta.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\ActivacionCambiodeComercializadorConCambios_C205.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\ActivacionTraspasoCOR.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Alta.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\AltaA301.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Aparato.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Aparatos.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\AutoconsumoSolicitudAlta.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\BajaSuspension.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Cabecera.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\ActivacionCambioComercializadorSinCambios_C105.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\CambioComercializadorSinCambios.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\CambioComercializadorConCambios.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Cliente.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\ClienteConDireccion.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\CondicionesContractuales_C105.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\CondicionesContractuales.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\CondicionesContractuales_M102.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\CondicionesContractuales_T101.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Contacto.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Contrato_B105.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Contrato.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Contrato_C105.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Contrato_C102_A.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\ContratoAlta.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Contrato_C101.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Contrato_T101.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosAceptacionB102.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosAceptacion.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosActivacionBaja.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosActivacionC105.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosActivacion.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosAparato.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosCAUAlta.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosInstGenSolicitud.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosSolicitud_A3.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosSolicitud_C1.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosSolicitud.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DatosSuministroSolicitud.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Direccion.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\DireccionPS.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\IdCliente.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\IdContrato.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Medida.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\ModeloAparato.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Nombre.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Potencia.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\PotenciasContratadas.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\PuntoDeMedida.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\PuntosDeMedida.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\RegistroDoc.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Rechazos.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Rechazo.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\RegistrosDocumento.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\SolicitudTraspasoCOR.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Telefono.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeA301.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeB102_R.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeB102_A.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeC102_A .cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeB105.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeC105.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeC102_R .cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeA302_R.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeA302_A.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeA305.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeB101.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeC101.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeT101.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\TipoMensajeT105.cs" />
+    <Compile Include="cnmc\PeajeGas.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\Via.cs" />
+    <Compile Include="cnmc\V21_2019_12_17\AceptacionBajaSuspencion.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\ActivacionAltaA3.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\BajaSuspension.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\Cliente.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\CondicionesContractuales_C201.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\Contrato_C201.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\Contrato_M1.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\DatosSolicitud_B1.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\DatosSolicitud_M1.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\ModificacionDeATR.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeA301.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeB101.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeC205.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeC202_R .cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeC202_A .cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeM105.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeM102_R .cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeM102A .cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeC201.cs" />
+    <Compile Include="cnmc\V30_2022_21_01\TipoMensajeM101.cs" />
+    <Compile Include="cnmc\XML_A1_43.cs" />
+    <Compile Include="cobros\CarteraSIOC_Tabla.cs" />
+    <Compile Include="cobros\Cartera_SalesForce.cs" />
+    <Compile Include="cobros\Deuda_Tabla.cs" />
+    <Compile Include="cola\Cola.cs" />
+    <Compile Include="cola\ProcesoCola.cs" />
+    <Compile Include="consultas\FacrturasSinCAP.cs" />
+    <Compile Include="contratacion\Cartera.cs" />
+    <Compile Include="contratacion\CNAE_Tabla.cs" />
+    <Compile Include="contratacion\ComplementosContrato.cs" />
+    <Compile Include="contratacion\ContratoPS_InformeComprobacion.cs" />
+    <Compile Include="contratacion\ContratosPS.cs" />
+    <Compile Include="contratacion\Cups_Vigentes_Agora_Tabla.cs" />
+    <Compile Include="contratacion\Diasuario.cs" />
+    <Compile Include="contratacion\Disuasoria_Informe.cs" />
+    <Compile Include="contratacion\Disuasorio_Resumen.cs" />
+    <Compile Include="contratacion\Exenciones.cs" />
+    <Compile Include="contratacion\gas\A2_43.cs" />
+    <Compile Include="contratacion\gas\Addenda.cs" />
+    <Compile Include="contratacion\gas\AdicionalSharepoint.cs" />
+    <Compile Include="contratacion\gas\Cups_Peaje.cs" />
+    <Compile Include="contratacion\gas\Distribuidora.cs" />
+    <Compile Include="contratacion\gas\Informe_GAS_XML.cs" />
+    <Compile Include="contratacion\gas\Solicitud.cs" />
+    <Compile Include="contratacion\gas\SolicitudDetalle.cs" />
+    <Compile Include="contratacion\gas\SolicitudesGas.cs" />
+    <Compile Include="contratacion\gas\XML_GAS.cs" />
+    <Compile Include="contratacion\GestionPropia.cs" />
+    <Compile Include="contratacion\Inventario.cs" />
+    <Compile Include="contratacion\men_xml.cs" />
+    <Compile Include="contratacion\MotivosRechazo.cs" />
+    <Compile Include="contratacion\Potencias_Contratadas.cs" />
+    <Compile Include="contratacion\PS_AT.cs" />
+    <Compile Include="contratacion\SolATRMT.cs" />
+    <Compile Include="contratacion\SOLATRMT_InformeATR_Carterizado.cs" />
+    <Compile Include="contratacion\Tabla_cp_fechas_procesos.cs" />
+    <Compile Include="contratacion\Tarifa.cs" />
+    <Compile Include="contratacion\Tension.cs" />
+    <Compile Include="contratacion\TiposMotivoRechazo.cs" />
+    <Compile Include="contratacion\XML_CNMC.cs" />
+    <Compile Include="contratacion\xxi\Casos_Tabla.cs" />
+    <Compile Include="contratacion\Documento_Tabla.cs" />
+    <Compile Include="contratacion\Param_Estados_Documentos_Tabla.cs" />
+    <Compile Include="contratacion\Estados_Tabla.cs" />
+    <Compile Include="contratacion\Inventario_Detalle_Estados_Tabla.cs" />
+    <Compile Include="contratacion\Inventario_Tabla.cs" />
+    <Compile Include="contratacion\PS_AT_Tabla.cs" />
+    <Compile Include="contratacion\Solicitudes_Codigos_Tabla.cs" />
+    <Compile Include="contratacion\SubEstados_Tabla.cs" />
+    <Compile Include="contratacion\ContratosPS_Tabla.cs" />
+    <Compile Include="contratacion\xxi\Casos_Tabla_Historico.cs" />
+    <Compile Include="contratacion\xxi\Comentario.cs" />
+    <Compile Include="contratacion\xxi\Cups_Solicitud.cs" />
+    <Compile Include="contratacion\xxi\Eventuales.cs" />
+    <Compile Include="contratacion\xxi\InformeCasos.cs" />
+    <Compile Include="contratacion\xxi\Informe_Facturacion.cs" />
+    <Compile Include="contratacion\xxi\Param_Estados_Casos.cs" />
+    <Compile Include="contratacion\xxi\Paso_a_COR.cs" />
+    <Compile Include="contratacion\xxi\XML_Aparatos.cs" />
+    <Compile Include="contratacion\xxi\XML_Datos.cs" />
+    <Compile Include="contratacion\xxi\XML_Medidas.cs" />
+    <Compile Include="contratacion\xxi\XML_Min.cs" />
+    <Compile Include="contratacion\xxi\XML_PuntoDeMedida.cs" />
+    <Compile Include="Correo.cs" />
+    <Compile Include="Cups.cs" />
+    <Compile Include="cups\PuntoSuministro.cs" />
+    <Compile Include="CurvaCuartoHoraria.cs" />
+    <Compile Include="DatosPeaje.cs" />
+    <Compile Include="Direccion.cs" />
+    <Compile Include="dsi\NotaCreditoPortugal.cs" />
+    <Compile Include="eer\Archivos.cs" />
+    <Compile Include="eer\Factura.cs" />
+    <Compile Include="eer\FacturaDetalle.cs" />
+    <Compile Include="eer\InformeFacturacion.cs" />
+    <Compile Include="eer\InventarioPuntosFacturador.cs" />
+    <Compile Include="EmpresaTitular.cs" />
+    <Compile Include="extrasistemas\ACC_con_Cambios.cs" />
+    <Compile Include="extrasistemas\ACC.cs" />
+    <Compile Include="extrasistemas\AD.cs" />
+    <Compile Include="extrasistemas\BAJA.cs" />
+    <Compile Include="extrasistemas\Global.cs" />
+    <Compile Include="extrasistemas\MOD.cs" />
+    <Compile Include="factoring\CalendarioFactoring.cs" />
+    <Compile Include="factoring\DatosExcel.cs" />
+    <Compile Include="factoring\Estimacion.cs" />
+    <Compile Include="factoring\Factura.cs" />
+    <Compile Include="factoring\ListaNegra.cs" />
+    <Compile Include="factoring\Mes12_BT.cs" />
+    <Compile Include="factoring\Seguimiento.cs" />
+    <Compile Include="facturacion\Adif_Factura.cs" />
+    <Compile Include="facturacion\Adif_Fichero_Factura.cs" />
+    <Compile Include="facturacion\Adif_impuestos.cs" />
+    <Compile Include="facturacion\AgoraManual.cs" />
+    <Compile Include="facturacion\Anomalia.cs" />
+    <Compile Include="facturacion\CalendarioTarifario.cs" />
+    <Compile Include="facturacion\ClaveFactura.cs" />
+    <Compile Include="facturacion\ClaveTcon.cs" />
+    <Compile Include="facturacion\ClicksPT.cs" />
+    <Compile Include="facturacion\Coeficiente_Excesos_Potencia.cs" />
+    <Compile Include="facturacion\Conceptos.cs" />
+    <Compile Include="facturacion\ConceptosEspeciales.cs" />
+    <Compile Include="facturacion\Consumo_Medio_Mensual.cs" />
+    <Compile Include="facturacion\ConsumptionDataExtration.cs" />
+    <Compile Include="facturacion\CosPhi.cs" />
+    <Compile Include="facturacion\cuadroDeMando\Autoconsumo.cs" />
+    <Compile Include="facturacion\cuadroDeMando\GrupoCliente.cs" />
+    <Compile Include="facturacion\cuadroDeMando\Informe.cs" />
+    <Compile Include="facturacion\cuadroDeMando\InformeGas.cs" />
+    <Compile Include="facturacion\cuadroDeMando\NRI.cs" />
+    <Compile Include="facturacion\cuadroDeMando\Resumen.cs" />
+    <Compile Include="facturacion\cuadroDeMando\Scoring.cs" />
+    <Compile Include="facturacion\cuadroDeMando\TipoTop.cs" />
+    <Compile Include="facturacion\CuadroMando.cs" />
+    <Compile Include="facturacion\DetalleCuadroMando.cs" />
+    <Compile Include="facturacion\dgeg\factura.cs" />
+    <Compile Include="facturacion\Entorno_Inffact.cs" />
+    <Compile Include="facturacion\ErseBTE.cs" />
+    <Compile Include="facturacion\ErseBTN.cs" />
+    <Compile Include="facturacion\ErseMT.cs" />
+    <Compile Include="facturacion\ErseSAP.cs" />
+    <Compile Include="facturacion\FacturaAgrupada.cs" />
+    <Compile Include="facturacion\FacturaGas.cs" />
+    <Compile Include="facturacion\FacturaInffact.cs" />
+    <Compile Include="facturacion\FacturaPortugal.cs" />
+    <Compile Include="facturacion\Factura_Detalle.cs" />
+    <Compile Include="facturacion\Fact_pt_calendarios_Tabla.cs" />
+    <Compile Include="facturacion\Condiciones_pago_detalle_tabla.cs" />
+    <Compile Include="facturacion\Condiciones_pago_tabla.cs" />
+    <Compile Include="facturacion\Factura.cs" />
+    <Compile Include="facturacion\Fact_pt_tipos_calendarios_Tabla.cs" />
+    <Compile Include="facturacion\FechaHoraPeriodo.cs" />
+    <Compile Include="facturacion\Fo_Tabla.cs" />
+    <Compile Include="facturacion\InformeAngel2022.cs" />
+    <Compile Include="facturacion\InformeComparativaContratos.cs" />
+    <Compile Include="facturacion\InformeComparativaContratosDetalle.cs" />
+    <Compile Include="facturacion\InformeContratosComplementos.cs" />
+    <Compile Include="facturacion\InformeCuadrePotenciasMT.cs" />
+    <Compile Include="facturacion\InformeFacturasConsumoPortugal.cs" />
+    <Compile Include="facturacion\InformeGasPortugal.cs" />
+    <Compile Include="facturacion\InformeRetrasoFacturacion.cs" />
+    <Compile Include="facturacion\InformeRevisionFacturas.cs" />
+    <Compile Include="facturacion\InformeRevisionFacturasTablaDias.cs" />
+    <Compile Include="facturacion\informes\SeguimientoNif.cs" />
+    <Compile Include="facturacion\InventarioFacturacion.cs" />
+    <Compile Include="facturacion\DireccionPS_Portugal.cs" />
+    <Compile Include="facturacion\InventarioTipologias.cs" />
+    <Compile Include="facturacion\IRF_Totales_Hist.cs" />
+    <Compile Include="facturacion\mes13\Factura.cs" />
+    <Compile Include="facturacion\mes13\FacturaMes13_Seguimiento.cs" />
+    <Compile Include="facturacion\mes13\FacturasSeguimiento.cs" />
+    <Compile Include="facturacion\mes13\Seguimiento.cs" />
+    <Compile Include="facturacion\MesDatosRetrasoFacturacion.cs" />
+    <Compile Include="facturacion\Pendiente_Mes_Gas_Factura.cs" />
+    <Compile Include="facturacion\PreciosSpot.cs" />
+    <Compile Include="facturacion\Precio_Exceso_Potencia.cs" />
+    <Compile Include="facturacion\ProgramasConsumo.cs" />
+    <Compile Include="facturacion\PuntosSofisticados.cs" />
+    <Compile Include="facturacion\puntos_calculo_btn\Ajuste.cs" />
+    <Compile Include="facturacion\puntos_calculo_btn\Perfil.cs" />
+    <Compile Include="facturacion\puntos_calculo_btn\puntos_calculo.cs" />
+    <Compile Include="facturacion\Regularizacion.cs" />
+    <Compile Include="facturacion\ResumenAgrupadaPendiente.cs" />
+    <Compile Include="facturacion\SIGAME_DireccionPS.cs" />
+    <Compile Include="facturacion\SIGAME_Informe_IH.cs" />
+    <Compile Include="facturacion\SIGAME_R_30.cs" />
+    <Compile Include="facturacion\SIGAME_R_20.cs" />
+    <Compile Include="facturacion\SIGAME_TablaBase.cs" />
+    <Compile Include="facturacion\SIGAME_TablaBaseDetalle.cs" />
+    <Compile Include="facturacion\SuplementoTerritorial.cs" />
+    <Compile Include="facturacion\TAM_Consumo.cs" />
+    <Compile Include="facturacion\TAM_factura.cs" />
+    <Compile Include="facturacion\TAM_factura_detalle.cs" />
+    <Compile Include="facturacion\TarifaTerritorio.cs" />
+    <Compile Include="facturacion\Tcon.cs" />
+    <Compile Include="facturacion\Tipos_Factura_Tabla.cs" />
+    <Compile Include="facturacion\TotalRetrasoFacturacion.cs" />
+    <Compile Include="facturacion\ValorConceptoPortugalRAM.cs" />
+    <Compile Include="FechaTarifa.cs" />
+    <Compile Include="FieldsAudit.cs" />
+    <Compile Include="global\Archivo.cs" />
+    <Compile Include="global\BorradoArchivosTabla.cs" />
+    <Compile Include="global\Cartera.cs" />
+    <Compile Include="global\Credencial.cs" />
+    <Compile Include="global\Jerarquia_CarteraSalesForce.cs" />
+    <Compile Include="global\Lista_Fechas.cs" />
+    <Compile Include="global\LTP.cs" />
+    <Compile Include="global\MSAccess.cs" />
+    <Compile Include="global\MunicipioTabla.cs" />
+    <Compile Include="global\MySQLDB.cs" />
+    <Compile Include="global\Parametro.cs" />
+    <Compile Include="global\ProvinciaTabla.cs" />
+    <Compile Include="global\Global_fechas_procesos.cs" />
+    <Compile Include="herramientas\Seguimiento_Procesos.cs" />
+    <Compile Include="herramientas\Seguimiento_ProcesosDetalle.cs" />
+    <Compile Include="Informe_contratos_gas_vencimiento.cs" />
+    <Compile Include="Inventario.cs" />
+    <Compile Include="Kee_Inventario_StarBeat.cs" />
+    <Compile Include="ListaLotes.cs" />
+    <Compile Include="Mail.cs" />
+    <Compile Include="MailDetail.cs" />
+    <Compile Include="Medida.cs" />
+    <Compile Include="medida\AdifInformeMedida.cs" />
+    <Compile Include="medida\CierresEnergia.cs" />
+    <Compile Include="medida\CM_GAS_Cisterna.cs" />
+    <Compile Include="medida\CM_Gas_Tubo.cs" />
+    <Compile Include="medida\Curva.cs" />
+    <Compile Include="medida\CurvaCuartoHorariaInformes.cs" />
+    <Compile Include="medida\CurvaCuartoHorariaTabla.cs" />
+    <Compile Include="medida\CurvaDeCarga.cs" />
+    <Compile Include="medida\CurvaResumen.cs" />
+    <Compile Include="medida\CurvaResumenTabla.cs" />
+    <Compile Include="medida\AdifInventario.cs" />
+    <Compile Include="medida\CurvaVector.cs" />
+    <Compile Include="medida\DiccionarioCurva.cs" />
+    <Compile Include="medida\DicCurva.cs" />
+    <Compile Include="medida\Dt_peticiones_curva.cs" />
+    <Compile Include="medida\Dt_vw_ed_f_puntos_mlTabla.cs" />
+    <Compile Include="medida\Estado_Curva.cs" />
+    <Compile Include="medida\FacturasPeajesRedShift.cs" />
+    <Compile Include="medida\Fuentes.cs" />
+    <Compile Include="medida\FuentesMedida.cs" />
+    <Compile Include="medida\GAS2000_cliente.cs" />
+    <Compile Include="medida\GAS2000_Medidas_y_Facturas.cs" />
+    <Compile Include="medida\GAS_MedidasFacturas.cs" />
+    <Compile Include="medida\K1.cs" />
+    <Compile Include="medida\Kee_2as_recepciones_curvas_tmp.cs" />
+    <Compile Include="medida\Kee_2as_recepciones_facturas_tmp.cs" />
+    <Compile Include="medida\Kee_Archivo.cs" />
+    <Compile Include="medida\Kee_autoconsumo.cs" />
+    <Compile Include="medida\Kee_Estado_Periodos.cs" />
+    <Compile Include="medida\Kee_Extraccion_Formulas.cs" />
+    <Compile Include="medida\KEE_PeticionExtraccion.cs" />
+    <Compile Include="medida\Kee_Peticion_Reporte_Extraccion.cs" />
+    <Compile Include="medida\Kee_Portugal_Tabla.cs" />
+    <Compile Include="medida\Kee_Reporte_Extraccion.cs" />
+    <Compile Include="medida\Kee_Resumen_Tabla.cs" />
+    <Compile Include="medida\Kee_Tabla.cs" />
+    <Compile Include="medida\Kee_Tabla_Decimales.cs" />
+    <Compile Include="medida\Kee_TipoReporte.cs" />
+    <Compile Include="medida\LecturasElectricidad.cs" />
+    <Compile Include="medida\Medida_Vertical.cs" />
+    <Compile Include="medida\Med_cc_horaria.cs" />
+    <Compile Include="medida\Med_cc_horaria_tmp.cs" />
+    <Compile Include="medida\P1.cs" />
+    <Compile Include="medida\P1_Dic.cs" />
+    <Compile Include="medida\Peajes_Vista.cs" />
+    <Compile Include="medida\Pendiente.cs" />
+    <Compile Include="medida\PendienteMedida_B2B.cs" />
+    <Compile Include="medida\PendienteSAPKEE.cs" />
+    <Compile Include="medida\Pendiente_Totales.cs" />
+    <Compile Include="medida\Perdidas.cs" />
+    <Compile Include="medida\PNT_XML.cs" />
+    <Compile Include="medida\PNT_XML_Detail.cs" />
+    <Compile Include="medida\PO1011.cs" />
+    <Compile Include="medida\Po1011_f1Tabla.cs" />
+    <Compile Include="medida\PO1011_Informe.cs" />
+    <Compile Include="medida\PO1011_resumenTabla.cs" />
+    <Compile Include="medida\PPAs_medida.cs" />
+    <Compile Include="medida\Ps_mstr.cs" />
+    <Compile Include="medida\PuntoMedida.cs" />
+    <Compile Include="medida\PuntoSuministro.cs" />
+    <Compile Include="medida\RelacionIncidencias.cs" />
+    <Compile Include="medida\SCEA_Tabla.cs" />
+    <Compile Include="medida\SegmentosPortugalKEE.cs" />
+    <Compile Include="medida\TipoTam.cs" />
+    <Compile Include="MeterPoint.cs" />
+    <Compile Include="office\ReglaCorreo.cs" />
+    <Compile Include="PreciosEnergia.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PuntoSuministro.cs" />
+    <Compile Include="punto_suministro\PuntoSuministro.cs" />
+    <Compile Include="punto_suministro\Tarifa.cs" />
+    <Compile Include="ree\PreciosRegulados.cs" />
+    <Compile Include="ReglaCorreo.cs" />
+    <Compile Include="sigame\Consumos.cs" />
+    <Compile Include="sigame\ContratoGas.cs" />
+    <Compile Include="sigame\Factura.cs" />
+    <Compile Include="sigame\GestGas_Equiv_Distr_PT.cs" />
+    <Compile Include="sigame\T_SGM_M_ALBARANES_CLIENTES.cs" />
+    <Compile Include="sigame\Uso_Gas.cs" />
+    <Compile Include="Solicitud.cs" />
+    <Compile Include="SolicitudDetalle.cs" />
+    <Compile Include="Table_ag_compp.cs" />
+    <Compile Include="Table_ag_comppd.cs" />
+    <Compile Include="Table_atrgas_contratos.cs" />
+    <Compile Include="Table_atrgas_contratos_detalle.cs" />
+    <Compile Include="Table_atrgas_distribuidoras.cs" />
+    <Compile Include="Table_atrgas_excepcion_tramitacion_xml.cs" />
+    <Compile Include="Tarifa.cs" />
+    <Compile Include="Tunel.cs" />
+    <Compile Include="TunelContrato.cs" />
+    <Compile Include="xml\CNMC_t_cabecera.cs" />
+    <Compile Include="xml\Etiqueta_valor_XML.cs" />
+    <Compile Include="xml\Plantilla_Extrasistemas_total_registros.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access">
+      <Guid>{4AFFC9A0-5F99-101B-AF4E-00AA003F0F07}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

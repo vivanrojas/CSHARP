@@ -1,0 +1,399 @@
+﻿using EndesaBusiness.servidores;
+using EndesaEntity.facturacion;
+using Microsoft.BusinessData.MetadataModel;
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EndesaBusiness.facturacion.cuadro_mando
+{
+    public class Sofisticados
+    {
+
+        Dictionary<string, EndesaEntity.contratacion.ContratosPS> dic_s;
+        Dictionary<string, EndesaEntity.contratacion.ContratosPS> dic_precio_fijo;
+        Dictionary<string, List<EndesaEntity.contratacion.ContratosPS>> dic_h;
+        Dictionary<string, string> dic_sofisticados;
+        public Sofisticados()
+        {
+            
+        }
+
+        public void Contruye_Sofisticados()
+        {
+            DateTime mesAnterior = DateTime.Now.AddMonths(-1);
+            int anio = mesAnterior.Year;
+            int mes = mesAnterior.Month;
+            int dias_del_mes = DateTime.DaysInMonth(anio, mes);
+
+            DateTime fh = new DateTime(anio, mes, dias_del_mes);
+            DateTime fd = new DateTime(fh.Year, fh.Month, 1);
+
+            DateTime fecha_inicio_version = new DateTime();
+
+            dic_h = Carga_Historico();            
+            dic_s = Carga_Actual();
+            dic_precio_fijo = Carga_PrecioFijo(dic_s);
+
+            dic_sofisticados = new Dictionary<string, string>();            
+
+
+            foreach (KeyValuePair<string, EndesaEntity.contratacion.ContratosPS> p in dic_s)
+            {
+                if (p.Value.Fpsercon == DateTime.MinValue)
+                    fecha_inicio_version = fd;
+                else
+                    fecha_inicio_version = p.Value.Fpsercon;
+
+                switch (p.Value.Testcont)
+                {
+                    case 1:
+                        if (p.Value.Cnumscps > 1 &&
+                            ExisteContratoHistorico(p.Value.Ccounips, (p.Value.Cnumscps - 1), fh))
+                            dic_sofisticados.Add(p.Key, p.Key);                        
+                        break;
+                    case 3:
+                        if(fecha_inicio_version <= fh)
+                            dic_sofisticados.Add(p.Key, p.Key);
+                        else if (ExisteContratoHistorico(p.Value.Ccounips, (p.Value.Cnumscps - 1), fh))
+                            dic_sofisticados.Add(p.Key, p.Key);
+                        break;
+                    case 4:
+                        if(fecha_inicio_version <= fd)
+                            dic_sofisticados.Add(p.Key, p.Key);
+                        else if (ExisteContratoHistorico(p.Value.Ccounips, (p.Value.Cnumscps - 1), fh))
+                            dic_sofisticados.Add(p.Key, p.Key);
+                        break;
+                    case 8:
+                        if(ExisteContratoHistorico(p.Value.Ccounips, (p.Value.Cnumscps - 1), fh))
+                            dic_sofisticados.Add(p.Key, p.Key);
+                        break;
+
+                }
+            }
+        }
+
+        public bool EsSofisticado(string cups13)
+        {
+            string o;
+            return dic_sofisticados.TryGetValue(cups13, out o);
+        }
+
+        public bool EsPrecioFijo(string cups13, int mesPdte)
+        {
+            EndesaEntity.contratacion.ContratosPS o;
+            if (dic_precio_fijo.TryGetValue(cups13, out o))
+            {
+                return (Convert.ToInt32(o.Fpsercon.ToString("yyyyMM")) <=
+                    mesPdte &&  
+                    Convert.ToInt32(o.Fpsercon_contrato_actual.ToString("yyyyMM")) > mesPdte);
+                    
+            }
+            else
+                return false;
+            
+        }
+        private Dictionary<string, EndesaEntity.contratacion.ContratosPS> Carga_Actual()
+        {
+            MySQLDB db;
+            MySqlCommand command;
+            MySqlDataReader r;
+            string strSql = "";
+            
+
+            Dictionary<string, EndesaEntity.contratacion.ContratosPS> d = 
+                new Dictionary<string, EndesaEntity.contratacion.ContratosPS>();
+
+            try
+            {
+
+                strSql = "select ps.CCOUNIPS, substr(r.CUPS22,1,20) as CUPS20,"
+                    + " ps.FINICPLA, ps.CNUMSCPS, ps.TESTCONT,"
+                    + " ps.FFINVESU , ps.FALTACON, ps.FBAJACON, ps.FPSERCON, ps.CCOMPOBJ"
+                    + " from contratosPS ps"
+                    + " INNER JOIN cont.PS_AT r ON r.IDU = ps.ccounips"
+                    + " WHERE ps.CCOMPOBJ = 'A01' and ps.TESTCONT IN (1,3,4,8)"
+                    + " GROUP BY ps.CCOUNIPS";
+
+                db = new MySQLDB(MySQLDB.Esquemas.CON);
+                command = new MySqlCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    EndesaEntity.contratacion.ContratosPS c = new EndesaEntity.contratacion.ContratosPS();
+                    c.Ccounips = r["CCOUNIPS"].ToString();
+
+
+                    if (r["FINICPLA"] != System.DBNull.Value)
+                        c.Finicpla = Convert.ToDateTime(r["FINICPLA"]);
+
+                    c.Cnumscps = Convert.ToInt32(r["CNUMSCPS"]);
+                    c.Testcont = Convert.ToInt32(r["TESTCONT"]);
+
+                    if (r["FFINVESU"] != System.DBNull.Value)
+                        c.Ffinvesu = Convert.ToDateTime(r["FFINVESU"]);
+
+                    if (r["FALTACON"] != System.DBNull.Value)
+                        c.Faltacon = Convert.ToDateTime(r["FALTACON"]);
+
+                    if (r["FBAJACON"] != System.DBNull.Value)
+                        c.Fbajacon = Convert.ToDateTime(r["FBAJACON"]);
+
+                    if (r["FPSERCON"] != System.DBNull.Value)
+                        c.Fpsercon = Convert.ToDateTime(r["FPSERCON"]);
+
+                    if (r["CCOMPOBJ"] != System.DBNull.Value)
+                        c.Ccompobj = r["CCOMPOBJ"].ToString();
+
+
+                    EndesaEntity.contratacion.ContratosPS o;
+                    if(!d.TryGetValue(c.Ccounips, out o))
+                        d.Add(c.Ccounips, c);
+                }
+                db.CloseConnection();
+
+                return d;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+
+        }
+
+        private Dictionary<string, EndesaEntity.contratacion.ContratosPS> 
+            Carga_PrecioFijo(Dictionary<string, EndesaEntity.contratacion.ContratosPS> dic_agora)
+        {
+            MySQLDB db;
+            MySqlCommand command;
+            MySqlDataReader r;
+            string strSql = "";
+
+
+            Dictionary<string, EndesaEntity.contratacion.ContratosPS> d =
+                new Dictionary<string, EndesaEntity.contratacion.ContratosPS>();
+
+            try
+            {
+
+                strSql = "select ps.CCOUNIPS, substr(r.CUPS22,1,20) as CUPS20,"
+                    + " ps.FINICPLA, ps.CNUMSCPS, ps.TESTCONT,"
+                    + " ps.FFINVESU , ps.FALTACON, ps.FBAJACON, ps.FPSERCON, ps.CCOMPOBJ"
+                    + " from contratosPS ps"
+                    + " INNER JOIN cont.PS_AT r ON r.IDU = ps.ccounips"
+                    + " WHERE ps.CCOMPOBJ <> 'A01' and ps.TESTCONT IN (1,3,4,8)"
+                    + " GROUP BY ps.CCOUNIPS";
+
+                db = new MySQLDB(MySQLDB.Esquemas.CON);
+                command = new MySqlCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    EndesaEntity.contratacion.ContratosPS c = new EndesaEntity.contratacion.ContratosPS();
+                    c.Ccounips = r["CCOUNIPS"].ToString();
+
+
+                    if (r["FINICPLA"] != System.DBNull.Value)
+                        c.Finicpla = Convert.ToDateTime(r["FINICPLA"]);
+
+                    c.Cnumscps = Convert.ToInt32(r["CNUMSCPS"]);
+                    c.Testcont = Convert.ToInt32(r["TESTCONT"]);
+
+                    if (r["FFINVESU"] != System.DBNull.Value)
+                        c.Ffinvesu = Convert.ToDateTime(r["FFINVESU"]);
+
+                    if (r["FALTACON"] != System.DBNull.Value)
+                        c.Faltacon = Convert.ToDateTime(r["FALTACON"]);
+
+                    if (r["FBAJACON"] != System.DBNull.Value)
+                        c.Fbajacon = Convert.ToDateTime(r["FBAJACON"]);
+
+                    if (r["FPSERCON"] != System.DBNull.Value)
+                        c.Fpsercon = Convert.ToDateTime(r["FPSERCON"]);
+
+                    if (r["CCOMPOBJ"] != System.DBNull.Value)
+                        c.Ccompobj = r["CCOMPOBJ"].ToString();
+
+
+                    EndesaEntity.contratacion.ContratosPS o;
+                    EndesaEntity.contratacion.ContratosPS agora;
+                    // Nos interesan los CUPS que no tengan complemento A01 en la actualidad
+                    // pero que en la versión anterior sí tengan A01
+                    if (!dic_agora.TryGetValue(c.Ccounips, out agora))
+                    {
+
+                        if (c.Cnumscps > 1 &&
+                           ExisteContratoHistoricoA01_PrecioFijo(c.Ccounips, (c.Cnumscps - 1)))
+                        {
+                            if (!d.TryGetValue(c.Ccounips, out o))
+                            {
+                                d.Add(c.Ccounips, ContratoHistoricoA01_PrecioFijo(c.Ccounips, (c.Cnumscps - 1), c.Fpsercon));
+
+                            }
+                                
+                        }                          
+
+                        
+                    }
+                        
+                }
+                db.CloseConnection();
+
+
+
+
+                return d;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+
+        }
+
+        private Dictionary<string, List<EndesaEntity.contratacion.ContratosPS>> Carga_Historico()
+        {
+            MySQLDB db;
+            MySqlCommand command;
+            MySqlDataReader r;
+            string strSql = "";
+
+            Dictionary<string, List<EndesaEntity.contratacion.ContratosPS>> d =
+                new Dictionary<string, List<EndesaEntity.contratacion.ContratosPS>>();
+
+            try
+            {
+
+                strSql = "select ps.CCOUNIPS, substr(r.CUPS22,1,20) as CUPS20,"
+                    + " ps.FINICPLA, ps.CNUMSCPS, ps.TESTCONT, ps.FSIGFACT,"
+                    + " ps.FFINVESU, ps.FALTACON, ps.FBAJACON, ps.FPSERCON, ps.CCOMPOBJ"
+                    + " from contratosPS_hist ps"
+                    + " INNER JOIN cont.PS_AT r ON r.IDU = ps.CCOUNIPS"
+                    + " WHERE ps.CCOMPOBJ = 'A01' and ps.TESTCONT IN (1,3,4,8)"
+                    + " GROUP BY ps.CCOUNIPS, ps.CNUMSCPS"
+                    + " ORDER BY ps.CCOUNIPS, ps.CNUMSCPS DESC;";
+
+                db = new MySQLDB(MySQLDB.Esquemas.CON);
+                command = new MySqlCommand(strSql, db.con);
+                r = command.ExecuteReader();
+                while (r.Read())
+                {
+                    EndesaEntity.contratacion.ContratosPS c = new EndesaEntity.contratacion.ContratosPS();
+                    c.Ccounips = r["CCOUNIPS"].ToString();
+
+
+                   if (r["FINICPLA"] != System.DBNull.Value)                        
+                        c.Finicpla = Convert.ToDateTime(r["FINICPLA"]);
+
+                    c.Cnumscps = Convert.ToInt32(r["CNUMSCPS"]);
+                    c.Testcont = Convert.ToInt32(r["TESTCONT"]);
+
+                    if (r["FFINVESU"] != System.DBNull.Value)                        
+                        c.Ffinvesu = Convert.ToDateTime(r["FFINVESU"]);                                            
+                    else
+                        c.Ffinvesu = new DateTime(2010, 01, 01);
+
+                    if (r["FALTACON"] != System.DBNull.Value)                        
+                        c.Faltacon = Convert.ToDateTime(r["FALTACON"]);
+                                       
+                        
+
+                    if (r["FBAJACON"] != System.DBNull.Value)                                            
+                        c.Fbajacon = Convert.ToDateTime(r["FBAJACON"]);
+
+                    if (r["FSIGFACT"] != System.DBNull.Value)
+                        c.Fsigfact = Convert.ToDateTime(r["FSIGFACT"]);
+
+                    if (r["FPSERCON"] != System.DBNull.Value)                                            
+                        c.Fpsercon = Convert.ToDateTime(r["FPSERCON"]);                                           
+                        
+
+                    if (r["CCOMPOBJ"] != System.DBNull.Value)
+                        c.Ccompobj = r["CCOMPOBJ"].ToString();
+
+
+                    List<EndesaEntity.contratacion.ContratosPS> o;
+                    if (!d.TryGetValue(c.Ccounips, out o))
+                    {
+                        o = new List<EndesaEntity.contratacion.ContratosPS>();
+                        o.Add(c);
+                        d.Add(c.Ccounips, o);
+                    }
+                    else
+                        o.Add(c);
+                        
+                }
+                db.CloseConnection();
+
+                return d;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        private bool ExisteContratoHistorico(string cups13, int version, DateTime fecha)
+        {
+            List<EndesaEntity.contratacion.ContratosPS> o;
+            if (dic_h.TryGetValue(cups13, out o))
+            {
+                for(int j = version; j >=1; j--)
+                    for(int i = 0; i < o.Count; i++)
+                    {
+                        if (o[i].Cnumscps == j &&
+                            o[i].Ffinvesu <= fecha)
+                            return true;
+                    }
+                                              
+            }
+
+            return false;
+        }
+
+        private bool ExisteContratoHistoricoA01_PrecioFijo(string cups13, int version)
+        {
+            List<EndesaEntity.contratacion.ContratosPS> o;
+            if (dic_h.TryGetValue(cups13, out o))
+            {
+                for (int j = version; j >= 1; j--)
+                    for (int i = 0; i < o.Count; i++)
+                    {
+                        if (o[i].Cnumscps == version)
+                            return true;
+                    }
+
+            }
+
+            return false;
+        }
+
+        private EndesaEntity.contratacion.ContratosPS ContratoHistoricoA01_PrecioFijo(string cups13, int version, DateTime fpsercon_contratoActual)
+        {
+            List<EndesaEntity.contratacion.ContratosPS> o;
+            if (dic_h.TryGetValue(cups13, out o))
+            {
+                for (int j = version; j >= 1; j--)
+                    for (int i = 0; i < o.Count; i++)
+                    {
+                        if (o[i].Cnumscps == version)
+                        {
+                            o[i].Fpsercon_contrato_actual = fpsercon_contratoActual;
+                            return o[i];
+                        }
+                            
+                    }
+
+            }
+
+            return null;
+        }
+    }
+}

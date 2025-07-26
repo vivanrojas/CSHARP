@@ -1,0 +1,2 @@
+16/06/2025 10:51:30 - VIVAN - GetID La secuencia no contiene ningún elemento coincidente
+16/06/2025 10:51:32 - VIVAN - UsuarioValido La secuencia no contiene ningún elemento coincidente

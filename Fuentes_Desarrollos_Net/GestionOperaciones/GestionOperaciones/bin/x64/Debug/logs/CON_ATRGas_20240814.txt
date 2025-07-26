@@ -1,0 +1,29 @@
+14/08/2024 11:42:19 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 11:42:19 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_114201128.xml
+14/08/2024 11:46:22 - gbenavides - Se publica en el FTP el archivo A1_43_SCTD_0007_0207_20240814_114201128.xml en la ruta SOLICITUDES_ENTRANTES/
+14/08/2024 11:53:35 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 11:53:35 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_115305124.xml
+14/08/2024 12:08:39 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 12:08:40 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_120832426.xml
+14/08/2024 12:08:48 - gbenavides - Se publica en el FTP el archivo A1_43_SCTD_0007_0207_20240814_120832426.xml en la ruta SOLICITUDES_ENTRANTES/
+14/08/2024 12:42:16 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 12:42:16 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_123730230.xml
+14/08/2024 12:43:02 - gbenavides - Se publica en el FTP el archivo A1_43_SCTD_0007_0207_20240814_123730230.xml en la ruta SOLICITUDES_ENTRANTES/
+14/08/2024 12:47:02 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 12:47:02 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_124656885.xml
+14/08/2024 12:50:51 - gbenavides - Se publica en el FTP el archivo A1_43_SCTD_0007_0207_20240814_124656885.xml en la ruta SOLICITUDES_ENTRANTES/
+14/08/2024 12:52:53 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 12:52:53 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_125248617.xml
+14/08/2024 13:38:22 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 13:38:22 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_133817539.xml
+14/08/2024 13:41:04 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 13:41:04 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_134056681.xml
+14/08/2024 13:43:19 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 13:43:19 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_134316940.xml
+14/08/2024 13:48:51 - gbenavides - Se publica en el FTP el archivo A1_43_SCTD_0007_0207_20240814_134316940.xml en la ruta SOLICITUDES_ENTRANTES/
+14/08/2024 13:50:30 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 13:50:30 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_135025977.xml
+14/08/2024 13:50:48 - gbenavides - Se publica en el FTP el archivo A1_43_SCTD_0007_0207_20240814_135025977.xml en la ruta SOLICITUDES_ENTRANTES/
+14/08/2024 13:54:57 - gbenavides - Conectando al FTP: ftp://sctd.gasextremadura.com:21/SOLICITUDES_ENTRANTES/
+14/08/2024 13:54:57 - gbenavides - Detectado: A1_43_SCTD_0007_0207_20240814_135454293.xml
+14/08/2024 13:55:19 - gbenavides - Se publica en el FTP el archivo A1_43_SCTD_0007_0207_20240814_135454293.xml en la ruta SOLICITUDES_ENTRANTES/PRUEBA/

@@ -1,0 +1,7 @@
+17/02/2025 8:24:38 - gbenavides - Carga: Unable to convert MySQL date/time value to System.DateTime
+17/02/2025 8:25:57 - gbenavides - Carga: Unable to convert MySQL date/time value to System.DateTime
+17/02/2025 8:26:29 - gbenavides - Carga: Unable to convert MySQL date/time value to System.DateTime
+17/02/2025 8:27:02 - gbenavides - Carga: Unable to convert MySQL date/time value to System.DateTime
+17/02/2025 8:28:19 - gbenavides - Carga: Unable to convert MySQL date/time value to System.DateTime
+17/02/2025 8:34:29 - gbenavides - Carga: Unable to convert MySQL date/time value to System.DateTime
+17/02/2025 8:39:40 - gbenavides - Carga: Unable to convert MySQL date/time value to System.DateTime

@@ -1,0 +1,4 @@
+16/02/2024 12:28:35 - gbenavides - GetID Connection must be valid and open.
+16/02/2024 12:28:35 - gbenavides - UsuarioValido Connection must be valid and open.
+16/02/2024 12:29:59 - gbenavides - GetID Connection must be valid and open.
+16/02/2024 12:29:59 - gbenavides - UsuarioValido Connection must be valid and open.

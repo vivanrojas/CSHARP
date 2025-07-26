@@ -1,0 +1,9 @@
+C:\desarrollos\EndesaEntity\EndesaEntity\bin\Release\EndesaEntity.dll
+C:\desarrollos\EndesaEntity\EndesaEntity\bin\Release\EndesaEntity.pdb
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Release\EndesaEntity.Properties.Resources.resources
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Release\EndesaEntity.csproj.GenerateResource.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Release\EndesaEntity.csproj.CoreCompileInputs.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Release\EndesaEntity.dll
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Release\EndesaEntity.pdb
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Release\EndesaEntity.csproj.ResolveComReference.cache
+C:\desarrollos\EndesaEntity\EndesaEntity\obj\Release\EndesaEntity.csproj.AssemblyReference.cache

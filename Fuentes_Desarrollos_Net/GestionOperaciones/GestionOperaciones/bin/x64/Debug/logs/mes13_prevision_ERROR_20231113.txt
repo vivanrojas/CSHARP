@@ -1,0 +1,4 @@
+13/11/2023 16:14:46 - ES01855 - SeleccionaFacturas.AnexionDatos No database selected
+13/11/2023 16:16:20 - ES01855 - SeleccionaFacturas.AnexionDatos No database selected
+13/11/2023 16:17:11 - ES01855 - SeleccionaFacturas.AnexionDatos No database selected
+13/11/2023 16:17:49 - ES01855 - SeleccionaFacturas.AnexionDatos No database selected

@@ -1,0 +1,12 @@
+10/01/2024 13:42:04 - gbenavides - Generando Informe Excel de Estimación Factorigin 202403
+10/01/2024 13:42:04 - gbenavides - Generado Excel --> C:\Temp\factoring_202403_estimacion_20240110_133610.xlsx
+10/01/2024 15:03:06 - gbenavides - Generando Informe Excel de Estimación Factorigin 202403
+10/01/2024 15:03:06 - gbenavides - Generado Excel --> C:\Temp\factoring_202403_estimacion_20240110_134524.xlsx
+10/01/2024 16:02:25 - gbenavides - Generando Informe Excel de Estimación Factorigin 202402
+10/01/2024 16:02:25 - gbenavides - Generado Excel --> C:\Temp\factoring_202402_estimacion_20240110_154622.xlsx
+10/01/2024 16:15:54 - gbenavides - Generando Informe Excel de Estimación Factorigin 202403
+10/01/2024 16:15:54 - gbenavides - Generado Excel --> C:\Temp\factoring_202403_estimacion_20240110_160418.xlsx
+10/01/2024 16:54:43 - gbenavides - Generando Informe Excel de Estimación Factorigin 202403
+10/01/2024 16:54:43 - gbenavides - Generado Excel --> C:\Temp\factoring_202403_estimacion_20240110_165119.xlsx
+10/01/2024 17:28:45 - gbenavides - Generando Informe Excel de Estimación Factorigin 202403
+10/01/2024 17:28:45 - gbenavides - Generado Excel --> C:\Temp\factoring_202403_estimacion_20240110_172433.xlsx

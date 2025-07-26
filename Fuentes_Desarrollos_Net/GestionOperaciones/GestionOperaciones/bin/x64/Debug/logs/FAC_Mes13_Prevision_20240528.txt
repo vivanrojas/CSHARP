@@ -1,0 +1,14 @@
+28/05/2024 9:49:20 - gbenavides - Generando Informe Excel de Estimación Factorigin 202312
+28/05/2024 9:49:20 - gbenavides - Generado Excel --> C:\Temp\DESA_factoring_202312_estimacion_20240528_085310.xlsx
+28/05/2024 10:19:45 - gbenavides - Generando Informe Excel de Estimación Factorigin 202402
+28/05/2024 10:19:45 - gbenavides - Generado Excel --> C:\Temp\DESA_factoring_202402_estimacion_20240528_095251.xlsx
+28/05/2024 10:54:45 - gbenavides - Generando Informe Excel de Estimación Factorigin 202402
+28/05/2024 10:54:45 - gbenavides - Generado Excel --> C:\Temp\DESA_factoring_202402_estimacion_20240528_102649.xlsx
+28/05/2024 11:33:47 - gbenavides - Generando Informe Excel de Estimación Factorigin 202312
+28/05/2024 11:33:47 - gbenavides - Generado Excel --> C:\Temp\DESA_DBPRO_factoring_202312_estimacion_20240528_111840.xlsx
+28/05/2024 12:34:56 - gbenavides - Generando Informe Excel de Estimación Factorigin 202402
+28/05/2024 12:34:56 - gbenavides - Generado Excel --> C:\Temp\DESA_DBPRO_factoring_202402_estimacion_20240528_122359.xlsx
+28/05/2024 14:19:54 - gbenavides - Generando Informe Excel de Estimación Factorigin 202402
+28/05/2024 14:19:54 - gbenavides - Generado Excel --> C:\Temp\DESA_DBPRO_factoring_202402_estimacion_20240528_133626.xlsx
+28/05/2024 15:57:09 - gbenavides - Generando Informe Excel de Estimación Factorigin 202402
+28/05/2024 15:57:09 - gbenavides - Generado Excel --> C:\Temp\DESA_DBPRO_factoring_202402_estimacion_20240528_151335.xlsx

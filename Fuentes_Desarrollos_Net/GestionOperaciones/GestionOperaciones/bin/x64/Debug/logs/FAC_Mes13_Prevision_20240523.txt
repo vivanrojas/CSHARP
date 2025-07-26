@@ -1,0 +1,6 @@
+23/05/2024 14:40:54 - gbenavides - Generando Informe Excel de Estimación Factorigin 202312
+23/05/2024 14:40:54 - gbenavides - Generado Excel --> C:\Temp\DESA_factoring_202312_estimacion_20240523_141653.xlsx
+23/05/2024 15:15:53 - gbenavides - Generando Informe Excel de Estimación Factorigin 202312
+23/05/2024 15:15:53 - gbenavides - Generado Excel --> C:\Temp\DESA_factoring_202312_estimacion_20240523_145112.xlsx
+23/05/2024 17:28:55 - gbenavides - Generando Informe Excel de Estimación Factorigin 202312
+23/05/2024 17:28:55 - gbenavides - Generado Excel --> C:\Temp\DESA_factoring_202312_estimacion_20240523_170006.xlsx

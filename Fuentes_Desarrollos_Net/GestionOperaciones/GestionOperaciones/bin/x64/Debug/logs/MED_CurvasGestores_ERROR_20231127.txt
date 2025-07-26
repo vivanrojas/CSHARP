@@ -1,0 +1,24 @@
+27/11/2023 16:51:37 - ES01855 - CurvasRedShift.GetCurva: ERROR [42601] [Amazon][Amazon Redshift] (30) Error occurred while trying to execute a query: [SQLState 42601] ERROR:  syntax error at or near ")"
+LINE 1: ...ETRA_OWNER.T_ED_H_CURVAS WHERE cd_cups_ext_20 in () AND (FH_...
+                                                             ^
+
+27/11/2023 16:51:37 - ES01855 - CurvasRedShift.GetCurva: ERROR [42601] [Amazon][Amazon Redshift] (30) Error occurred while trying to execute a query: [SQLState 42601] ERROR:  syntax error at or near ")"
+LINE 1: ...M METRA_OWNER.T_ED_H_CURVAS WHERE CD_CUPS_EXT in () AND (FH_...
+                                                             ^
+
+27/11/2023 16:51:56 - ES01855 - CurvasRedShift.GetCurva: ERROR [42601] [Amazon][Amazon Redshift] (30) Error occurred while trying to execute a query: [SQLState 42601] ERROR:  syntax error at or near ")"
+LINE 1: ...ETRA_OWNER.T_ED_H_CURVAS WHERE cd_cups_ext_20 in () AND (FH_...
+                                                             ^
+
+27/11/2023 16:51:57 - ES01855 - CurvasRedShift.GetCurva: ERROR [42601] [Amazon][Amazon Redshift] (30) Error occurred while trying to execute a query: [SQLState 42601] ERROR:  syntax error at or near ")"
+LINE 1: ...M METRA_OWNER.T_ED_H_CURVAS WHERE CD_CUPS_EXT in () AND (FH_...
+                                                             ^
+
+27/11/2023 16:54:34 - ES01855 - CurvasRedShift.GetCurva: ERROR [42601] [Amazon][Amazon Redshift] (30) Error occurred while trying to execute a query: [SQLState 42601] ERROR:  syntax error at or near ")"
+LINE 1: ...ETRA_OWNER.T_ED_H_CURVAS WHERE cd_cups_ext_20 in () AND (FH_...
+                                                             ^
+
+27/11/2023 16:54:35 - ES01855 - CurvasRedShift.GetCurva: ERROR [42601] [Amazon][Amazon Redshift] (30) Error occurred while trying to execute a query: [SQLState 42601] ERROR:  syntax error at or near ")"
+LINE 1: ...M METRA_OWNER.T_ED_H_CURVAS WHERE CD_CUPS_EXT in () AND (FH_...
+                                                             ^
+

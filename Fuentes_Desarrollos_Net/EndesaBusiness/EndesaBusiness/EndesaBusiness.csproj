@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDD4BB7A-AAAB-4586-9A1C-55CBF2394E83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EndesaBusiness</RootNamespace>
+    <AssemblyName>EndesaBusiness</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AE.Net.Mail">
+      <HintPath>..\..\Operaciones\Operaciones\packages\AE.Net.Mail.1.7.10.0\lib\net40\AE.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Cells, Version=24.8.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Aspose.Cells.24.8.0\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core, Version=1.25.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Azure.Core.1.25.0\lib\net461\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.7.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Azure.Identity.1.7.0\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\Operaciones\Operaciones\packages\EPPlus.5.7.3\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentFTP, Version=51.0.0.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\FluentFTP.51.0.0\lib\net472\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentFTP.GnuTLS, Version=1.0.31.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\FluentFTP.GnuTLS.1.0.31\lib\net472\FluentFTP.GnuTLS.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\Operaciones\Operaciones\bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.12.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\MailKit.2.12.0\lib\net46\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices.Auth, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph, Version=4.42.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.Graph.4.42.0\lib\net462\Microsoft.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph.Core, Version=2.0.13.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.Graph.Core.2.0.13\lib\net462\Microsoft.Graph.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.47.1.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.Identity.Client.4.47.1\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=2.19.3.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.Identity.Client.Extensions.Msal.2.19.3\lib\net45\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.IdentityModel.Abstractions.6.23.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.IdentityModel.JsonWebTokens.6.23.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.IdentityModel.Logging.6.23.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.IdentityModel.Protocols.6.23.1\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.6.23.1\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.IdentityModel.Tokens.6.23.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.Policy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.TranslationServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Access, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Access\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Access.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.SharePoint.Tools, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Online.SharePoint.Client.Tenant, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectServer.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.ProjectServer.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceFabric.Internal, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.ServiceFabric.9.0.1107\lib\net472\Microsoft.ServiceFabric.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceFabric.Internal.Strings, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.ServiceFabric.9.0.1107\lib\net472\Microsoft.ServiceFabric.Internal.Strings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceFabric.Preview, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.ServiceFabric.9.0.1107\lib\net472\Microsoft.ServiceFabric.Preview.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime.Windows, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.Runtime.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.SharePointOnline.CSOM.16.1.20412.12000\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.12.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\MimeKit.2.12.0\lib\net46\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\MySql.Data.8.0.31\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="StartupServicesModel, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.ServiceFabric.9.0.1107\lib\net472\StartupServicesModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Fabric, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.ServiceFabric.9.0.1107\lib\net472\System.Fabric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Fabric.Management.ServiceModel, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.ServiceFabric.9.0.1107\lib\net472\System.Fabric.Management.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Fabric.Strings, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.ServiceFabric.9.0.1107\lib\net472\System.Fabric.Strings.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.IdentityModel.Tokens.Jwt.6.23.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Memory.Data.1.0.2\lib\net461\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WinHttpHandler, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Net.Http.WinHttpHandler.6.0.1\lib\net461\System.Net.Http.WinHttpHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Security.Cryptography.ProtectedData.4.7.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Text.Json.6.0.6\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot, Version=15.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Telegram.Bot.15.7.1\lib\net45\Telegram.Bot.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\GestionOperaciones\packages\MySql.Data.8.0.31\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adif\AdifImportar.cs" />
+    <Compile Include="adif\AdifLotes.cs" />
+    <Compile Include="adif\Adif_calculaImpuestos.cs" />
+    <Compile Include="adif\CierresEnergia.cs" />
+    <Compile Include="adif\CupsFunciones.cs" />
+    <Compile Include="adif\InventarioFunciones.cs" />
+    <Compile Include="adif\MedidaAdif.cs" />
+    <Compile Include="adif\NuevaMedidaADIF.cs" />
+    <Compile Include="adif\P01011_Funciones.cs" />
+    <Compile Include="adif\Param.cs" />
+    <Compile Include="adif\ProcesosFunciones.cs" />
+    <Compile Include="adif\Provincias.cs" />
+    <Compile Include="calendarios\Calendario.cs" />
+    <Compile Include="calendarios\CalendarioPortugal.cs" />
+    <Compile Include="calendarios\Calendarios_Anterior_20210601.cs" />
+    <Compile Include="calendarios\CalendarioTiposPortugal.cs" />
+    <Compile Include="calendarios\CargaCalendarios.cs" />
+    <Compile Include="calendarios\CargaCalendarios_Anterior_20210601.cs" />
+    <Compile Include="calendarios\UtilidadesCalendario.cs" />
+    <Compile Include="cartera\Cartera.cs" />
+    <Compile Include="cartera\Cartera_SalesForce_old.cs" />
+    <Compile Include="cartera\Cartera_SalesForce.cs" />
+    <Compile Include="cnmc\CNMC.cs" />
+    <Compile Include="cnmc\XML.cs" />
+    <Compile Include="compor\Inventario.cs" />
+    <Compile Include="compor\Inventario_Multipuntos.cs" />
+    <Compile Include="contratacion\Agora_Portugal.cs" />
+    <Compile Include="contratacion\Agrupadas.cs" />
+    <Compile Include="contratacion\C70CCNAE.cs" />
+    <Compile Include="contratacion\CNAE.cs" />
+    <Compile Include="contratacion\CNMC_XML.cs" />
+    <Compile Include="contratacion\ComplementosContrato.cs" />
+    <Compile Include="contratacion\ContratosPS_Portugal_BTE.cs" />
+    <Compile Include="contratacion\ContratosPS_Portugal_BTN.cs" />
+    <Compile Include="contratacion\ContratosPS_Portugal_MT.cs" />
+    <Compile Include="contratacion\Covid.cs" />
+    <Compile Include="contratacion\eexxi\Aviso_a_COR.cs" />
+    <Compile Include="contratacion\eexxi\Casos.cs" />
+    <Compile Include="contratacion\eexxi\Comentarios.cs" />
+    <Compile Include="contratacion\eexxi\EEXXI.cs" />
+    <Compile Include="contratacion\eexxi\Enviar_Mails.cs" />
+    <Compile Include="contratacion\eexxi\EstadosCasos.cs" />
+    <Compile Include="contratacion\eexxi\Eventuales.cs" />
+    <Compile Include="contratacion\eexxi\Facturacion.cs" />
+    <Compile Include="contratacion\eexxi\Informes.cs" />
+    <Compile Include="contratacion\eexxi\Inventario.cs" />
+    <Compile Include="contratacion\eexxi\InventarioDetalleEstados.cs" />
+    <Compile Include="contratacion\eexxi\Mail_Destinatarios.cs" />
+    <Compile Include="contratacion\eexxi\Mail_Plantilla.cs" />
+    <Compile Include="contratacion\eexxi\Solicitudes.cs" />
+    <Compile Include="contratacion\eexxi\SolicitudesCodigos.cs" />
+    <Compile Include="contratacion\eexxi\SolicitudesCodigosArchivo.cs" />
+    <Compile Include="contratacion\eexxi\T101.cs" />
+    <Compile Include="contratacion\eexxi\XML_GAS.cs" />
+    <Compile Include="contratacion\FechasProcesosPS.cs" />
+    <Compile Include="contratacion\gestionATRGas\AdicionalesSharepoint.cs" />
+    <Compile Include="contratacion\gestionATRGas\Automatismo_Gas_Excel.cs" />
+    <Compile Include="contratacion\gestionATRGas\Azucarera.cs" />
+    <Compile Include="contratacion\gestionATRGas\ContratoGasDetalle.cs" />
+    <Compile Include="contratacion\gestionATRGas\ContratosGas.cs" />
+    <Compile Include="contratacion\gestionATRGas\ContratosGasDetalle.cs" />
+    <Compile Include="contratacion\gestionATRGas\ContratosGasDetalle_Informe.cs" />
+    <Compile Include="contratacion\gestionATRGas\Distribuidoras.cs" />
+    <Compile Include="contratacion\gestionATRGas\Excepciones.cs" />
+    <Compile Include="contratacion\gestionATRGas\GestionATRGas.cs" />
+    <Compile Include="contratacion\gestionATRGas\HTML.cs" />
+    <Compile Include="contratacion\gestionATRGas\Reubicaciones.cs" />
+    <Compile Include="contratacion\gestionATRGas\Solicitudes.cs" />
+    <Compile Include="contratacion\GestionPropiaATR.cs" />
+    <Compile Include="contratacion\InformarBajas.cs" />
+    <Compile Include="contratacion\Portugal.cs" />
+    <Compile Include="contratacion\PS.cs" />
+    <Compile Include="contratacion\PS_AT_Funciones.cs" />
+    <Compile Include="contratacion\PS_AT_HIST.cs" />
+    <Compile Include="contratacion\PuntosActivosBTE_COMPOR.cs" />
+    <Compile Include="contratacion\PuntosActivosMT_COMPOR.cs" />
+    <Compile Include="contratacion\PuntosEnVigor.cs" />
+    <Compile Include="contratacion\Redshift\ContratosRosetta.cs" />
+    <Compile Include="contratacion\Redshift\Inventario.cs" />
+    <Compile Include="contratacion\Redshift\InventarioRosetta.cs" />
+    <Compile Include="contratacion\Redshift\Inventario_PT.cs" />
+    <Compile Include="contratacion\Redshift\Rechazos_ESP_D4.cs" />
+    <Compile Include="contratacion\Redshift\Solicitudes.cs" />
+    <Compile Include="contratacion\SolicitudesATR.cs" />
+    <Compile Include="contratacion\TarifaDisuasoria.cs" />
+    <Compile Include="contratacion\TiposMotivosRechazo.cs" />
+    <Compile Include="contratacion\MotivosRechazos.cs" />
+    <Compile Include="contratacion\PS_AT.cs" />
+    <Compile Include="cups\PuntosSuministro.cs" />
+    <Compile Include="cups\TarifaATR.cs" />
+    <Compile Include="cups\TensionATR.cs" />
+    <Compile Include="Currency\ExchangeRate.cs" />
+    <Compile Include="deuda\Deuda.cs" />
+    <Compile Include="dsi\Notas_Credito_Portugal.cs" />
+    <Compile Include="eer\Archivos.cs" />
+    <Compile Include="eer\Coef_Excesos_Potencia.cs" />
+    <Compile Include="eer\CopiaMedidaParaPruebas.cs" />
+    <Compile Include="eer\CurvasAccess.cs" />
+    <Compile Include="eer\Exportar_Calculos.cs" />
+    <Compile Include="eer\Factura.cs" />
+    <Compile Include="eer\Facturador.cs" />
+    <Compile Include="eer\FacturasEER.cs" />
+    <Compile Include="eer\InformeEERFacturas.cs" />
+    <Compile Include="eer\Inventario.cs" />
+    <Compile Include="eer\MedidaResumen.cs" />
+    <Compile Include="eer\PreciosEnergia.cs" />
+    <Compile Include="eer\Precios_Excesos_Potencia.cs" />
+    <Compile Include="eer\PuntosMedida.cs" />
+    <Compile Include="eer\RegularizacionPrecios.cs" />
+    <Compile Include="factoring\CalculoEstimacion.cs" />
+    <Compile Include="factoring\CalculoMes13.cs" />
+    <Compile Include="factoring\Cal_Factorigin.cs" />
+    <Compile Include="factoring\FechasExtracciones.cs" />
+    <Compile Include="factoring\Informes.cs" />
+    <Compile Include="factoring\Lista_Negra.cs" />
+    <Compile Include="factoring\Lista_Negra_Cups.cs" />
+    <Compile Include="factoring\Mes12.cs" />
+    <Compile Include="factoring\Mes12BT.cs" />
+    <Compile Include="factoring\Prevision.cs" />
+    <Compile Include="factoring\PuntosActivosBTE_COMPOR.cs" />
+    <Compile Include="factoring\PuntosActivosGas.cs" />
+    <Compile Include="factoring\SeguimientoMes13.cs" />
+    <Compile Include="facturacion\ActualizaFacturadores.cs" />
+    <Compile Include="facturacion\AdifFacturas.cs" />
+    <Compile Include="facturacion\Adif_calculaImpuestos.cs" />
+    <Compile Include="facturacion\Adif_CupsLote.cs" />
+    <Compile Include="facturacion\Adif_Empresa.cs" />
+    <Compile Include="facturacion\Adif_Ficheros.cs" />
+    <Compile Include="facturacion\Adif_Producto.cs" />
+    <Compile Include="facturacion\Agora.cs" />
+    <Compile Include="facturacion\AgoraManual.cs" />
+    <Compile Include="facturacion\Agora_DyP.cs" />
+    <Compile Include="facturacion\Alarmas.cs" />
+    <Compile Include="facturacion\Anomalias.cs" />
+    <Compile Include="facturacion\Autoconsumo.cs" />
+    <Compile Include="facturacion\BTE_CAPB.cs" />
+    <Compile Include="facturacion\BTN_CAPB.cs" />
+    <Compile Include="facturacion\CapturaImpresionFactura.cs" />
+    <Compile Include="facturacion\cap_gas\Calculo_CAP_GAS.cs" />
+    <Compile Include="facturacion\Clicks.cs" />
+    <Compile Include="facturacion\ConceptosFacturacion.cs" />
+    <Compile Include="facturacion\Consultas.cs" />
+    <Compile Include="facturacion\ConsumosPortugal.cs" />
+    <Compile Include="facturacion\ConsumptionDataExtration.cs" />
+    <Compile Include="facturacion\CuadroMandoFacturacion.cs" />
+    <Compile Include="facturacion\CuadroMandoRiesgo.cs" />
+    <Compile Include="facturacion\cuadro_mando\CuadroDeMando.cs" />
+    <Compile Include="facturacion\cuadro_mando\GrupoCliente.cs" />
+    <Compile Include="facturacion\cuadro_mando\NRIs.cs" />
+    <Compile Include="facturacion\cuadro_mando\Resumen.cs" />
+    <Compile Include="facturacion\cuadro_mando\Riesgo.cs" />
+    <Compile Include="facturacion\cuadro_mando\Scoring.cs" />
+    <Compile Include="facturacion\cuadro_mando\Sofisticados.cs" />
+    <Compile Include="facturacion\cuadro_mando\TopPortugal_Electricidad.cs" />
+    <Compile Include="facturacion\Facturacion.cs" />
+    <Compile Include="facturacion\FacturaPortugal.cs" />
+    <Compile Include="facturacion\FacturaPortugalExcel.cs" />
+    <Compile Include="facturacion\FacturasAgrupadas.cs" />
+    <Compile Include="facturacion\FacturasBTN.cs" />
+    <Compile Include="facturacion\FacturasGas.cs" />
+    <Compile Include="facturacion\Facturas_Conceptos_Valor.cs" />
+    <Compile Include="facturacion\FestivosElectricos.cs" />
+    <Compile Include="facturacion\HistoricoCuadroMandoFacturacion.cs" />
+    <Compile Include="facturacion\Inffact.cs" />
+    <Compile Include="facturacion\InformeComparativaConversionContratos.cs" />
+    <Compile Include="facturacion\InformeCuadrePotenciasMT.cs" />
+    <Compile Include="facturacion\InformeErse.cs" />
+    <Compile Include="facturacion\InformeInventarioTipologias_PT.cs" />
+    <Compile Include="facturacion\InformeRevisionFacturas.cs" />
+    <Compile Include="facturacion\informes_cnmc\Facturas_BTN.cs" />
+    <Compile Include="facturacion\InformeXConcepto.cs" />
+    <Compile Include="facturacion\Informe_Consumo_Mensual_Portugal.cs" />
+    <Compile Include="facturacion\Informe_Contratos_Complementos.cs" />
+    <Compile Include="facturacion\InventarioFacturacionPortugal.cs" />
+    <Compile Include="facturacion\InventarioSofisticadosManuales.cs" />
+    <Compile Include="facturacion\LecturasElectricidadBTN.cs" />
+    <Compile Include="facturacion\puntos_calculo_btn\Ajustes.cs" />
+    <Compile Include="facturacion\puntos_calculo_btn\Calculo_Prefacturas_BTN.cs" />
+    <Compile Include="facturacion\puntos_calculo_btn\Calendarios.cs" />
+    <Compile Include="facturacion\puntos_calculo_btn\ImportacionPlantillaExcel.cs" />
+    <Compile Include="facturacion\puntos_calculo_btn\Perfiles.cs" />
+    <Compile Include="facturacion\puntos_calculo_btn\Tarifas.cs" />
+    <Compile Include="facturacion\redshift\Clientes.cs" />
+    <Compile Include="facturacion\redshift\Facturas.cs" />
+    <Compile Include="facturacion\redshift\Pendiente.cs" />
+    <Compile Include="facturacion\redshift\Pendiente_Estados.cs" />
+    <Compile Include="facturacion\redshift\Pendiente_Facturacion_Medida_B2B.cs" />
+    <Compile Include="facturacion\redshift\Pendiente_Subestados.cs" />
+    <Compile Include="facturacion\redshift\Relacion_Incidencias_SAP.cs" />
+    <Compile Include="facturacion\SofisticadosInventario.cs" />
+    <Compile Include="facturacion\SofisticadosOrigenCurvas.cs" />
+    <Compile Include="facturacion\PagosPortugal.cs" />
+    <Compile Include="facturacion\PagosPortugalConceptos.cs" />
+    <Compile Include="facturacion\Pendiente_Mes_Gas_Factura.cs" />
+    <Compile Include="facturacion\ProgramasConsumo.cs" />
+    <Compile Include="facturacion\RetrasoFacturacion.cs" />
+    <Compile Include="facturacion\SegmentosMercado.cs" />
+    <Compile Include="facturacion\ServicioGestionPreferente.cs" />
+    <Compile Include="facturacion\SIGAME_Importe_Redes.cs" />
+    <Compile Include="facturacion\SofisticadosProgramasConsumo.cs" />
+    <Compile Include="facturacion\Spot.cs" />
+    <Compile Include="facturacion\SuplementosTerritoriales.cs" />
+    <Compile Include="facturacion\TamElectricidad.cs" />
+    <Compile Include="facturacion\TamGas.cs" />
+    <Compile Include="facturacion\TAM_Consumo.cs" />
+    <Compile Include="facturacion\TiposFactura.cs" />
+    <Compile Include="facturacion\Tunel.cs" />
+    <Compile Include="facturacion\TunelCuadroMando.cs" />
+    <Compile Include="forms\FrmProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmProgressBar.Designer.cs">
+      <DependentUpon>FrmProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gas\Gas.cs" />
+    <Compile Include="gas\PuntosActivosGas.cs" />
+    <Compile Include="global\Municipios.cs" />
+    <Compile Include="global\Provincias.cs" />
+    <Compile Include="logs\Log.cs" />
+    <Compile Include="mail\MailExchangeServer.cs" />
+    <Compile Include="facturacion\CosPhi.cs" />
+    <Compile Include="mail\Mail_IMAP.cs" />
+    <Compile Include="medida\BuzonPNT.cs" />
+    <Compile Include="medida\BuzonPNT_IMAP.cs" />
+    <Compile Include="medida\CurvaCuartoHorariaFunciones.cs" />
+    <Compile Include="medida\CurvaCuartoHorariaSCE.cs" />
+    <Compile Include="medida\CurvaDeCarga.cs" />
+    <Compile Include="medida\CurvaResumenBI.cs" />
+    <Compile Include="medida\CurvaResumenEER.cs" />
+    <Compile Include="medida\CurvaResumenFunciones.cs" />
+    <Compile Include="medida\CurvaResumenSCE.cs" />
+    <Compile Include="medida\curvasDataMart\SolicitudFunciones.cs" />
+    <Compile Include="medida\curvasDataMart\SolictudDetalleFunciones.cs" />
+    <Compile Include="medida\CurvasEER.cs" />
+    <Compile Include="medida\CCRD.cs" />
+    <Compile Include="medida\CRRD.cs" />
+    <Compile Include="medida\CuadroMandoGASMedida.cs" />
+    <Compile Include="medida\CurvasGestores.cs" />
+    <Compile Include="medida\CurvasGestoresBuzon.cs" />
+    <Compile Include="medida\DatosPeajesEER.cs" />
+    <Compile Include="medida\EstadosSubestadosKronos.cs" />
+    <Compile Include="medida\ExcelCUPS.cs" />
+    <Compile Include="medida\Extractores_Jesus.cs" />
+    <Compile Include="medida\FacturacionGas.cs" />
+    <Compile Include="medida\FuentesMedida.cs" />
+    <Compile Include="medida\GAS_MedidasFacturas.cs" />
+    <Compile Include="medida\ImportacionTPLs.cs" />
+    <Compile Include="medida\InformeExcelCurvasADIF.cs" />
+    <Compile Include="medida\InformeExcelCurvasGestores.cs" />
+    <Compile Include="medida\InformeExcelCurvasSCE.cs" />
+    <Compile Include="medida\Informe_DGEG.cs" />
+    <Compile Include="medida\Kee.cs" />
+    <Compile Include="medida\Kee_Extraccion_Formulas.cs" />
+    <Compile Include="medida\Kee_Medida.cs" />
+    <Compile Include="medida\KEE_PeticionesExtraccion.cs" />
+    <Compile Include="medida\Kee_Reporte_Extraccion_CH.cs" />
+    <Compile Include="medida\Kee_Resumen.cs" />
+    <Compile Include="medida\licitaciones\Licitaciones.cs" />
+    <Compile Include="medida\MedidaFunciones.cs" />
+    <Compile Include="medida\MedidaRedShift.cs" />
+    <Compile Include="medida\MedidaSofisticados.cs" />
+    <Compile Include="medida\Pendiente.cs" />
+    <Compile Include="medida\PendienteAntiguo.cs" />
+    <Compile Include="medida\pendiente\PendienteFacturadoSAPKEE.cs" />
+    <Compile Include="medida\pendiente\PendienteWeb_B2B.cs" />
+    <Compile Include="medida\pendiente\SegmentosPortugal_KEE.cs" />
+    <Compile Include="medida\Pend_Informe_FAC.cs" />
+    <Compile Include="medida\Perdidas.cs" />
+    <Compile Include="medida\PM_ML.cs" />
+    <Compile Include="medida\PNT_Office365.cs" />
+    <Compile Include="medida\PPAs.cs" />
+    <Compile Include="medida\PS.cs" />
+    <Compile Include="medida\PuntosMedidaPrincipalesVigentes.cs" />
+    <Compile Include="medida\Redshift\Curvas.cs" />
+    <Compile Include="medida\Redshift\CurvasMasivas.cs" />
+    <Compile Include="medida\Redshift\Estados_Curvas.cs" />
+    <Compile Include="medida\Redshift\FuentesMedidaFunciones.cs" />
+    <Compile Include="medida\Redshift\Inventario.cs" />
+    <Compile Include="medida\Redshift\Peajes.cs" />
+    <Compile Include="medida\PNTsGraph.cs" />
+    <Compile Include="medida\SCEA.cs" />
+    <Compile Include="medida\SolicitudCurvasGestoresFunciones.cs" />
+    <Compile Include="medida\SolicitudCurvasGestoresFuncionesDetalle.cs" />
+    <Compile Include="medida\StarBeat_EE.cs" />
+    <Compile Include="medida\TAM.cs" />
+    <Compile Include="medida\TAM_GAS.cs" />
+    <Compile Include="ocasional\ArregloTCON.cs" />
+    <Compile Include="ocasional\Ocasional_Adicionales_GAS_mant_NEDGIA.cs" />
+    <Compile Include="office365\Mail365.cs" />
+    <Compile Include="office365\MS_Access.cs" />
+    <Compile Include="office365\OAuth_Mail.cs" />
+    <Compile Include="office365\Offce365Graph.cs" />
+    <Compile Include="office365\SharePoint_Teams.cs" />
+    <Compile Include="office\CreaCorreo.cs" />
+    <Compile Include="office\Excel.cs" />
+    <Compile Include="office\MailCompose.cs" />
+    <Compile Include="office\SendMail.cs" />
+    <Compile Include="pdf\JuntaHojasPDF.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="punto_suministro\Tarifa.cs" />
+    <Compile Include="punto_suministro\Territorios.cs" />
+    <Compile Include="ree\PreciosRegulados.cs" />
+    <Compile Include="ree\SuplementoTerritorial.cs" />
+    <Compile Include="servidores\AccessDB.cs" />
+    <Compile Include="servidores\MySQLDB.cs" />
+    <Compile Include="servidores\OracleServer.cs" />
+    <Compile Include="servidores\RedShiftServer.cs" />
+    <Compile Include="servidores\SQLServer.cs" />
+    <Compile Include="sharePoint\Utilidades.cs" />
+    <Compile Include="sigame\Addendas.cs" />
+    <Compile Include="sigame\Albaranes_Clientes.cs" />
+    <Compile Include="sigame\DistribuidorasGasMySQL.cs" />
+    <Compile Include="sigame\GAS2000.cs" />
+    <Compile Include="sigame\SIGAME.cs" />
+    <Compile Include="sigame\UsoGas.cs" />
+    <Compile Include="utilidades\Cargas.cs" />
+    <Compile Include="utilidades\Credenciales.cs" />
+    <Compile Include="utilidades\Properties.cs" />
+    <Compile Include="utilidades\Seguimiento_Procesos.cs" />
+    <Compile Include="utilidades\Fechas.cs" />
+    <Compile Include="utilidades\FechasCargas.cs" />
+    <Compile Include="utilidades\FechasProcesos.cs" />
+    <Compile Include="utilidades\Fichero.cs" />
+    <Compile Include="utilidades\FTP.cs" />
+    <Compile Include="utilidades\FuncionesTexto.cs" />
+    <Compile Include="utilidades\Global.cs" />
+    <Compile Include="utilidades\GOMail.cs" />
+    <Compile Include="utilidades\ListasCorreo.cs" />
+    <Compile Include="utilidades\Param.cs" />
+    <Compile Include="utilidades\ParamUser.cs" />
+    <Compile Include="utilidades\PdteWeb.cs" />
+    <Compile Include="utilidades\RellenaTablaPlanificacionDiasHabiles.cs" />
+    <Compile Include="utilidades\TelegramMensajes.cs" />
+    <Compile Include="utilidades\UltimateFTP.cs" />
+    <Compile Include="utilidades\UsageForm.cs" />
+    <Compile Include="utilidades\UtilidadesArchivo.cs" />
+    <Compile Include="utilidades\ZIP.cs" />
+    <Compile Include="utilidades\ZipUnZip.cs" />
+    <Compile Include="Validators\CellValidationResult.cs" />
+    <Compile Include="Validators\ICellValidator.cs" />
+    <Compile Include="Validators\OpenOfficeSheetValidator.cs" />
+    <Compile Include="Validators\SheetValidationResult.cs" />
+    <Compile Include="Validators\SheetValidator.cs" />
+    <Compile Include="Validators\Validations\CauValidation.cs" />
+    <Compile Include="Validators\Validations\CNAEValidation.cs" />
+    <Compile Include="Validators\Validations\CodigopostalValidation.cs" />
+    <Compile Include="Validators\Validations\ColectivoValidation.cs" />
+    <Compile Include="Validators\Validations\ContratacionIncondicionalPSValidation.cs" />
+    <Compile Include="Validators\Validations\ContratIncondBSValidation.cs" />
+    <Compile Include="Validators\Validations\Cups22Validation.cs" />
+    <Compile Include="Validators\Validations\DireccionUrlValidation.cs" />
+    <Compile Include="Validators\Validations\DistribuidoraValidation.cs" />
+    <Compile Include="Validators\Validations\EmpresaEmisoraValidation.cs" />
+    <Compile Include="Validators\Validations\EntornoValidation.cs" />
+    <Compile Include="Validators\Validations\FechaactivacionValidation.cs" />
+    <Compile Include="Validators\Validations\FechadeFinalizacionValidation.cs" />
+    <Compile Include="Validators\Validations\IndActivacionValidation.cs" />
+    <Compile Include="Validators\Validations\IndicadorTipoDireccionValidation.cs" />
+    <Compile Include="Validators\Validations\IntegerValidation.cs" />
+    <Compile Include="Validators\Validations\ModoControlPotenciaValidation.cs" />
+    <Compile Include="Validators\Validations\MunicipioValidation.cs" />
+    <Compile Include="Validators\Validations\NIdentificadorValidation.cs" />
+    <Compile Include="Validators\Validations\NombreDePilaValidation.cs" />
+    <Compile Include="Validators\Validations\NombreViaValidation.cs" />
+    <Compile Include="Validators\Validations\NumeroValidation.cs" />
+    <Compile Include="Validators\Validations\PaisValidation.cs" />
+    <Compile Include="Validators\Validations\PersonadeContactoValidation.cs" />
+    <Compile Include="Validators\Validations\PisoValidation.cs" />
+    <Compile Include="Validators\Validations\PotenciaWValidation.cs" />
+    <Compile Include="Validators\Validations\PotInstaladaGenValidation.cs" />
+    <Compile Include="Validators\Validations\PrimerApellidoValidation.cs" />
+    <Compile Include="Validators\Validations\ProvinciaValidation.cs" />
+    <Compile Include="Validators\Validations\PuertaValidation.cs" />
+    <Compile Include="Validators\Validations\RazonSocialValidation.cs" />
+    <Compile Include="Validators\Validations\SolicitudmodificaciontensionValidation.cs" />
+    <Compile Include="Validators\Validations\SsaaValidation.cs" />
+    <Compile Include="Validators\Validations\StringNotNullValidation.cs" />
+    <Compile Include="Validators\Validations\TarifaValidation.cs" />
+    <Compile Include="Validators\Validations\TelefonoValidation.cs" />
+    <Compile Include="Validators\Validations\TensionsolicitadaValidation.cs" />
+    <Compile Include="Validators\Validations\TipoclienteValidation.cs" />
+    <Compile Include="Validators\Validations\TipocontratoValidation.cs" />
+    <Compile Include="Validators\Validations\TipoCupsValidation.cs" />
+    <Compile Include="Validators\Validations\TipodeautoconsumoValidatiions.cs" />
+    <Compile Include="Validators\Validations\TipodeviaValidation.cs" />
+    <Compile Include="Validators\Validations\TipoDocAportadoValidation.cs" />
+    <Compile Include="Validators\Validations\TipoindentificadorValidations.cs" />
+    <Compile Include="Validators\Validations\TipoInstalacionValidation.cs" />
+    <Compile Include="Validators\Validations\TipomodifcacionValidation.cs" />
+    <Compile Include="Validators\Validations\TipoPersonaValidation.cs" />
+    <Compile Include="Validators\Validations\TiposolicitudadministrativaValidation.cs" />
+    <Compile Include="Validators\Validations\TipoSubseccionValidation.cs" />
+    <Compile Include="Validators\Validations\TlfcontactoValidation.cs" />
+    <Compile Include="Validators\Validations\UnicoContratoValidations.cs" />
+    <Compile Include="xml\ContratacionXML.cs" />
+    <Compile Include="xml\Extrasistemas.cs" />
+    <Compile Include="xml\XMLFunciones.cs" />
+    <Compile Include="xml\XML_SolicitudesCodigos.cs" />
+    <EmbeddedResource Include="forms\FrmProgressBar.resx">
+      <DependentUpon>FrmProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Validators\Validations\.editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EndesaEntity\EndesaEntity\EndesaEntity.csproj">
+      <Project>{cd4f6101-96e8-4bd6-b966-229c23975986}</Project>
+      <Name>EndesaEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libgcc_s_seh-1.dll" />
+    <Content Include="libgmp-10.dll" />
+    <Content Include="libgnutls-30.dll" />
+    <Content Include="libhogweed-6.dll" />
+    <Content Include="libnettle-8.dll" />
+    <Content Include="libwinpthread-1.dll" />
+    <Content Include="xml\XMLFile1.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\Operaciones\Operaciones\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets" Condition="Exists('..\..\Operaciones\Operaciones\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\Operaciones\Operaciones\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\Operaciones\Operaciones\packages\System.Text.Json.6.0.6\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('..\..\GestionOperaciones\packages\FluentFTP.GnuTLS.1.0.31\build\FluentFTP.GnuTLS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\GestionOperaciones\packages\FluentFTP.GnuTLS.1.0.31\build\FluentFTP.GnuTLS.targets'))" />
+  </Target>
+  <Import Project="..\..\GestionOperaciones\packages\FluentFTP.GnuTLS.1.0.31\build\FluentFTP.GnuTLS.targets" Condition="Exists('..\..\GestionOperaciones\packages\FluentFTP.GnuTLS.1.0.31\build\FluentFTP.GnuTLS.targets')" />
+</Project>

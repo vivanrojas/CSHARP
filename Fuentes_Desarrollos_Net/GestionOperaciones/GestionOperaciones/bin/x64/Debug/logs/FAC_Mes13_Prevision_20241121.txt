@@ -1,0 +1,2 @@
+21/11/2024 14:20:31 - gbenavides - Generando Informe Excel de Estimación Factorigin 202411
+21/11/2024 14:20:31 - gbenavides - Generado Excel --> C:\Temp\factoring_202411_estimacion_20241121_135309.xlsx

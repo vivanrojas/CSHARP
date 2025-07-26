@@ -1,0 +1,1 @@
+11/08/2022 13:46:14 - ES01855 - Ejecutando:  Grupo: 0 Proceso: 0 bbdd: LTPS a ACCENTURE.ACCDB nombre_proceso: Actualiza ESTADO ULTIMA GESTION BO obligatorio: True Hay Error: True

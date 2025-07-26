@@ -1,0 +1,50 @@
+18/06/2024 10:49:57 - gbenavides - CurvasRedShift.GetCurva: ERROR [XX000] [Redshift][ODBC Driver][Server]XX000:ERROR:  abort query
+DETAIL:  
+  -----------------------------------------------
+  error:  abort query
+  code:      1020
+  context:   system requested abort
+  query:     652738721
+  location:  queryabort.hpp:89
+  process:   padbmaster [pid=1074075188]
+  ------------------------------------
+18/06/2024 10:50:28 - gbenavides - CurvasRedShift.GetCurva: ERROR [XX000] [Redshift][ODBC Driver][Server]XX000:ERROR:  abort query
+DETAIL:  
+  -----------------------------------------------
+  error:  abort query
+  code:      1020
+  context:   system requested abort
+  query:     652738871
+  location:  queryabort.hpp:89
+  process:   padbmaster [pid=1074157069]
+  ------------------------------------
+18/06/2024 10:53:51 - gbenavides - CurvasRedShift.GetCurva: ERROR [XX000] [Redshift][ODBC Driver][Server]XX000:ERROR:  abort query
+DETAIL:  
+  -----------------------------------------------
+  error:  abort query
+  code:      1020
+  context:   system requested abort
+  query:     652739933
+  location:  queryabort.hpp:89
+  process:   padbmaster [pid=1074449274]
+  ------------------------------------
+18/06/2024 10:54:22 - gbenavides - CurvasRedShift.GetCurva: ERROR [XX000] [Redshift][ODBC Driver][Server]XX000:ERROR:  abort query
+DETAIL:  
+  -----------------------------------------------
+  error:  abort query
+  code:      1020
+  context:   system requested abort
+  query:     652740055
+  location:  queryabort.hpp:89
+  process:   padbmaster [pid=1074481628]
+  ------------------------------------
+18/06/2024 11:03:35 - gbenavides - CurvasRedShift.GetCurva: ERROR [XX000] [Redshift][ODBC Driver][Server]XX000:ERROR:  abort query
+DETAIL:  
+  -----------------------------------------------
+  error:  abort query
+  code:      1020
+  context:   system requested abort
+  query:     652742343
+  location:  queryabort.hpp:89
+  process:   padbmaster [pid=1074269641]
+  ------------------------------------

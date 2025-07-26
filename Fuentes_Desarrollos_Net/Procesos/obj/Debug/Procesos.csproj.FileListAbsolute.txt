@@ -1,0 +1,53 @@
+C:\desarrollos\Procesos\Procesos\bin\Debug\Procesos.exe.config
+C:\desarrollos\Procesos\Procesos\bin\Debug\Procesos.exe
+C:\desarrollos\Procesos\Procesos\bin\Debug\Procesos.pdb
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.csproj.AssemblyReference.cache
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.Main.resources
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.Properties.Resources.resources
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.csproj.GenerateResource.cache
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.csproj.CoreCompileInputs.cache
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.exe
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.pdb
+C:\desarrollos\Procesos\Procesos\bin\Debug\BouncyCastle.Crypto.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\EndesaEntity.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\Google.Protobuf.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\K4os.Compression.LZ4.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\K4os.Hash.xxHash.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\MySql.Data.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\System.Buffers.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\System.Memory.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\System.Numerics.Vectors.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\Ubiety.Dns.Core.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\ZstdNet.dll
+C:\desarrollos\Procesos\Procesos\bin\Debug\EndesaEntity.pdb
+C:\desarrollos\Procesos\Procesos\bin\Debug\Google.Protobuf.pdb
+C:\desarrollos\Procesos\Procesos\bin\Debug\Google.Protobuf.xml
+C:\desarrollos\Procesos\Procesos\bin\Debug\K4os.Compression.LZ4.xml
+C:\desarrollos\Procesos\Procesos\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\desarrollos\Procesos\Procesos\bin\Debug\K4os.Hash.xxHash.xml
+C:\desarrollos\Procesos\Procesos\bin\Debug\MySql.Data.xml
+C:\desarrollos\Procesos\Procesos\bin\Debug\System.Buffers.xml
+C:\desarrollos\Procesos\Procesos\bin\Debug\System.Memory.xml
+C:\desarrollos\Procesos\Procesos\bin\Debug\System.Numerics.Vectors.xml
+C:\desarrollos\Procesos\Procesos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.csproj.CopyComplete
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.csproj.ResolveComReference.cache
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.FrmTimer.resources
+C:\desarrollos\Procesos\Procesos\bin\Debug\aa-ER\Procesos.resources.dll
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.FrmNuevaCola.resources
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.FrmNuevaCola.aa-ER.resources
+C:\desarrollos\Procesos\Procesos\obj\Debug\aa-ER\Procesos.resources.dll
+C:\desarrollos\Procesos\Procesos\obj\Debug\Procesos.csproj.SuggestedBindingRedirects.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.csproj.AssemblyReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.csproj.ResolveComReference.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.FrmNuevaCola.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.FrmTimer.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.Main.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.Properties.Resources.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.FrmNuevaCola.aa-ER.resources
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.csproj.GenerateResource.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.csproj.CoreCompileInputs.cache
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.exe
+C:\Users\gbenavides\Documents\Visual Studio 2022\Fuentes_Desarrollos_Net\Procesos\obj\Debug\Procesos.pdb

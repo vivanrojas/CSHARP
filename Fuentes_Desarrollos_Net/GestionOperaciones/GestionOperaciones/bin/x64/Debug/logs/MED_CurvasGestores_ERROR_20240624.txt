@@ -1,0 +1,14 @@
+24/06/2024 11:34:29 - gbenavides - CurvasRedShift.GetCurva: ERROR [XX000] [Redshift][ODBC Driver][Server]XX000:ERROR:  abort query
+DETAIL:  
+  -----------------------------------------------
+  error:  abort query
+  code:      1020
+  context:   system requested abort
+  query:     655194105
+  location:  queryabort.hpp:89
+  process:   padbmaster [pid=1074194798]
+  ------------------------------------
+24/06/2024 15:36:52 - gbenavides - CurvasRedShift.GetCurva: ERROR [57014] [Redshift][ODBC Driver][Server]57014:ERROR:  Query (655257382) cancelled on user's request
+
+24/06/2024 15:41:49 - gbenavides - CurvasRedShift.GetCurva: ERROR [57014] [Redshift][ODBC Driver][Server]57014:ERROR:  Query (655258905) cancelled on user's request
+

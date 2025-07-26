@@ -1,0 +1,2 @@
+29/11/2024 11:17:31 - gbenavides - CurvasRedShift.GetCurva: ERROR [57014] [Redshift][ODBC Driver][Server]57014:ERROR:  Query (726472982) cancelled on user's request
+

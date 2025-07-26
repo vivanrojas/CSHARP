@@ -1,0 +1,8 @@
+04/12/2023 7:55:38 - es01855 - Generando Informe Excel de Estimación Factorigin 202402
+04/12/2023 7:55:38 - es01855 - Generado Excel --> C:\Temp\factoring_202402_estimacion_20231204_074646.xlsx
+04/12/2023 8:12:22 - es01855 - Generando Informe Excel de Estimación Factorigin 202402
+04/12/2023 8:12:22 - es01855 - Generado Excel --> C:\Temp\factoring_202402_estimacion_20231204_080616.xlsx
+04/12/2023 8:32:00 - es01855 - Generando Informe Excel de Estimación Factorigin 202402
+04/12/2023 8:32:00 - es01855 - Generado Excel --> C:\Temp\factoring_202402_estimacion_20231204_082725.xlsx
+04/12/2023 8:36:15 - es01855 - Generando Informe Excel de Estimación Factorigin 202402
+04/12/2023 8:36:15 - es01855 - Generado Excel --> C:\Temp\factoring_202402_estimacion_20231204_083459.xlsx

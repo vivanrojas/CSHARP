@@ -1,0 +1,8 @@
+21/11/2023 12:42:31 - ES01855 - CurvasRedShift.GetCurva: ERROR [42601] [Amazon][Amazon Redshift] (30) Error occurred while trying to execute a query: [SQLState 42601] ERROR:  syntax error at or near ")"
+LINE 1: ...ETRA_OWNER.T_ED_H_CURVAS WHERE cd_cups_ext_20 in () AND (FH_...
+                                                             ^
+
+21/11/2023 12:42:32 - ES01855 - CurvasRedShift.GetCurva: ERROR [42601] [Amazon][Amazon Redshift] (30) Error occurred while trying to execute a query: [SQLState 42601] ERROR:  syntax error at or near ")"
+LINE 1: ...M METRA_OWNER.T_ED_H_CURVAS WHERE CD_CUPS_EXT in () AND (FH_...
+                                                             ^
+

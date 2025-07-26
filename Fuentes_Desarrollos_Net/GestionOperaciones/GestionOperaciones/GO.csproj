@@ -1,0 +1,1471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B5ABC5D-AC90-4297-B99E-9757C04293AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestionOperaciones</RootNamespace>
+    <AssemblyName>GO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GestionOperaciones.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>endesa.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\Operaciones\Operaciones\packages\EPPlus.5.7.3\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
+      <HintPath>..\..\Operaciones\Operaciones\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStart.Designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\Filtros_Respuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\Filtros_Respuestas.Designer.cs">
+      <DependentUpon>Filtros_Respuestas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmComprobacion_Contratacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmComprobacion_Contratacion.Designer.cs">
+      <DependentUpon>FrmComprobacion_Contratacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmDisuasoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmDisuasoria.Designer.cs">
+      <DependentUpon>FrmDisuasoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmEndesaEnergia21_AvisoVentas_Manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmEndesaEnergia21_AvisoVentas_Manual.Designer.cs">
+      <DependentUpon>FrmEndesaEnergia21_AvisoVentas_Manual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmEndesaEnergia21_bajas_sin_altas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmEndesaEnergia21_bajas_sin_altas.Designer.cs">
+      <DependentUpon>FrmEndesaEnergia21_bajas_sin_altas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmInformeAviso_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmInformeAviso_Ventas.Designer.cs">
+      <DependentUpon>FrmInformeAviso_Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmInformePaso_a_COR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmInformePaso_a_COR.Designer.cs">
+      <DependentUpon>FrmInformePaso_a_COR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmPasosXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmPasosXML.Designer.cs">
+      <DependentUpon>FrmPasosXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmPlantillaXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmPlantillaXML.Designer.cs">
+      <DependentUpon>FrmPlantillaXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmPS_AT_HIST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmPS_AT_HIST.Designer.cs">
+      <DependentUpon>FrmPS_AT_HIST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_A1550.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_A1550.Designer.cs">
+      <DependentUpon>FrmXML_A1550.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_M102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_M102.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_M102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_B105.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_B105.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_B105.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_B1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_B1.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_B1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C205.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C205.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_C205.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C202R.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C202R.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_C202R.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C202.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C202.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_C202.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_M105.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_M105.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_M105.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C105.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C105.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_C105.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C102R.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C102R.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_C102R.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_C102.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_C102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_A305.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_A305.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_A305.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_A3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmXML_Respuestas_Datos_A3.Designer.cs">
+      <DependentUpon>FrmXML_Respuestas_Datos_A3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmExcepcion_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmExcepcion_Edit.Designer.cs">
+      <DependentUpon>FrmExcepcion_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmModificacionPeaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmModificacionPeaje.Designer.cs">
+      <DependentUpon>FrmModificacionPeaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmReubicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmReubicaciones.Designer.cs">
+      <DependentUpon>FrmReubicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmSolicitudManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmSolicitudManual.Designer.cs">
+      <DependentUpon>FrmSolicitudManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmActualizaFacturadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmActualizaFacturadores.Designer.cs">
+      <DependentUpon>FrmActualizaFacturadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmCalculoPuntosBTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmCalculoPuntosBTN.Designer.cs">
+      <DependentUpon>FrmCalculoPuntosBTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmConsumptionDataExtraction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmConsumptionDataExtraction.Designer.cs">
+      <DependentUpon>FrmConsumptionDataExtraction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmCuadresPotenciaMT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmCuadresPotenciaMT.Designer.cs">
+      <DependentUpon>FrmCuadresPotenciaMT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmEER_FacturasManuales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmEER_FacturasManuales.Designer.cs">
+      <DependentUpon>FrmEER_FacturasManuales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasBTE_CAPB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasBTE_CAPB.Designer.cs">
+      <DependentUpon>FrmFacturasBTE_CAPB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasBTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasBTN.Designer.cs">
+      <DependentUpon>FrmFacturasBTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasBTN_CAPB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasBTN_CAPB.Designer.cs">
+      <DependentUpon>FrmFacturasBTN_CAPB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasElectricidad_BTN_Real_Estimado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasElectricidad_BTN_Real_Estimado.Designer.cs">
+      <DependentUpon>FrmFacturasElectricidad_BTN_Real_Estimado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasGAS_ES_REAL_ESTIMADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasGAS_ES_REAL_ESTIMADO.Designer.cs">
+      <DependentUpon>FrmFacturasGAS_ES_REAL_ESTIMADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasGAS_PT_REAL_ESTIMADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasGAS_PT_REAL_ESTIMADO.Designer.cs">
+      <DependentUpon>FrmFacturasGAS_PT_REAL_ESTIMADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmImpagosCAP_GAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmImpagosCAP_GAS.Designer.cs">
+      <DependentUpon>FrmImpagosCAP_GAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInformeConsumoMensualPortugal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInformeConsumoMensualPortugal.Designer.cs">
+      <DependentUpon>FrmInformeConsumoMensualPortugal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInformeEERcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInformeEERcs.Designer.cs">
+      <DependentUpon>FrmInformeEERcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInforme_Pdte Web_PSAT_TAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInforme_Pdte Web_PSAT_TAM.Designer.cs">
+      <DependentUpon>FrmInforme_Pdte Web_PSAT_TAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes12BT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes12BT.Designer.cs">
+      <DependentUpon>FrmMes12BT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13Comprobacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13Comprobacion.Designer.cs">
+      <DependentUpon>FrmMes13Comprobacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13Conversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13Conversion.Designer.cs">
+      <DependentUpon>FrmMes13Conversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13ListaNegra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13ListaNegra.Designer.cs">
+      <DependentUpon>FrmMes13ListaNegra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13ListaNegraCUPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13ListaNegraCUPS.Designer.cs">
+      <DependentUpon>FrmMes13ListaNegraCUPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13ListaNegraCUPS_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13ListaNegraCUPS_Edit.Designer.cs">
+      <DependentUpon>FrmMes13ListaNegraCUPS_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13ListaNegra_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13ListaNegra_Edit.Designer.cs">
+      <DependentUpon>FrmMes13ListaNegra_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13Prevision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmMes13Prevision.Designer.cs">
+      <DependentUpon>FrmMes13Prevision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmPendFacturacionSubestadosBI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmPendFacturacionSubestadosBI.Designer.cs">
+      <DependentUpon>FrmPendFacturacionSubestadosBI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmPendFacturacionSubestadosBi_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmPendFacturacionSubestadosBi_Edit.Designer.cs">
+      <DependentUpon>FrmPendFacturacionSubestadosBi_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmPrefacturas_BTN_CAP_GAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmPrefacturas_BTN_CAP_GAS.Designer.cs">
+      <DependentUpon>FrmPrefacturas_BTN_CAP_GAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmSofisticados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmSofisticados.Designer.cs">
+      <DependentUpon>FrmSofisticados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTipologiasEspana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTipologiasEspana.Designer.cs">
+      <DependentUpon>FrmTipologiasEspana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTipologiasPortugal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTipologiasPortugal.Designer.cs">
+      <DependentUpon>FrmTipologiasPortugal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTunel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTunel.Designer.cs">
+      <DependentUpon>FrmTunel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTunelCuadroMando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTunelCuadroMando.Designer.cs">
+      <DependentUpon>FrmTunelCuadroMando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTunelCuadroMando_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmTunelCuadroMando_Edit.Designer.cs">
+      <DependentUpon>FrmTunelCuadroMando_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmAyuda.Designer.cs">
+      <DependentUpon>FrmAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmComentarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmComentarios.Designer.cs">
+      <DependentUpon>FrmComentarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmComentariosEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmComentariosEdit.Designer.cs">
+      <DependentUpon>FrmComentariosEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmDirecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmDirecciones.Designer.cs">
+      <DependentUpon>FrmDirecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmEndesaEnergia21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmEndesaEnergia21.Designer.cs">
+      <DependentUpon>FrmEndesaEnergia21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmMotivosRechazo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\FrmMotivosRechazo.Designer.cs">
+      <DependentUpon>FrmMotivosRechazo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmContratos.Designer.cs">
+      <DependentUpon>FrmContratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmContratosDetalle_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmContratosDetalle_Edit.Designer.cs">
+      <DependentUpon>FrmContratosDetalle_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmContratos_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmContratos_Edit.Designer.cs">
+      <DependentUpon>FrmContratos_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmDistribuidoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmDistribuidoras.Designer.cs">
+      <DependentUpon>FrmDistribuidoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmDistribuidoras_Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmDistribuidoras_Ayuda.Designer.cs">
+      <DependentUpon>FrmDistribuidoras_Ayuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmDistribuidoras_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmDistribuidoras_Edit.Designer.cs">
+      <DependentUpon>FrmDistribuidoras_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmFechasInforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmFechasInforme.Designer.cs">
+      <DependentUpon>FrmFechasInforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmInformeSolapados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contratacion\gas\FrmInformeSolapados.Designer.cs">
+      <DependentUpon>FrmInformeSolapados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FormPuntosSofisticados_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FormPuntosSofisticados_Edit.Designer.cs">
+      <DependentUpon>FormPuntosSofisticados_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmAgora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmAgora.Designer.cs">
+      <DependentUpon>FrmAgora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmAgora_Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmAgora_Ayuda.Designer.cs">
+      <DependentUpon>FrmAgora_Ayuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturadorEER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturadorEER.Designer.cs">
+      <DependentUpon>FrmFacturadorEER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmAdifFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmAdifFacturas.Designer.cs">
+      <DependentUpon>FrmAdifFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmCredencialesWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmCredencialesWeb.Designer.cs">
+      <DependentUpon>FrmCredencialesWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturadorInvoiceNumberEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturadorInvoiceNumberEdit.Designer.cs">
+      <DependentUpon>FrmFacturadorInvoiceNumberEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturadorPortugal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturadorPortugal.Designer.cs">
+      <DependentUpon>FrmFacturadorPortugal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmFacturasOperaciones.Designer.cs">
+      <DependentUpon>FrmFacturasOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmIHGasEspana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmIHGasEspana.Designer.cs">
+      <DependentUpon>FrmIHGasEspana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInformeERSE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInformeERSE.Designer.cs">
+      <DependentUpon>FrmInformeERSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInformeERSE_Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmInformeERSE_Ayuda.Designer.cs">
+      <DependentUpon>FrmInformeERSE_Ayuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmPuntosSofisticados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmPuntosSofisticados.Designer.cs">
+      <DependentUpon>FrmPuntosSofisticados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmSIGAME_Importe_Redes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\facturacion\FrmSIGAME_Importe_Redes.Designer.cs">
+      <DependentUpon>FrmSIGAME_Importe_Redes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FormFacFestivosElectricosParam_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FormFacFestivosElectricosParam_Edit.Designer.cs">
+      <DependentUpon>FormFacFestivosElectricosParam_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmGlobal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmGlobal.Designer.cs">
+      <DependentUpon>FrmGlobal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmListBox.Designer.cs">
+      <DependentUpon>FrmListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmParamEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmParamEdit.Designer.cs">
+      <DependentUpon>FrmParamEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmParameters.Designer.cs">
+      <DependentUpon>FrmParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmProgressBar.Designer.cs">
+      <DependentUpon>FrmProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmBusquedaArchivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmBusquedaArchivos.Designer.cs">
+      <DependentUpon>FrmBusquedaArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmCalendarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmCalendarios.Designer.cs">
+      <DependentUpon>FrmCalendarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmCargas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmCargas.Designer.cs">
+      <DependentUpon>FrmCargas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmCarteraSalesForce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmCarteraSalesForce.Designer.cs">
+      <DependentUpon>FrmCarteraSalesForce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmSeguimiento_Procesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\herramientas\FrmSeguimiento_Procesos.Designer.cs">
+      <DependentUpon>FrmSeguimiento_Procesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdif.Designer.cs">
+      <DependentUpon>FrmAdif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdifCierresEnergia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdifCierresEnergia.Designer.cs">
+      <DependentUpon>FrmAdifCierresEnergia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdifCierresEnergia_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdifCierresEnergia_Edit.Designer.cs">
+      <DependentUpon>FrmAdifCierresEnergia_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdifInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdifInventario.Designer.cs">
+      <DependentUpon>FrmAdifInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdifIventario_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdifIventario_Edit.Designer.cs">
+      <DependentUpon>FrmAdifIventario_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdif_CS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdif_CS.Designer.cs">
+      <DependentUpon>FrmAdif_CS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdif_Curvas_Adif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdif_Curvas_Adif.Designer.cs">
+      <DependentUpon>FrmAdif_Curvas_Adif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdif_Importar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmAdif_Importar.Designer.cs">
+      <DependentUpon>FrmAdif_Importar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmCurvaResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmCurvaResumen.Designer.cs">
+      <DependentUpon>FrmCurvaResumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmCurvas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmCurvas.Designer.cs">
+      <DependentUpon>FrmCurvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmEstadosSubEstadosKronos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmEstadosSubEstadosKronos.Designer.cs">
+      <DependentUpon>FrmEstadosSubEstadosKronos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmExportacion_PMML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmExportacion_PMML.Designer.cs">
+      <DependentUpon>FrmExportacion_PMML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmInformeDGEG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmInformeDGEG.Designer.cs">
+      <DependentUpon>FrmInformeDGEG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmInventarioBI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmInventarioBI.Designer.cs">
+      <DependentUpon>FrmInventarioBI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmKeeReporteExtraccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmKeeReporteExtraccion.Designer.cs">
+      <DependentUpon>FrmKeeReporteExtraccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmLicitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmLicitaciones.Designer.cs">
+      <DependentUpon>FrmLicitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmPeajesFormatoF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmPeajesFormatoF.Designer.cs">
+      <DependentUpon>FrmPeajesFormatoF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\medida\FrmPPAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\medida\FrmPPAs.Designer.cs">
+      <DependentUpon>FrmPPAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\Filtros_Respuestas.resx">
+      <DependentUpon>Filtros_Respuestas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmComentarios.resx">
+      <DependentUpon>FrmComentarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmComentariosEdit.resx">
+      <DependentUpon>FrmComentariosEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmComprobacion_Contratacion.resx">
+      <DependentUpon>FrmComprobacion_Contratacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmDirecciones.resx">
+      <DependentUpon>FrmDirecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmDisuasoria.resx">
+      <DependentUpon>FrmDisuasoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmEndesaEnergia21.resx">
+      <DependentUpon>FrmEndesaEnergia21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmEndesaEnergia21_AvisoVentas_Manual.resx">
+      <DependentUpon>FrmEndesaEnergia21_AvisoVentas_Manual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmEndesaEnergia21_bajas_sin_altas.resx">
+      <DependentUpon>FrmEndesaEnergia21_bajas_sin_altas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmInformeAviso_Ventas.resx">
+      <DependentUpon>FrmInformeAviso_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmInformePaso_a_COR.resx">
+      <DependentUpon>FrmInformePaso_a_COR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmMotivosRechazo.resx">
+      <DependentUpon>FrmMotivosRechazo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmPasosXML.resx">
+      <DependentUpon>FrmPasosXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmPlantillaXML.resx">
+      <DependentUpon>FrmPlantillaXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmPS_AT_HIST.resx">
+      <DependentUpon>FrmPS_AT_HIST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_A1550.resx">
+      <DependentUpon>FrmXML_A1550.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas.resx">
+      <DependentUpon>FrmXML_Respuestas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_M102.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_M102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_B105.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_B105.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_B1.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_B1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_C205.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_C205.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_C202R.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_C202R.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_C202.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_C202.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_M105.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_M105.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_C105.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_C105.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_C102R.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_C102R.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_C102.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_C102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_A305.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_A305.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\FrmXML_Respuestas_Datos_A3.resx">
+      <DependentUpon>FrmXML_Respuestas_Datos_A3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmContratos.resx">
+      <DependentUpon>FrmContratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmContratosDetalle_Edit.resx">
+      <DependentUpon>FrmContratosDetalle_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmContratos_Edit.resx">
+      <DependentUpon>FrmContratos_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmDistribuidoras.resx">
+      <DependentUpon>FrmDistribuidoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmDistribuidoras_Ayuda.resx">
+      <DependentUpon>FrmDistribuidoras_Ayuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmDistribuidoras_Edit.resx">
+      <DependentUpon>FrmDistribuidoras_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmExcepcion_Edit.resx">
+      <DependentUpon>FrmExcepcion_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmFechasInforme.resx">
+      <DependentUpon>FrmFechasInforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmInformeSolapados.resx">
+      <DependentUpon>FrmInformeSolapados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmModificacionPeaje.resx">
+      <DependentUpon>FrmModificacionPeaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmReubicaciones.resx">
+      <DependentUpon>FrmReubicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contratacion\gas\FrmSolicitudManual.resx">
+      <DependentUpon>FrmSolicitudManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmActualizaFacturadores.resx">
+      <DependentUpon>FrmActualizaFacturadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmCalculoPuntosBTN.resx">
+      <DependentUpon>FrmCalculoPuntosBTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmConsumptionDataExtraction.resx">
+      <DependentUpon>FrmConsumptionDataExtraction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmCuadresPotenciaMT.resx">
+      <DependentUpon>FrmCuadresPotenciaMT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FormPuntosSofisticados_Edit.resx">
+      <DependentUpon>FormPuntosSofisticados_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmAgora.resx">
+      <DependentUpon>FrmAgora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmAgora_Ayuda.resx">
+      <DependentUpon>FrmAgora_Ayuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmEER_FacturasManuales.resx">
+      <DependentUpon>FrmEER_FacturasManuales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturadorEER.resx">
+      <DependentUpon>FrmFacturadorEER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmAdifFacturas.resx">
+      <DependentUpon>FrmAdifFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmCredencialesWeb.resx">
+      <DependentUpon>FrmCredencialesWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturadorInvoiceNumberEdit.resx">
+      <DependentUpon>FrmFacturadorInvoiceNumberEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturadorPortugal.resx">
+      <DependentUpon>FrmFacturadorPortugal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturasBTE_CAPB.resx">
+      <DependentUpon>FrmFacturasBTE_CAPB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturasBTN.resx">
+      <DependentUpon>FrmFacturasBTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturasBTN_CAPB.resx">
+      <DependentUpon>FrmFacturasBTN_CAPB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturasElectricidad_BTN_Real_Estimado.resx">
+      <DependentUpon>FrmFacturasElectricidad_BTN_Real_Estimado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturasGAS_ES_REAL_ESTIMADO.resx">
+      <DependentUpon>FrmFacturasGAS_ES_REAL_ESTIMADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturasGAS_PT_REAL_ESTIMADO.resx">
+      <DependentUpon>FrmFacturasGAS_PT_REAL_ESTIMADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmFacturasOperaciones.resx">
+      <DependentUpon>FrmFacturasOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmIHGasEspana.resx">
+      <DependentUpon>FrmIHGasEspana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmImpagosCAP_GAS.resx">
+      <DependentUpon>FrmImpagosCAP_GAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmInformeConsumoMensualPortugal.resx">
+      <DependentUpon>FrmInformeConsumoMensualPortugal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmInformeEERcs.resx">
+      <DependentUpon>FrmInformeEERcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmInformeERSE.resx">
+      <DependentUpon>FrmInformeERSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmInforme_Pdte Web_PSAT_TAM.resx">
+      <DependentUpon>FrmInforme_Pdte Web_PSAT_TAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmMes12BT.resx">
+      <DependentUpon>FrmMes12BT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmMes13Comprobacion.resx">
+      <DependentUpon>FrmMes13Comprobacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmMes13Conversion.resx">
+      <DependentUpon>FrmMes13Conversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmMes13ListaNegra.resx">
+      <DependentUpon>FrmMes13ListaNegra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmMes13ListaNegraCUPS.resx">
+      <DependentUpon>FrmMes13ListaNegraCUPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmMes13ListaNegraCUPS_Edit.resx">
+      <DependentUpon>FrmMes13ListaNegraCUPS_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmMes13ListaNegra_Edit.resx">
+      <DependentUpon>FrmMes13ListaNegra_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmMes13Prevision.resx">
+      <DependentUpon>FrmMes13Prevision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmPendFacturacionSubestadosBI.resx">
+      <DependentUpon>FrmPendFacturacionSubestadosBI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmPendFacturacionSubestadosBi_Edit.resx">
+      <DependentUpon>FrmPendFacturacionSubestadosBi_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmPrefacturas_BTN_CAP_GAS.resx">
+      <DependentUpon>FrmPrefacturas_BTN_CAP_GAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmPuntosSofisticados.resx">
+      <DependentUpon>FrmPuntosSofisticados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmSIGAME_Importe_Redes.resx">
+      <DependentUpon>FrmSIGAME_Importe_Redes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmSofisticados.resx">
+      <DependentUpon>FrmSofisticados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmTipologiasEspana.resx">
+      <DependentUpon>FrmTipologiasEspana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmTipologiasPortugal.resx">
+      <DependentUpon>FrmTipologiasPortugal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmTunel.resx">
+      <DependentUpon>FrmTunel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmTunelCuadroMando.resx">
+      <DependentUpon>FrmTunelCuadroMando.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\facturacion\FrmTunelCuadroMando_Edit.resx">
+      <DependentUpon>FrmTunelCuadroMando_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormFacFestivosElectricosParam_Edit.resx">
+      <DependentUpon>FormFacFestivosElectricosParam_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmAyuda.resx">
+      <DependentUpon>FrmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmGlobal.resx">
+      <DependentUpon>FrmGlobal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmListBox.resx">
+      <DependentUpon>FrmListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmParamEdit.resx">
+      <DependentUpon>FrmParamEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmParameters.resx">
+      <DependentUpon>FrmParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmProgressBar.resx">
+      <DependentUpon>FrmProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\herramientas\FrmBusquedaArchivos.resx">
+      <DependentUpon>FrmBusquedaArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\herramientas\FrmCalendarios.resx">
+      <DependentUpon>FrmCalendarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\herramientas\FrmCargas.resx">
+      <DependentUpon>FrmCargas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\herramientas\FrmCarteraSalesForce.resx">
+      <DependentUpon>FrmCarteraSalesForce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\herramientas\FrmSeguimiento_Procesos.resx">
+      <DependentUpon>FrmSeguimiento_Procesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmAdif.resx">
+      <DependentUpon>FrmAdif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmAdifCierresEnergia.resx">
+      <DependentUpon>FrmAdifCierresEnergia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmAdifCierresEnergia_Edit.resx">
+      <DependentUpon>FrmAdifCierresEnergia_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmAdifInventario.resx">
+      <DependentUpon>FrmAdifInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmAdifIventario_Edit.resx">
+      <DependentUpon>FrmAdifIventario_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmAdif_CS.resx">
+      <DependentUpon>FrmAdif_CS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmAdif_Curvas_Adif.resx">
+      <DependentUpon>FrmAdif_Curvas_Adif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmAdif_Importar.resx">
+      <DependentUpon>FrmAdif_Importar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmCurvaResumen.resx">
+      <DependentUpon>FrmCurvaResumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmCurvas.resx">
+      <DependentUpon>FrmCurvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmEstadosSubEstadosKronos.resx">
+      <DependentUpon>FrmEstadosSubEstadosKronos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmExportacion_PMML.resx">
+      <DependentUpon>FrmExportacion_PMML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmInformeDGEG.resx">
+      <DependentUpon>FrmInformeDGEG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmInventarioBI.resx">
+      <DependentUpon>FrmInventarioBI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmKeeReporteExtraccion.resx">
+      <DependentUpon>FrmKeeReporteExtraccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmLicitaciones.resx">
+      <DependentUpon>FrmLicitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmPeajesFormatoF.resx">
+      <DependentUpon>FrmPeajesFormatoF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\medida\FrmPPAs.resx">
+      <DependentUpon>FrmPPAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EndesaBusiness\EndesaBusiness\EndesaBusiness.csproj">
+      <Project>{fdd4bb7a-aaab-4586-9a1c-55cbf2394e83}</Project>
+      <Name>EndesaBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EndesaEntity\EndesaEntity\EndesaEntity.csproj">
+      <Project>{cd4f6101-96e8-4bd6-b966-229c23975986}</Project>
+      <Name>EndesaEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1493038278_excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1495200266_Outlook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1496067747_Checklist_clipboard_inventory_list_report_tasks_todo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-games-difficult-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adif_logo_cani.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ark-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ball-13-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandera_portugal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barrier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bola13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Endesa_Logo_Secondary_RGB.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erse_logotipo_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_floppy_285657%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_floppy_285657%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_floppy_285657%283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_floppy_285657.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Fuel_Meter_2501873.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_letter_384888.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_tools_61840.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_4_2509370.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_9_2511082.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_12_Bills_1871414%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_12_Bills_1871414.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_13_Tax_1871418.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_492-Control_2124480.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_aiga_mail_134146%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_aiga_mail_134146.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_application-vnd.ms-excel_24744.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_attention_alert_caution_electricity_shock_1083155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_calendar-alt_285665.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Customer_Male_Light_80830%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Customer_Male_Light_80830.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_dialog-close_29299.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_document_file_paper_page-26_2850884.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_emblem-cool_28821.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Excel_15_98845.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_fire_173014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_f-right_256_282463.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_help-browser_118806.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_ic_local_gas_station_48px_352499.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icon-102-document-file-xml_314544.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icon-129-cloud-download_314711.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_import-export_63126.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_JD-37_2624871.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_line_graph-b_86265.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_microsoft_office_excel_1784856.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_open-file_85334.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_price_tag_usd_172529%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_search_binoculars_find_103854.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_settings_2199094.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_view-refresh_118801.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meter_point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Office-Customer-Male-Light-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pipe-line-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tasks-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erse.pt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Reactor_134235.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="endesa.ico" />
+    <None Include="Resources\bola_billar_12.ico" />
+    <None Include="Resources\ConsumptionData.png" />
+    <None Include="Resources\SalesForce.png" />
+    <None Include="Resources\eexxi.png" />
+    <None Include="Resources\Spain_flags_flag_8858%281%29.png" />
+    <None Include="Resources\Spain_flags_flag_8858.png" />
+    <None Include="Resources\iconfinder_hand_finger_17529.png" />
+    <None Include="Resources\finger_.png" />
+    <None Include="Resources\portugal.ico" />
+    <None Include="img\EstructuraArchivoTunel.png" />
+    <None Include="Resources\tunnel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-arrow-right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-arrow-left-double-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

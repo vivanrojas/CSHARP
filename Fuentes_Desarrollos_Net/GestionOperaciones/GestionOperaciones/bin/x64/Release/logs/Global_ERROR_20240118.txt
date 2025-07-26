@@ -1,0 +1,2 @@
+18/01/2024 12:28:53 - gbenavides - GetID La secuencia no contiene ningún elemento coincidente
+18/01/2024 12:28:55 - gbenavides - UsuarioValido La secuencia no contiene ningún elemento coincidente

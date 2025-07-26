@@ -1,0 +1,5 @@
+15/05/2025 11:30:36 - gbenavides - CurvasRedShift.GetCurva: No se puede convertir un objeto DBNull en otros tipos.
+15/05/2025 11:39:31 - gbenavides - CurvasRedShift.GetCurva: No se puede convertir un objeto DBNull en otros tipos.
+15/05/2025 12:01:35 - gbenavides - CurvasRedShift.GetCurva: ERROR [57014] [Redshift][ODBC Driver][Server]57014:ERROR:  Query (791971647) cancelled on user's request
+
+15/05/2025 12:06:44 - gbenavides - CurvasRedShift.GetCurva: No se puede convertir un objeto DBNull en otros tipos.

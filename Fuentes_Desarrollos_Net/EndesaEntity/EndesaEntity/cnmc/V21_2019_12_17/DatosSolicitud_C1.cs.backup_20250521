@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+
+namespace EndesaEntity.cnmc.V21_2019_12_17
+{
+    [XmlRoot(ElementName = "DatosSolicitud")]
+    public class DatosSolicitud_C1
+    {
+        [XmlElement(ElementName = "TipoModificacion")] public string tipoModificacion { get; set; }
+        [XmlElement(ElementName = "TipoSolicitudAdministrativa")] public string tipoSolicitudAdministrativa { get; set; }
+        [XmlElement(ElementName = "CNAE")] public string cnae { get; set; }
+        [XmlElement(ElementName = "IndActivacion")] public string indActivacion { get; set; }
+        //[24/01/2025 GUS] Cambiamos a tipo string la fechaPrevistaAccion
+        //[XmlElement(ElementName = "FechaPrevistaAccion")] public DateTime fechaPrevistaAccion { get; set; }        
+        [XmlElement(ElementName = "FechaPrevistaAccion")] public string fechaPrevistaAccion { get; set; }
+        [XmlElement(ElementName = "ContratacionIncondicionalPS")] public string contratacionIncondicionalPS { get; set; }
+        [XmlElement(ElementName = "ContratacionIncondicionalBS")] public string contratacionIncondicionalBS { get; set; }
+        [XmlElement(ElementName = "SolicitudTension")] public string solicitudTension { get; set; }
+
+
+        //public Cliente Cliente { get; set; }
+
+        
+    }
+}

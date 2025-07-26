@@ -1,0 +1,2 @@
+21/02/2024 13:20:43 - gbenavides - Se han detectado 1 xml
+21/02/2024 13:21:44 - gbenavides - leido xml: 010636002900T1000120240219081657_19.xml Proceso: T101

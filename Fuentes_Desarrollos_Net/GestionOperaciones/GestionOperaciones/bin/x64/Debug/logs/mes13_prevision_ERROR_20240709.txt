@@ -1,0 +1,2 @@
+09/07/2024 11:45:24 - gbenavides - SeleccionaFacturas.AnexionDatos Lock wait timeout exceeded; try restarting transaction
+09/07/2024 11:46:15 - gbenavides - SeleccionaFacturas.MarcaCisternas Lock wait timeout exceeded; try restarting transaction
