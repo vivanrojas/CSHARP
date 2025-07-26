@@ -1,0 +1,33 @@
+# Establece texto normal con saltos de línea CRLF (Windows)
+* text=auto eol=crlf
+
+# Archivos por tipo de lenguaje
+*.cs     text
+*.csproj text
+*.sln    text
+*.config text
+*.xml    text
+*.xaml   text
+
+# Archivos por herramientas
+*.ps1    text
+*.sh     text eol=lf
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+
+# Archivos de markdown y documentación
+*.md     text
+*.txt    text
+
+# Mantener binarios sin conversión de línea
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.dll    binary
+*.exe    binary
+*.pdf    binary
+*.zip    binary
+*.7z     binary
+*.nupkg  binary
